@@ -1,0 +1,15 @@
+{
+  "name": "gogocode-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js > testOut.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gogocode": "^1.0.40"
+  }
+}
