@@ -1,19 +1,6 @@
-/**
- * @fileoverview gRPC-Web generated client stub for grpc.gateway.testing
- * @enhanceable
- * @public
- */
+import * as grpcWeb from 'grpc-web'
 
-// GENERATED CODE -- DO NOT EDIT!
-
-
-/* eslint-disable */
-// @ts-nocheck
-
-
-import * as grpcWeb from 'grpc-web';
-
-import * as echo_pb from './echo_pb';
+import echo_pb from './echo_pb';
 
 
 export class EchoServiceClient {
