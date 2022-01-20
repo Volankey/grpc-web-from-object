@@ -34,8 +34,6 @@ message EchoRequest {
   string message = 1;
   Student student = 2;
   Suject suject = 3;
-  map<string,string> keyValue = 4;
-  map<string,Score> key_scroe = 5;
 }
 
 message EchoResponse {

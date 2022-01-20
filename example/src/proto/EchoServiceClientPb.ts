@@ -1,23 +1,20 @@
-//@ts-nocheck
-/* eslint-disable */
-import * as grpcWeb from "grpc-web";
+import * as grpcWeb from 'grpc-web'
 
-import echo_pb from "./echo_pb";
+import echo_pb from './echo_pb';
+
 
 export class EchoServiceClient {
   client_: grpcWeb.AbstractClientBase;
   hostname_: string;
-  credentials_: null | { [index: string]: string };
-  options_: null | { [index: string]: any };
+  credentials_: null | { [index: string]: string; };
+  options_: null | { [index: string]: any; };
 
-  constructor(
-    hostname: string,
-    credentials?: null | { [index: string]: string },
-    options?: null | { [index: string]: any }
-  ) {
+  constructor (hostname: string,
+               credentials?: null | { [index: string]: string; },
+               options?: null | { [index: string]: any; }) {
     if (!options) options = {};
     if (!credentials) credentials = {};
-    options["format"] = "text";
+    options['format'] = 'text';
 
     this.client_ = new grpcWeb.GrpcWebClientBase(options);
     this.hostname_ = hostname;
@@ -26,7 +23,7 @@ export class EchoServiceClient {
   }
 
   methodInfoEcho = new grpcWeb.MethodDescriptor(
-    "/grpc.gateway.testing.EchoService/Echo",
+    '/grpc.gateway.testing.EchoService/Echo',
     grpcWeb.MethodType.UNARY,
     echo_pb.EchoRequest,
     echo_pb.EchoResponse,
@@ -38,39 +35,38 @@ export class EchoServiceClient {
 
   echo(
     request: echo_pb.EchoRequest,
-    metadata: grpcWeb.Metadata | null
-  ): Promise<echo_pb.EchoResponse>;
+    metadata: grpcWeb.Metadata | null): Promise<echo_pb.EchoResponse>;
 
   echo(
     request: echo_pb.EchoRequest,
     metadata: grpcWeb.Metadata | null,
-    callback: (err: grpcWeb.RpcError, response: echo_pb.EchoResponse) => void
-  ): grpcWeb.ClientReadableStream<echo_pb.EchoResponse>;
+    callback: (err: grpcWeb.RpcError,
+               response: echo_pb.EchoResponse) => void): grpcWeb.ClientReadableStream<echo_pb.EchoResponse>;
 
   echo(
     request: echo_pb.EchoRequest,
     metadata: grpcWeb.Metadata | null,
-    callback?: (err: grpcWeb.RpcError, response: echo_pb.EchoResponse) => void
-  ) {
+    callback?: (err: grpcWeb.RpcError,
+               response: echo_pb.EchoResponse) => void) {
     if (callback !== undefined) {
       return this.client_.rpcCall(
-        this.hostname_ + "/grpc.gateway.testing.EchoService/Echo",
+        this.hostname_ +
+          '/grpc.gateway.testing.EchoService/Echo',
         request,
         metadata || {},
         this.methodInfoEcho,
-        callback
-      );
+        callback);
     }
     return this.client_.unaryCall(
-      this.hostname_ + "/grpc.gateway.testing.EchoService/Echo",
-      request,
-      metadata || {},
-      this.methodInfoEcho
-    );
+    this.hostname_ +
+      '/grpc.gateway.testing.EchoService/Echo',
+    request,
+    metadata || {},
+    this.methodInfoEcho);
   }
 
   methodInfoEchoAbort = new grpcWeb.MethodDescriptor(
-    "/grpc.gateway.testing.EchoService/EchoAbort",
+    '/grpc.gateway.testing.EchoService/EchoAbort',
     grpcWeb.MethodType.UNARY,
     echo_pb.EchoRequest,
     echo_pb.EchoResponse,
@@ -82,39 +78,38 @@ export class EchoServiceClient {
 
   echoAbort(
     request: echo_pb.EchoRequest,
-    metadata: grpcWeb.Metadata | null
-  ): Promise<echo_pb.EchoResponse>;
+    metadata: grpcWeb.Metadata | null): Promise<echo_pb.EchoResponse>;
 
   echoAbort(
     request: echo_pb.EchoRequest,
     metadata: grpcWeb.Metadata | null,
-    callback: (err: grpcWeb.RpcError, response: echo_pb.EchoResponse) => void
-  ): grpcWeb.ClientReadableStream<echo_pb.EchoResponse>;
+    callback: (err: grpcWeb.RpcError,
+               response: echo_pb.EchoResponse) => void): grpcWeb.ClientReadableStream<echo_pb.EchoResponse>;
 
   echoAbort(
     request: echo_pb.EchoRequest,
     metadata: grpcWeb.Metadata | null,
-    callback?: (err: grpcWeb.RpcError, response: echo_pb.EchoResponse) => void
-  ) {
+    callback?: (err: grpcWeb.RpcError,
+               response: echo_pb.EchoResponse) => void) {
     if (callback !== undefined) {
       return this.client_.rpcCall(
-        this.hostname_ + "/grpc.gateway.testing.EchoService/EchoAbort",
+        this.hostname_ +
+          '/grpc.gateway.testing.EchoService/EchoAbort',
         request,
         metadata || {},
         this.methodInfoEchoAbort,
-        callback
-      );
+        callback);
     }
     return this.client_.unaryCall(
-      this.hostname_ + "/grpc.gateway.testing.EchoService/EchoAbort",
-      request,
-      metadata || {},
-      this.methodInfoEchoAbort
-    );
+    this.hostname_ +
+      '/grpc.gateway.testing.EchoService/EchoAbort',
+    request,
+    metadata || {},
+    this.methodInfoEchoAbort);
   }
 
   methodInfoNoOp = new grpcWeb.MethodDescriptor(
-    "/grpc.gateway.testing.EchoService/NoOp",
+    '/grpc.gateway.testing.EchoService/NoOp',
     grpcWeb.MethodType.UNARY,
     echo_pb.Empty,
     echo_pb.Empty,
@@ -126,39 +121,38 @@ export class EchoServiceClient {
 
   noOp(
     request: echo_pb.Empty,
-    metadata: grpcWeb.Metadata | null
-  ): Promise<echo_pb.Empty>;
+    metadata: grpcWeb.Metadata | null): Promise<echo_pb.Empty>;
 
   noOp(
     request: echo_pb.Empty,
     metadata: grpcWeb.Metadata | null,
-    callback: (err: grpcWeb.RpcError, response: echo_pb.Empty) => void
-  ): grpcWeb.ClientReadableStream<echo_pb.Empty>;
+    callback: (err: grpcWeb.RpcError,
+               response: echo_pb.Empty) => void): grpcWeb.ClientReadableStream<echo_pb.Empty>;
 
   noOp(
     request: echo_pb.Empty,
     metadata: grpcWeb.Metadata | null,
-    callback?: (err: grpcWeb.RpcError, response: echo_pb.Empty) => void
-  ) {
+    callback?: (err: grpcWeb.RpcError,
+               response: echo_pb.Empty) => void) {
     if (callback !== undefined) {
       return this.client_.rpcCall(
-        this.hostname_ + "/grpc.gateway.testing.EchoService/NoOp",
+        this.hostname_ +
+          '/grpc.gateway.testing.EchoService/NoOp',
         request,
         metadata || {},
         this.methodInfoNoOp,
-        callback
-      );
+        callback);
     }
     return this.client_.unaryCall(
-      this.hostname_ + "/grpc.gateway.testing.EchoService/NoOp",
-      request,
-      metadata || {},
-      this.methodInfoNoOp
-    );
+    this.hostname_ +
+      '/grpc.gateway.testing.EchoService/NoOp',
+    request,
+    metadata || {},
+    this.methodInfoNoOp);
   }
 
   methodInfoServerStreamingEcho = new grpcWeb.MethodDescriptor(
-    "/grpc.gateway.testing.EchoService/ServerStreamingEcho",
+    '/grpc.gateway.testing.EchoService/ServerStreamingEcho',
     grpcWeb.MethodType.SERVER_STREAMING,
     echo_pb.ServerStreamingEchoRequest,
     echo_pb.ServerStreamingEchoResponse,
@@ -170,18 +164,17 @@ export class EchoServiceClient {
 
   serverStreamingEcho(
     request: echo_pb.ServerStreamingEchoRequest,
-    metadata?: grpcWeb.Metadata
-  ) {
+    metadata?: grpcWeb.Metadata) {
     return this.client_.serverStreaming(
-      this.hostname_ + "/grpc.gateway.testing.EchoService/ServerStreamingEcho",
+      this.hostname_ +
+        '/grpc.gateway.testing.EchoService/ServerStreamingEcho',
       request,
       metadata || {},
-      this.methodInfoServerStreamingEcho
-    );
+      this.methodInfoServerStreamingEcho);
   }
 
   methodInfoServerStreamingEchoAbort = new grpcWeb.MethodDescriptor(
-    "/grpc.gateway.testing.EchoService/ServerStreamingEchoAbort",
+    '/grpc.gateway.testing.EchoService/ServerStreamingEchoAbort',
     grpcWeb.MethodType.SERVER_STREAMING,
     echo_pb.ServerStreamingEchoRequest,
     echo_pb.ServerStreamingEchoResponse,
@@ -193,14 +186,14 @@ export class EchoServiceClient {
 
   serverStreamingEchoAbort(
     request: echo_pb.ServerStreamingEchoRequest,
-    metadata?: grpcWeb.Metadata
-  ) {
+    metadata?: grpcWeb.Metadata) {
     return this.client_.serverStreaming(
       this.hostname_ +
-        "/grpc.gateway.testing.EchoService/ServerStreamingEchoAbort",
+        '/grpc.gateway.testing.EchoService/ServerStreamingEchoAbort',
       request,
       metadata || {},
-      this.methodInfoServerStreamingEchoAbort
-    );
+      this.methodInfoServerStreamingEchoAbort);
   }
+
 }
+
