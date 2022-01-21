@@ -48,7 +48,7 @@ function setRequestBody (
     const setMethodName = `set${varsNameUpper}`
     const setMethodCall = reqTypeInstance[setMethodName].bind(reqTypeInstance)
     let finalVal = null
-    const valueTypeCtor = reqTypeInstance[setMethodName].getValueType?.()
+    const valueTypeCtor = reqTypeInstance[setMethodName].getValueType?.call(reqTypeInstance)
     if (setMethodCall) {
       // 递归处理
       if (!isObject(value)) {
@@ -58,7 +58,13 @@ function setRequestBody (
         // @ts-ignore
         const mapValueCtor = valueTypeCtor.valueCtor_
         const [k,v] = (value as [[any,any]])[0]
-        setMethodCall(k,setRequestBody(mapValueCtor,v))
+        // wrapperd field
+        if(mapValueCtor){
+          setMethodCall(k,setRequestBody(mapValueCtor,v))
+        }else {
+          setMethodCall(k,v)
+        }
+        return reqTypeInstance
       } else if (Array.isArray(value)) {
         finalVal = value.map((item) => {
           if (valueTypeCtor) {
@@ -142,8 +148,8 @@ export function createInvoker<C> (
   ): Promise<GrpcMessageToObject<PromiseCallReturnType<C[IM]>>> {
     const methodInfo = getMethodInfo(client, method)
     const ReqType = methodInfo.getRequestMessageCtor()
-    debugger
     const requestBody = setRequestBody(ReqType, data)
+    console.log("🚀 ~ file: createGrpcWebInvoker.ts ~ line 152 ~ requestBody", requestBody)
     const tmpMetadata = merge(metadata, config.globalMeta)
     let reqInstance: any = null
     if (options?.mock || invokerOptions?.mock) {

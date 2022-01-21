@@ -78,9 +78,8 @@ const res = AST.find(
     const protoType = item.match[1][0].value // eg: 'proto.grpc.gateway.testing.EchoRequest'
     const setMapValueFunctionContent = `
     /* @param [[key,value]] */
-    ${protoType}.prototype.${setMethodName} = function(mapData) {
-      const kv = mapData[0]
-      this.${getMethodName}().set(kv[0],kv[1])
+    ${protoType}.prototype.${setMethodName} = function(k,v) {
+      this.${getMethodName}().set(k,v)
     }
     `
     const setMapValueType = `
@@ -89,7 +88,7 @@ const res = AST.find(
       return this.${getMethodName}()
     }
     `
-    item.after(setMapValueFunctionContent).after(setMapValueType)
+    item.after(setMapValueType).after(setMapValueFunctionContent)
 
   })
   .root()

@@ -1336,18 +1336,17 @@ proto.grpc.gateway.testing.EchoRequest.prototype.getKeyvalueMap = function (opt_
     jspb.Message.getMapField(this, 4, opt_noLazyCreate, null)
   );
 };
+/* @param [[key,value]] */
+
+
+proto.grpc.gateway.testing.EchoRequest.prototype.setKeyvalueMap = function (k, v) {
+  this.getKeyvalueMap().set(k, v);
+};
 /* generate by Volankey */
 
 
 proto.grpc.gateway.testing.EchoRequest.prototype.setKeyvalueMap.getValueType = function () {
   return this.getKeyvalueMap();
-};
-/* @param [[key,value]] */
-
-
-proto.grpc.gateway.testing.EchoRequest.prototype.setKeyvalueMap = function (mapData) {
-  const kv = mapData[0];
-  this.getKeyvalueMap().set(kv[0], kv[1]);
 };
 /**
  * Clears values from the map. The map will be non-null.
@@ -1373,18 +1372,17 @@ proto.grpc.gateway.testing.EchoRequest.prototype.getKeyScroeMap = function (opt_
     jspb.Message.getMapField(this, 5, opt_noLazyCreate, proto.grpc.gateway.testing.Score)
   );
 };
+/* @param [[key,value]] */
+
+
+proto.grpc.gateway.testing.EchoRequest.prototype.setKeyScroeMap = function (k, v) {
+  this.getKeyScroeMap().set(k, v);
+};
 /* generate by Volankey */
 
 
 proto.grpc.gateway.testing.EchoRequest.prototype.setKeyScroeMap.getValueType = function () {
   return this.getKeyScroeMap();
-};
-/* @param [[key,value]] */
-
-
-proto.grpc.gateway.testing.EchoRequest.prototype.setKeyScroeMap = function (mapData) {
-  const kv = mapData[0];
-  this.getKeyScroeMap().set(kv[0], kv[1]);
 };
 /**
  * Clears values from the map. The map will be non-null.
