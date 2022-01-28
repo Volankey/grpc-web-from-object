@@ -2,8 +2,7 @@
 const $ = require('gogocode')
 const fs = require('fs')
 
-// const filePath = process.argv[2]
-const filePath = '/home/tusimple/Documents/wksp/grpc-web-protojs-transformer/example/src/proto/echo_pb.js'
+const filePath = process.argv[2]
 
 console.log('handle file:', filePath, '...')
 
