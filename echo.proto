@@ -30,17 +30,25 @@ message Score {
   string name = 1;
   string score = 2;
 }
+message OneOfSample {
+  oneof test_oneof {
+    string name = 4;
+    Score sub_message = 9;
+  }
+}
 message EchoRequest {
   string message = 1;
   Student student = 2;
   Suject suject = 3;
   map<string,string> keyValue = 4;
   map<string,Score> key_scroe = 5;
+  OneOfSample one_of_sample = 6;
 }
 
 message EchoResponse {
   string message = 1;
   int32 message_count = 2;
+  EchoRequest resp = 3;
 }
 
 // Request type for server side streaming echo.

@@ -52,9 +52,9 @@ function copyMetadata(call) {
  * @param {function():?} callback
  */
 function doEcho(call, callback) {
-  console.log("🚀 ~ file: server.js ~ line 57 ~ doEcho ~ call.request", call.request)
   callback(null, {
-    message: JSON.stringify(call.request)
+    message: 'ok',
+    resp: call.request
   }, copyMetadata(call));
 }
 

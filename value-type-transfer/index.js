@@ -92,5 +92,31 @@ const res = AST.find(
 
   })
   .root()
+  .find(
+    `$_$1 = function(value) {
+    return jspb.Message.setOneofWrapperField(this, $_$2, $_$3, value);
+   };`
+  )
+  .each((item) => {
+    const methodName = item.match[1][0].value
+
+    const tokens = item.node.loc.tokens
+    const currentStartTokenNum = item.node.loc.start.token
+    const preToken = tokens[currentStartTokenNum - 1]
+    if (preToken && preToken.type === 'CommentBlock') {
+      // @param {?proto.grpc.gateway.testing.Score|undefined} value
+      const setMethodValueType = preToken.value.match(
+        /@param \{\?(.+)\|undefined} value/
+      )?.[1]
+      if (setMethodValueType) {
+        // console.debug(methodName,setMethodValueType)
+        item.after(`
+            ${methodName}.getValueType = function() {
+              return ${setMethodValueType};
+            }
+              `)
+      }
+    }
+  }).root()
   .generate()
 fs.writeFileSync(filePath, res, 'utf-8')

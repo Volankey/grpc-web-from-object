@@ -20,11 +20,20 @@ function doEcho(){
       scienceList: [{ name: "math", score: "23" }],
     },
     'keyScroeMap':[['ss',{'name':'nihao','score':'30'}]],
-    'keyvalueMap':[['1','1']]
+    'keyvalueMap':[['1','1']],
+    'oneOfSample':{
+      name:'红红火火',
+      // or
+
+      // 'subMessage':{
+      //   'name':'a1',
+      //   'score':'100'
+      // }
+    }
   })
   .then((t) => {
-    console.log(t.message);
-    result.value = JSON.stringify(JSON.parse(t.message),null,' ')
+    console.log(t.resp);
+    result.value = JSON.stringify(t.resp,null,' ')
   })
   .catch((e) => {});
 }

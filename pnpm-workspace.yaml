@@ -1,3 +1,4 @@
 packages:
   - example
   - value-type-transfer
+  - server/echo/node-server

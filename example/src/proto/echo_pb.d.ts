@@ -92,6 +92,38 @@ export namespace Score {
   }
 }
 
+export class OneOfSample extends jspb.Message {
+  getName(): string;
+  setName(value: string): OneOfSample;
+
+  getSubMessage(): Score | undefined;
+  setSubMessage(value?: Score): OneOfSample;
+  hasSubMessage(): boolean;
+  clearSubMessage(): OneOfSample;
+
+  getTestOneofCase(): OneOfSample.TestOneofCase;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): OneOfSample.AsObject;
+  static toObject(includeInstance: boolean, msg: OneOfSample): OneOfSample.AsObject;
+  static serializeBinaryToWriter(message: OneOfSample, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): OneOfSample;
+  static deserializeBinaryFromReader(message: OneOfSample, reader: jspb.BinaryReader): OneOfSample;
+}
+
+export namespace OneOfSample {
+  export type AsObject = {
+    name: string,
+    subMessage?: Score.AsObject,
+  }
+
+  export enum TestOneofCase { 
+    TEST_ONEOF_NOT_SET = 0,
+    NAME = 4,
+    SUB_MESSAGE = 9,
+  }
+}
+
 export class EchoRequest extends jspb.Message {
   getMessage(): string;
   setMessage(value: string): EchoRequest;
@@ -112,6 +144,11 @@ export class EchoRequest extends jspb.Message {
   getKeyScroeMap(): jspb.Map<string, Score>;
   clearKeyScroeMap(): EchoRequest;
 
+  getOneOfSample(): OneOfSample | undefined;
+  setOneOfSample(value?: OneOfSample): EchoRequest;
+  hasOneOfSample(): boolean;
+  clearOneOfSample(): EchoRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): EchoRequest.AsObject;
   static toObject(includeInstance: boolean, msg: EchoRequest): EchoRequest.AsObject;
@@ -127,6 +164,7 @@ export namespace EchoRequest {
     suject?: Suject.AsObject,
     keyvalueMap: Array<[string, string]>,
     keyScroeMap: Array<[string, Score.AsObject]>,
+    oneOfSample?: OneOfSample.AsObject,
   }
 }
 
@@ -136,6 +174,11 @@ export class EchoResponse extends jspb.Message {
 
   getMessageCount(): number;
   setMessageCount(value: number): EchoResponse;
+
+  getResp(): EchoRequest | undefined;
+  setResp(value?: EchoRequest): EchoResponse;
+  hasResp(): boolean;
+  clearResp(): EchoResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): EchoResponse.AsObject;
@@ -149,6 +192,7 @@ export namespace EchoResponse {
   export type AsObject = {
     message: string,
     messageCount: number,
+    resp?: EchoRequest.AsObject,
   }
 }
 
