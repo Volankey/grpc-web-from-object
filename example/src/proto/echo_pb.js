@@ -1,4 +1,10 @@
+import _googleProtobuf from "google-protobuf";
+var module = {
+  exports: {}
+};
+var exports = module.exports;
 // source: echo.proto
+
 /**
  * @fileoverview
  * @enhanceable
@@ -8,18 +14,31 @@
  * @public
  */
 // GENERATED CODE -- DO NOT EDIT!
+
 /* eslint-disable */
 // @ts-nocheck
-
-var jspb = require('google-protobuf');
+var jspb = _googleProtobuf;
 var goog = jspb;
-var global = (function() {
-  if (this) { return this; }
-  if (typeof window !== 'undefined') { return window; }
-  if (typeof global !== 'undefined') { return global; }
-  if (typeof self !== 'undefined') { return self; }
+
+var global = function () {
+  if (this) {
+    return this;
+  }
+
+  if (typeof window !== 'undefined') {
+    return window;
+  }
+
+  if (typeof global !== 'undefined') {
+    return global;
+  }
+
+  if (typeof self !== 'undefined') {
+    return self;
+  }
+
   return Function('return this')();
-}.call(null));
+}.call(null);
 
 goog.exportSymbol('proto.grpc.gateway.testing.ClientStreamingEchoRequest', null, global);
 goog.exportSymbol('proto.grpc.gateway.testing.ClientStreamingEchoResponse', null, global);
@@ -43,10 +62,13 @@ goog.exportSymbol('proto.grpc.gateway.testing.Suject', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.grpc.gateway.testing.Empty = function(opt_data) {
+
+proto.grpc.gateway.testing.Empty = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
+
 goog.inherits(proto.grpc.gateway.testing.Empty, jspb.Message);
+
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -64,10 +86,14 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.grpc.gateway.testing.Student = function(opt_data) {
+
+
+proto.grpc.gateway.testing.Student = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.grpc.gateway.testing.Student.repeatedFields_, null);
 };
+
 goog.inherits(proto.grpc.gateway.testing.Student, jspb.Message);
+
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -85,10 +111,14 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.grpc.gateway.testing.Suject = function(opt_data) {
+
+
+proto.grpc.gateway.testing.Suject = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.grpc.gateway.testing.Suject.repeatedFields_, null);
 };
+
 goog.inherits(proto.grpc.gateway.testing.Suject, jspb.Message);
+
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -106,10 +136,14 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.grpc.gateway.testing.Score = function(opt_data) {
+
+
+proto.grpc.gateway.testing.Score = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
+
 goog.inherits(proto.grpc.gateway.testing.Score, jspb.Message);
+
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -127,10 +161,14 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.grpc.gateway.testing.OneOfSample = function(opt_data) {
+
+
+proto.grpc.gateway.testing.OneOfSample = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, proto.grpc.gateway.testing.OneOfSample.oneofGroups_);
 };
+
 goog.inherits(proto.grpc.gateway.testing.OneOfSample, jspb.Message);
+
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -148,10 +186,14 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.grpc.gateway.testing.EchoRequest = function(opt_data) {
+
+
+proto.grpc.gateway.testing.EchoRequest = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
+
 goog.inherits(proto.grpc.gateway.testing.EchoRequest, jspb.Message);
+
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -169,10 +211,14 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.grpc.gateway.testing.EchoResponse = function(opt_data) {
+
+
+proto.grpc.gateway.testing.EchoResponse = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
+
 goog.inherits(proto.grpc.gateway.testing.EchoResponse, jspb.Message);
+
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -190,10 +236,14 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.grpc.gateway.testing.ServerStreamingEchoRequest = function(opt_data) {
+
+
+proto.grpc.gateway.testing.ServerStreamingEchoRequest = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
+
 goog.inherits(proto.grpc.gateway.testing.ServerStreamingEchoRequest, jspb.Message);
+
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -211,10 +261,14 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.grpc.gateway.testing.ServerStreamingEchoResponse = function(opt_data) {
+
+
+proto.grpc.gateway.testing.ServerStreamingEchoResponse = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
+
 goog.inherits(proto.grpc.gateway.testing.ServerStreamingEchoResponse, jspb.Message);
+
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -232,10 +286,14 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.grpc.gateway.testing.ClientStreamingEchoRequest = function(opt_data) {
+
+
+proto.grpc.gateway.testing.ClientStreamingEchoRequest = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
+
 goog.inherits(proto.grpc.gateway.testing.ClientStreamingEchoRequest, jspb.Message);
+
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -253,10 +311,14 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.grpc.gateway.testing.ClientStreamingEchoResponse = function(opt_data) {
+
+
+proto.grpc.gateway.testing.ClientStreamingEchoResponse = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
+
 goog.inherits(proto.grpc.gateway.testing.ClientStreamingEchoResponse, jspb.Message);
+
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -265,60 +327,56 @@ if (goog.DEBUG && !COMPILED) {
   proto.grpc.gateway.testing.ClientStreamingEchoResponse.displayName = 'proto.grpc.gateway.testing.ClientStreamingEchoResponse';
 }
 
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.grpc.gateway.testing.Empty.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.gateway.testing.Empty.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.grpc.gateway.testing.Empty} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.gateway.testing.Empty.toObject = function(includeInstance, msg) {
-  var f, obj = {
-
+  /**
+   * Creates an object representation of this proto.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * Optional fields that are not set will be set to undefined.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+   * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+   *     JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.grpc.gateway.testing.Empty.prototype.toObject = function (opt_includeInstance) {
+    return proto.grpc.gateway.testing.Empty.toObject(opt_includeInstance, this);
   };
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+   *     the JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.grpc.gateway.testing.Empty} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  proto.grpc.gateway.testing.Empty.toObject = function (includeInstance, msg) {
+    var f,
+        obj = {};
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+
+    return obj;
+  };
 }
-
-
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.grpc.gateway.testing.Empty}
  */
-proto.grpc.gateway.testing.Empty.deserializeBinary = function(bytes) {
+
+
+proto.grpc.gateway.testing.Empty.deserializeBinary = function (bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.gateway.testing.Empty;
+  var msg = new proto.grpc.gateway.testing.Empty();
   return proto.grpc.gateway.testing.Empty.deserializeBinaryFromReader(msg, reader);
 };
-
-
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
@@ -326,33 +384,36 @@ proto.grpc.gateway.testing.Empty.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.grpc.gateway.testing.Empty}
  */
-proto.grpc.gateway.testing.Empty.deserializeBinaryFromReader = function(msg, reader) {
+
+
+proto.grpc.gateway.testing.Empty.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
+
     var field = reader.getFieldNumber();
+
     switch (field) {
-    default:
-      reader.skipField();
-      break;
+      default:
+        reader.skipField();
+        break;
     }
   }
+
   return msg;
 };
-
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.grpc.gateway.testing.Empty.prototype.serializeBinary = function() {
+
+
+proto.grpc.gateway.testing.Empty.prototype.serializeBinary = function () {
   var writer = new jspb.BinaryWriter();
   proto.grpc.gateway.testing.Empty.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
-
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
@@ -360,75 +421,74 @@ proto.grpc.gateway.testing.Empty.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.gateway.testing.Empty.serializeBinaryToWriter = function(message, writer) {
+
+
+proto.grpc.gateway.testing.Empty.serializeBinaryToWriter = function (message, writer) {
   var f = undefined;
 };
-
-
-
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
+
+
 proto.grpc.gateway.testing.Student.repeatedFields_ = [3];
 
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.grpc.gateway.testing.Student.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.gateway.testing.Student.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.grpc.gateway.testing.Student} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.gateway.testing.Student.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    sex: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    favoratesList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f
+  /**
+   * Creates an object representation of this proto.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * Optional fields that are not set will be set to undefined.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+   * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+   *     JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.grpc.gateway.testing.Student.prototype.toObject = function (opt_includeInstance) {
+    return proto.grpc.gateway.testing.Student.toObject(opt_includeInstance, this);
   };
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+   *     the JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.grpc.gateway.testing.Student} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  proto.grpc.gateway.testing.Student.toObject = function (includeInstance, msg) {
+    var f,
+        obj = {
+      name: jspb.Message.getFieldWithDefault(msg, 1, ""),
+      sex: jspb.Message.getFieldWithDefault(msg, 2, ""),
+      favoratesList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+
+    return obj;
+  };
 }
-
-
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.grpc.gateway.testing.Student}
  */
-proto.grpc.gateway.testing.Student.deserializeBinary = function(bytes) {
+
+
+proto.grpc.gateway.testing.Student.deserializeBinary = function (bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.gateway.testing.Student;
+  var msg = new proto.grpc.gateway.testing.Student();
   return proto.grpc.gateway.testing.Student.deserializeBinaryFromReader(msg, reader);
 };
-
-
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
@@ -436,45 +496,57 @@ proto.grpc.gateway.testing.Student.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.grpc.gateway.testing.Student}
  */
-proto.grpc.gateway.testing.Student.deserializeBinaryFromReader = function(msg, reader) {
+
+
+proto.grpc.gateway.testing.Student.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
+
     var field = reader.getFieldNumber();
+
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setName(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setSex(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.addFavorates(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value =
+        /** @type {string} */
+        reader.readString();
+        msg.setName(value);
+        break;
+
+      case 2:
+        var value =
+        /** @type {string} */
+        reader.readString();
+        msg.setSex(value);
+        break;
+
+      case 3:
+        var value =
+        /** @type {string} */
+        reader.readString();
+        msg.addFavorates(value);
+        break;
+
+      default:
+        reader.skipField();
+        break;
     }
   }
+
   return msg;
 };
-
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.grpc.gateway.testing.Student.prototype.serializeBinary = function() {
+
+
+proto.grpc.gateway.testing.Student.prototype.serializeBinary = function () {
   var writer = new jspb.BinaryWriter();
   proto.grpc.gateway.testing.Student.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
-
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
@@ -482,170 +554,172 @@ proto.grpc.gateway.testing.Student.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.gateway.testing.Student.serializeBinaryToWriter = function(message, writer) {
+
+
+proto.grpc.gateway.testing.Student.serializeBinaryToWriter = function (message, writer) {
   var f = undefined;
   f = message.getName();
+
   if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
+    writer.writeString(1, f);
   }
+
   f = message.getSex();
+
   if (f.length > 0) {
-    writer.writeString(
-      2,
-      f
-    );
+    writer.writeString(2, f);
   }
+
   f = message.getFavoratesList();
+
   if (f.length > 0) {
-    writer.writeRepeatedString(
-      3,
-      f
-    );
+    writer.writeRepeatedString(3, f);
   }
 };
-
-
 /**
  * optional string name = 1;
  * @return {string}
  */
-proto.grpc.gateway.testing.Student.prototype.getName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+
+
+proto.grpc.gateway.testing.Student.prototype.getName = function () {
+  return (
+    /** @type {string} */
+    jspb.Message.getFieldWithDefault(this, 1, "")
+  );
 };
-
-
 /**
  * @param {string} value
  * @return {!proto.grpc.gateway.testing.Student} returns this
  */
-proto.grpc.gateway.testing.Student.prototype.setName = function(value) {
+
+
+proto.grpc.gateway.testing.Student.prototype.setName = function (value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
-
-
 /**
  * optional string sex = 2;
  * @return {string}
  */
-proto.grpc.gateway.testing.Student.prototype.getSex = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+
+
+proto.grpc.gateway.testing.Student.prototype.getSex = function () {
+  return (
+    /** @type {string} */
+    jspb.Message.getFieldWithDefault(this, 2, "")
+  );
 };
-
-
 /**
  * @param {string} value
  * @return {!proto.grpc.gateway.testing.Student} returns this
  */
-proto.grpc.gateway.testing.Student.prototype.setSex = function(value) {
+
+
+proto.grpc.gateway.testing.Student.prototype.setSex = function (value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
-
-
 /**
  * repeated string favorates = 3;
  * @return {!Array<string>}
  */
-proto.grpc.gateway.testing.Student.prototype.getFavoratesList = function() {
-  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 3));
+
+
+proto.grpc.gateway.testing.Student.prototype.getFavoratesList = function () {
+  return (
+    /** @type {!Array<string>} */
+    jspb.Message.getRepeatedField(this, 3)
+  );
 };
-
-
 /**
  * @param {!Array<string>} value
  * @return {!proto.grpc.gateway.testing.Student} returns this
  */
-proto.grpc.gateway.testing.Student.prototype.setFavoratesList = function(value) {
+
+
+proto.grpc.gateway.testing.Student.prototype.setFavoratesList = function (value) {
   return jspb.Message.setField(this, 3, value || []);
 };
-
-
 /**
  * @param {string} value
  * @param {number=} opt_index
  * @return {!proto.grpc.gateway.testing.Student} returns this
  */
-proto.grpc.gateway.testing.Student.prototype.addFavorates = function(value, opt_index) {
+
+
+proto.grpc.gateway.testing.Student.prototype.addFavorates = function (value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 3, value, opt_index);
 };
-
-
 /**
  * Clears the list making it empty but non-null.
  * @return {!proto.grpc.gateway.testing.Student} returns this
  */
-proto.grpc.gateway.testing.Student.prototype.clearFavoratesList = function() {
+
+
+proto.grpc.gateway.testing.Student.prototype.clearFavoratesList = function () {
   return this.setFavoratesList([]);
 };
-
-
-
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.grpc.gateway.testing.Suject.repeatedFields_ = [1,2];
 
 
+proto.grpc.gateway.testing.Suject.repeatedFields_ = [1, 2];
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.grpc.gateway.testing.Suject.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.gateway.testing.Suject.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.grpc.gateway.testing.Suject} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.gateway.testing.Suject.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    liberalArtsList: jspb.Message.toObjectList(msg.getLiberalArtsList(),
-    proto.grpc.gateway.testing.Score.toObject, includeInstance),
-    scienceList: jspb.Message.toObjectList(msg.getScienceList(),
-    proto.grpc.gateway.testing.Score.toObject, includeInstance)
+  /**
+   * Creates an object representation of this proto.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * Optional fields that are not set will be set to undefined.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+   * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+   *     JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.grpc.gateway.testing.Suject.prototype.toObject = function (opt_includeInstance) {
+    return proto.grpc.gateway.testing.Suject.toObject(opt_includeInstance, this);
   };
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+   *     the JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.grpc.gateway.testing.Suject} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  proto.grpc.gateway.testing.Suject.toObject = function (includeInstance, msg) {
+    var f,
+        obj = {
+      liberalArtsList: jspb.Message.toObjectList(msg.getLiberalArtsList(), proto.grpc.gateway.testing.Score.toObject, includeInstance),
+      scienceList: jspb.Message.toObjectList(msg.getScienceList(), proto.grpc.gateway.testing.Score.toObject, includeInstance)
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+
+    return obj;
+  };
 }
-
-
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.grpc.gateway.testing.Suject}
  */
-proto.grpc.gateway.testing.Suject.deserializeBinary = function(bytes) {
+
+
+proto.grpc.gateway.testing.Suject.deserializeBinary = function (bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.gateway.testing.Suject;
+  var msg = new proto.grpc.gateway.testing.Suject();
   return proto.grpc.gateway.testing.Suject.deserializeBinaryFromReader(msg, reader);
 };
-
-
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
@@ -653,43 +727,48 @@ proto.grpc.gateway.testing.Suject.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.grpc.gateway.testing.Suject}
  */
-proto.grpc.gateway.testing.Suject.deserializeBinaryFromReader = function(msg, reader) {
+
+
+proto.grpc.gateway.testing.Suject.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
+
     var field = reader.getFieldNumber();
+
     switch (field) {
-    case 1:
-      var value = new proto.grpc.gateway.testing.Score;
-      reader.readMessage(value,proto.grpc.gateway.testing.Score.deserializeBinaryFromReader);
-      msg.addLiberalArts(value);
-      break;
-    case 2:
-      var value = new proto.grpc.gateway.testing.Score;
-      reader.readMessage(value,proto.grpc.gateway.testing.Score.deserializeBinaryFromReader);
-      msg.addScience(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = new proto.grpc.gateway.testing.Score();
+        reader.readMessage(value, proto.grpc.gateway.testing.Score.deserializeBinaryFromReader);
+        msg.addLiberalArts(value);
+        break;
+
+      case 2:
+        var value = new proto.grpc.gateway.testing.Score();
+        reader.readMessage(value, proto.grpc.gateway.testing.Score.deserializeBinaryFromReader);
+        msg.addScience(value);
+        break;
+
+      default:
+        reader.skipField();
+        break;
     }
   }
+
   return msg;
 };
-
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.grpc.gateway.testing.Suject.prototype.serializeBinary = function() {
+
+
+proto.grpc.gateway.testing.Suject.prototype.serializeBinary = function () {
   var writer = new jspb.BinaryWriter();
   proto.grpc.gateway.testing.Suject.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
-
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
@@ -697,179 +776,176 @@ proto.grpc.gateway.testing.Suject.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.gateway.testing.Suject.serializeBinaryToWriter = function(message, writer) {
+
+
+proto.grpc.gateway.testing.Suject.serializeBinaryToWriter = function (message, writer) {
   var f = undefined;
   f = message.getLiberalArtsList();
+
   if (f.length > 0) {
-    writer.writeRepeatedMessage(
-      1,
-      f,
-      proto.grpc.gateway.testing.Score.serializeBinaryToWriter
-    );
+    writer.writeRepeatedMessage(1, f, proto.grpc.gateway.testing.Score.serializeBinaryToWriter);
   }
+
   f = message.getScienceList();
+
   if (f.length > 0) {
-    writer.writeRepeatedMessage(
-      2,
-      f,
-      proto.grpc.gateway.testing.Score.serializeBinaryToWriter
-    );
+    writer.writeRepeatedMessage(2, f, proto.grpc.gateway.testing.Score.serializeBinaryToWriter);
   }
 };
-
-
 /**
  * repeated Score liberal_arts = 1;
  * @return {!Array<!proto.grpc.gateway.testing.Score>}
  */
-proto.grpc.gateway.testing.Suject.prototype.getLiberalArtsList = function() {
-  return /** @type{!Array<!proto.grpc.gateway.testing.Score>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.grpc.gateway.testing.Score, 1));
+
+
+proto.grpc.gateway.testing.Suject.prototype.getLiberalArtsList = function () {
+  return (
+    /** @type{!Array<!proto.grpc.gateway.testing.Score>} */
+    jspb.Message.getRepeatedWrapperField(this, proto.grpc.gateway.testing.Score, 1)
+  );
 };
-
-
 /**
  * @param {!Array<!proto.grpc.gateway.testing.Score>} value
  * @return {!proto.grpc.gateway.testing.Suject} returns this
 */
-proto.grpc.gateway.testing.Suject.prototype.setLiberalArtsList = function(value) {
+
+
+proto.grpc.gateway.testing.Suject.prototype.setLiberalArtsList = function (value) {
   return jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
 
-
-proto.grpc.gateway.testing.Suject.prototype.setLiberalArtsList.getValueType = function() {
+proto.grpc.gateway.testing.Suject.prototype.setLiberalArtsList.getValueType = function () {
   return proto.grpc.gateway.testing.Score;
-}
-
-
+};
 /**
  * @param {proto.grpc.gateway.testing.Score} value
  * @return {!proto.grpc.gateway.testing.Suject} returns this
 */
+
+
 proto.grpc.gateway.testing.Suject.prototype.setLiberalArtsList.valueType = proto.grpc.gateway.testing.Score;
 /**
  * @param {!proto.grpc.gateway.testing.Score=} opt_value
  * @param {number=} opt_index
  * @return {!proto.grpc.gateway.testing.Score}
  */
-proto.grpc.gateway.testing.Suject.prototype.addLiberalArts = function(opt_value, opt_index) {
+
+proto.grpc.gateway.testing.Suject.prototype.addLiberalArts = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.grpc.gateway.testing.Score, opt_index);
 };
-
-
 /**
  * Clears the list making it empty but non-null.
  * @return {!proto.grpc.gateway.testing.Suject} returns this
  */
-proto.grpc.gateway.testing.Suject.prototype.clearLiberalArtsList = function() {
+
+
+proto.grpc.gateway.testing.Suject.prototype.clearLiberalArtsList = function () {
   return this.setLiberalArtsList([]);
 };
-
-
 /**
  * repeated Score science = 2;
  * @return {!Array<!proto.grpc.gateway.testing.Score>}
  */
-proto.grpc.gateway.testing.Suject.prototype.getScienceList = function() {
-  return /** @type{!Array<!proto.grpc.gateway.testing.Score>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.grpc.gateway.testing.Score, 2));
+
+
+proto.grpc.gateway.testing.Suject.prototype.getScienceList = function () {
+  return (
+    /** @type{!Array<!proto.grpc.gateway.testing.Score>} */
+    jspb.Message.getRepeatedWrapperField(this, proto.grpc.gateway.testing.Score, 2)
+  );
 };
-
-
 /**
  * @param {!Array<!proto.grpc.gateway.testing.Score>} value
  * @return {!proto.grpc.gateway.testing.Suject} returns this
 */
-proto.grpc.gateway.testing.Suject.prototype.setScienceList = function(value) {
+
+
+proto.grpc.gateway.testing.Suject.prototype.setScienceList = function (value) {
   return jspb.Message.setRepeatedWrapperField(this, 2, value);
 };
 
-
-proto.grpc.gateway.testing.Suject.prototype.setScienceList.getValueType = function() {
+proto.grpc.gateway.testing.Suject.prototype.setScienceList.getValueType = function () {
   return proto.grpc.gateway.testing.Score;
-}
-
-
+};
 /**
  * @param {proto.grpc.gateway.testing.Score} value
  * @return {!proto.grpc.gateway.testing.Suject} returns this
 */
+
+
 proto.grpc.gateway.testing.Suject.prototype.setScienceList.valueType = proto.grpc.gateway.testing.Score;
 /**
  * @param {!proto.grpc.gateway.testing.Score=} opt_value
  * @param {number=} opt_index
  * @return {!proto.grpc.gateway.testing.Score}
  */
-proto.grpc.gateway.testing.Suject.prototype.addScience = function(opt_value, opt_index) {
+
+proto.grpc.gateway.testing.Suject.prototype.addScience = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.grpc.gateway.testing.Score, opt_index);
 };
-
-
 /**
  * Clears the list making it empty but non-null.
  * @return {!proto.grpc.gateway.testing.Suject} returns this
  */
-proto.grpc.gateway.testing.Suject.prototype.clearScienceList = function() {
+
+
+proto.grpc.gateway.testing.Suject.prototype.clearScienceList = function () {
   return this.setScienceList([]);
 };
 
-
-
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.grpc.gateway.testing.Score.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.gateway.testing.Score.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.grpc.gateway.testing.Score} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.gateway.testing.Score.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    score: jspb.Message.getFieldWithDefault(msg, 2, "")
+  /**
+   * Creates an object representation of this proto.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * Optional fields that are not set will be set to undefined.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+   * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+   *     JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.grpc.gateway.testing.Score.prototype.toObject = function (opt_includeInstance) {
+    return proto.grpc.gateway.testing.Score.toObject(opt_includeInstance, this);
   };
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+   *     the JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.grpc.gateway.testing.Score} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  proto.grpc.gateway.testing.Score.toObject = function (includeInstance, msg) {
+    var f,
+        obj = {
+      name: jspb.Message.getFieldWithDefault(msg, 1, ""),
+      score: jspb.Message.getFieldWithDefault(msg, 2, "")
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+
+    return obj;
+  };
 }
-
-
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.grpc.gateway.testing.Score}
  */
-proto.grpc.gateway.testing.Score.deserializeBinary = function(bytes) {
+
+
+proto.grpc.gateway.testing.Score.deserializeBinary = function (bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.gateway.testing.Score;
+  var msg = new proto.grpc.gateway.testing.Score();
   return proto.grpc.gateway.testing.Score.deserializeBinaryFromReader(msg, reader);
 };
-
-
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
@@ -877,41 +953,50 @@ proto.grpc.gateway.testing.Score.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.grpc.gateway.testing.Score}
  */
-proto.grpc.gateway.testing.Score.deserializeBinaryFromReader = function(msg, reader) {
+
+
+proto.grpc.gateway.testing.Score.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
+
     var field = reader.getFieldNumber();
+
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setName(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setScore(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value =
+        /** @type {string} */
+        reader.readString();
+        msg.setName(value);
+        break;
+
+      case 2:
+        var value =
+        /** @type {string} */
+        reader.readString();
+        msg.setScore(value);
+        break;
+
+      default:
+        reader.skipField();
+        break;
     }
   }
+
   return msg;
 };
-
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.grpc.gateway.testing.Score.prototype.serializeBinary = function() {
+
+
+proto.grpc.gateway.testing.Score.prototype.serializeBinary = function () {
   var writer = new jspb.BinaryWriter();
   proto.grpc.gateway.testing.Score.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
-
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
@@ -919,62 +1004,64 @@ proto.grpc.gateway.testing.Score.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.gateway.testing.Score.serializeBinaryToWriter = function(message, writer) {
+
+
+proto.grpc.gateway.testing.Score.serializeBinaryToWriter = function (message, writer) {
   var f = undefined;
   f = message.getName();
+
   if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
+    writer.writeString(1, f);
   }
+
   f = message.getScore();
+
   if (f.length > 0) {
-    writer.writeString(
-      2,
-      f
-    );
+    writer.writeString(2, f);
   }
 };
-
-
 /**
  * optional string name = 1;
  * @return {string}
  */
-proto.grpc.gateway.testing.Score.prototype.getName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+
+
+proto.grpc.gateway.testing.Score.prototype.getName = function () {
+  return (
+    /** @type {string} */
+    jspb.Message.getFieldWithDefault(this, 1, "")
+  );
 };
-
-
 /**
  * @param {string} value
  * @return {!proto.grpc.gateway.testing.Score} returns this
  */
-proto.grpc.gateway.testing.Score.prototype.setName = function(value) {
+
+
+proto.grpc.gateway.testing.Score.prototype.setName = function (value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
-
-
 /**
  * optional string score = 2;
  * @return {string}
  */
-proto.grpc.gateway.testing.Score.prototype.getScore = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+
+
+proto.grpc.gateway.testing.Score.prototype.getScore = function () {
+  return (
+    /** @type {string} */
+    jspb.Message.getFieldWithDefault(this, 2, "")
+  );
 };
-
-
 /**
  * @param {string} value
  * @return {!proto.grpc.gateway.testing.Score} returns this
  */
-proto.grpc.gateway.testing.Score.prototype.setScore = function(value) {
+
+
+proto.grpc.gateway.testing.Score.prototype.setScore = function (value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
-
-
-
 /**
  * Oneof group definitions for this message. Each group defines the field
  * numbers belonging to that group. When of these fields' value is set, all
@@ -983,79 +1070,82 @@ proto.grpc.gateway.testing.Score.prototype.setScore = function(value) {
  * @private {!Array<!Array<number>>}
  * @const
  */
-proto.grpc.gateway.testing.OneOfSample.oneofGroups_ = [[4,9]];
 
+
+proto.grpc.gateway.testing.OneOfSample.oneofGroups_ = [[4, 9]];
 /**
  * @enum {number}
  */
+
 proto.grpc.gateway.testing.OneOfSample.TestOneofCase = {
   TEST_ONEOF_NOT_SET: 0,
   NAME: 4,
   SUB_MESSAGE: 9
 };
-
 /**
  * @return {proto.grpc.gateway.testing.OneOfSample.TestOneofCase}
  */
-proto.grpc.gateway.testing.OneOfSample.prototype.getTestOneofCase = function() {
-  return /** @type {proto.grpc.gateway.testing.OneOfSample.TestOneofCase} */(jspb.Message.computeOneofCase(this, proto.grpc.gateway.testing.OneOfSample.oneofGroups_[0]));
+
+proto.grpc.gateway.testing.OneOfSample.prototype.getTestOneofCase = function () {
+  return (
+    /** @type {proto.grpc.gateway.testing.OneOfSample.TestOneofCase} */
+    jspb.Message.computeOneofCase(this, proto.grpc.gateway.testing.OneOfSample.oneofGroups_[0])
+  );
 };
-
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.grpc.gateway.testing.OneOfSample.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.gateway.testing.OneOfSample.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.grpc.gateway.testing.OneOfSample} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.gateway.testing.OneOfSample.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    name: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    subMessage: (f = msg.getSubMessage()) && proto.grpc.gateway.testing.Score.toObject(includeInstance, f)
+  /**
+   * Creates an object representation of this proto.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * Optional fields that are not set will be set to undefined.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+   * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+   *     JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.grpc.gateway.testing.OneOfSample.prototype.toObject = function (opt_includeInstance) {
+    return proto.grpc.gateway.testing.OneOfSample.toObject(opt_includeInstance, this);
   };
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+   *     the JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.grpc.gateway.testing.OneOfSample} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  proto.grpc.gateway.testing.OneOfSample.toObject = function (includeInstance, msg) {
+    var f,
+        obj = {
+      name: jspb.Message.getFieldWithDefault(msg, 4, ""),
+      subMessage: (f = msg.getSubMessage()) && proto.grpc.gateway.testing.Score.toObject(includeInstance, f)
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+
+    return obj;
+  };
 }
-
-
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.grpc.gateway.testing.OneOfSample}
  */
-proto.grpc.gateway.testing.OneOfSample.deserializeBinary = function(bytes) {
+
+
+proto.grpc.gateway.testing.OneOfSample.deserializeBinary = function (bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.gateway.testing.OneOfSample;
+  var msg = new proto.grpc.gateway.testing.OneOfSample();
   return proto.grpc.gateway.testing.OneOfSample.deserializeBinaryFromReader(msg, reader);
 };
-
-
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
@@ -1063,42 +1153,49 @@ proto.grpc.gateway.testing.OneOfSample.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.grpc.gateway.testing.OneOfSample}
  */
-proto.grpc.gateway.testing.OneOfSample.deserializeBinaryFromReader = function(msg, reader) {
+
+
+proto.grpc.gateway.testing.OneOfSample.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
+
     var field = reader.getFieldNumber();
+
     switch (field) {
-    case 4:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setName(value);
-      break;
-    case 9:
-      var value = new proto.grpc.gateway.testing.Score;
-      reader.readMessage(value,proto.grpc.gateway.testing.Score.deserializeBinaryFromReader);
-      msg.setSubMessage(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 4:
+        var value =
+        /** @type {string} */
+        reader.readString();
+        msg.setName(value);
+        break;
+
+      case 9:
+        var value = new proto.grpc.gateway.testing.Score();
+        reader.readMessage(value, proto.grpc.gateway.testing.Score.deserializeBinaryFromReader);
+        msg.setSubMessage(value);
+        break;
+
+      default:
+        reader.skipField();
+        break;
     }
   }
+
   return msg;
 };
-
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.grpc.gateway.testing.OneOfSample.prototype.serializeBinary = function() {
+
+
+proto.grpc.gateway.testing.OneOfSample.prototype.serializeBinary = function () {
   var writer = new jspb.BinaryWriter();
   proto.grpc.gateway.testing.OneOfSample.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
-
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
@@ -1106,169 +1203,170 @@ proto.grpc.gateway.testing.OneOfSample.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.gateway.testing.OneOfSample.serializeBinaryToWriter = function(message, writer) {
+
+
+proto.grpc.gateway.testing.OneOfSample.serializeBinaryToWriter = function (message, writer) {
   var f = undefined;
-  f = /** @type {string} */ (jspb.Message.getField(message, 4));
+  f =
+  /** @type {string} */
+  jspb.Message.getField(message, 4);
+
   if (f != null) {
-    writer.writeString(
-      4,
-      f
-    );
+    writer.writeString(4, f);
   }
+
   f = message.getSubMessage();
+
   if (f != null) {
-    writer.writeMessage(
-      9,
-      f,
-      proto.grpc.gateway.testing.Score.serializeBinaryToWriter
-    );
+    writer.writeMessage(9, f, proto.grpc.gateway.testing.Score.serializeBinaryToWriter);
   }
 };
-
-
 /**
  * optional string name = 4;
  * @return {string}
  */
-proto.grpc.gateway.testing.OneOfSample.prototype.getName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+
+
+proto.grpc.gateway.testing.OneOfSample.prototype.getName = function () {
+  return (
+    /** @type {string} */
+    jspb.Message.getFieldWithDefault(this, 4, "")
+  );
 };
-
-
 /**
  * @param {string} value
  * @return {!proto.grpc.gateway.testing.OneOfSample} returns this
  */
-proto.grpc.gateway.testing.OneOfSample.prototype.setName = function(value) {
+
+
+proto.grpc.gateway.testing.OneOfSample.prototype.setName = function (value) {
   return jspb.Message.setOneofField(this, 4, proto.grpc.gateway.testing.OneOfSample.oneofGroups_[0], value);
 };
-
-
 /**
  * Clears the field making it undefined.
  * @return {!proto.grpc.gateway.testing.OneOfSample} returns this
  */
-proto.grpc.gateway.testing.OneOfSample.prototype.clearName = function() {
+
+
+proto.grpc.gateway.testing.OneOfSample.prototype.clearName = function () {
   return jspb.Message.setOneofField(this, 4, proto.grpc.gateway.testing.OneOfSample.oneofGroups_[0], undefined);
 };
-
-
 /**
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.grpc.gateway.testing.OneOfSample.prototype.hasName = function() {
+
+
+proto.grpc.gateway.testing.OneOfSample.prototype.hasName = function () {
   return jspb.Message.getField(this, 4) != null;
 };
-
-
 /**
  * optional Score sub_message = 9;
  * @return {?proto.grpc.gateway.testing.Score}
  */
-proto.grpc.gateway.testing.OneOfSample.prototype.getSubMessage = function() {
-  return /** @type{?proto.grpc.gateway.testing.Score} */ (
-    jspb.Message.getWrapperField(this, proto.grpc.gateway.testing.Score, 9));
+
+
+proto.grpc.gateway.testing.OneOfSample.prototype.getSubMessage = function () {
+  return (
+    /** @type{?proto.grpc.gateway.testing.Score} */
+    jspb.Message.getWrapperField(this, proto.grpc.gateway.testing.Score, 9)
+  );
 };
-
-
 /**
  * @param {?proto.grpc.gateway.testing.Score|undefined} value
  * @return {!proto.grpc.gateway.testing.OneOfSample} returns this
 */
-proto.grpc.gateway.testing.OneOfSample.prototype.setSubMessage = function(value) {
+
+
+proto.grpc.gateway.testing.OneOfSample.prototype.setSubMessage = function (value) {
   return jspb.Message.setOneofWrapperField(this, 9, proto.grpc.gateway.testing.OneOfSample.oneofGroups_[0], value);
 };
 
-
-proto.grpc.gateway.testing.OneOfSample.prototype.setSubMessage.getValueType = function() {
+proto.grpc.gateway.testing.OneOfSample.prototype.setSubMessage.getValueType = function () {
   return proto.grpc.gateway.testing.Score;
-}
-
-
+};
 /**
  * @param {proto.grpc.gateway.testing.Score} value
  * @return {!proto.grpc.gateway.testing.OneOfSample} returns this
 */
+
+
 proto.grpc.gateway.testing.OneOfSample.prototype.setSubMessage.valueType = proto.grpc.gateway.testing.Score;
 /**
  * Clears the message field making it undefined.
  * @return {!proto.grpc.gateway.testing.OneOfSample} returns this
  */
-proto.grpc.gateway.testing.OneOfSample.prototype.clearSubMessage = function() {
+
+proto.grpc.gateway.testing.OneOfSample.prototype.clearSubMessage = function () {
   return this.setSubMessage(undefined);
 };
-
-
 /**
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.grpc.gateway.testing.OneOfSample.prototype.hasSubMessage = function() {
+
+
+proto.grpc.gateway.testing.OneOfSample.prototype.hasSubMessage = function () {
   return jspb.Message.getField(this, 9) != null;
 };
 
-
-
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.grpc.gateway.testing.EchoRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.gateway.testing.EchoRequest.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.grpc.gateway.testing.EchoRequest} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.gateway.testing.EchoRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    message: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    student: (f = msg.getStudent()) && proto.grpc.gateway.testing.Student.toObject(includeInstance, f),
-    suject: (f = msg.getSuject()) && proto.grpc.gateway.testing.Suject.toObject(includeInstance, f),
-    keyvalueMap: (f = msg.getKeyvalueMap()) ? f.toObject(includeInstance, undefined) : [],
-    keyScroeMap: (f = msg.getKeyScroeMap()) ? f.toObject(includeInstance, proto.grpc.gateway.testing.Score.toObject) : [],
-    oneOfSample: (f = msg.getOneOfSample()) && proto.grpc.gateway.testing.OneOfSample.toObject(includeInstance, f)
+  /**
+   * Creates an object representation of this proto.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * Optional fields that are not set will be set to undefined.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+   * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+   *     JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.grpc.gateway.testing.EchoRequest.prototype.toObject = function (opt_includeInstance) {
+    return proto.grpc.gateway.testing.EchoRequest.toObject(opt_includeInstance, this);
   };
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+   *     the JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.grpc.gateway.testing.EchoRequest} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  proto.grpc.gateway.testing.EchoRequest.toObject = function (includeInstance, msg) {
+    var f,
+        obj = {
+      message: jspb.Message.getFieldWithDefault(msg, 1, ""),
+      student: (f = msg.getStudent()) && proto.grpc.gateway.testing.Student.toObject(includeInstance, f),
+      suject: (f = msg.getSuject()) && proto.grpc.gateway.testing.Suject.toObject(includeInstance, f),
+      keyvalueMap: (f = msg.getKeyvalueMap()) ? f.toObject(includeInstance, undefined) : [],
+      keyScroeMap: (f = msg.getKeyScroeMap()) ? f.toObject(includeInstance, proto.grpc.gateway.testing.Score.toObject) : [],
+      oneOfSample: (f = msg.getOneOfSample()) && proto.grpc.gateway.testing.OneOfSample.toObject(includeInstance, f)
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+
+    return obj;
+  };
 }
-
-
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.grpc.gateway.testing.EchoRequest}
  */
-proto.grpc.gateway.testing.EchoRequest.deserializeBinary = function(bytes) {
+
+
+proto.grpc.gateway.testing.EchoRequest.deserializeBinary = function (bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.gateway.testing.EchoRequest;
+  var msg = new proto.grpc.gateway.testing.EchoRequest();
   return proto.grpc.gateway.testing.EchoRequest.deserializeBinaryFromReader(msg, reader);
 };
-
-
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
@@ -1276,64 +1374,75 @@ proto.grpc.gateway.testing.EchoRequest.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.grpc.gateway.testing.EchoRequest}
  */
-proto.grpc.gateway.testing.EchoRequest.deserializeBinaryFromReader = function(msg, reader) {
+
+
+proto.grpc.gateway.testing.EchoRequest.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
+
     var field = reader.getFieldNumber();
+
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setMessage(value);
-      break;
-    case 2:
-      var value = new proto.grpc.gateway.testing.Student;
-      reader.readMessage(value,proto.grpc.gateway.testing.Student.deserializeBinaryFromReader);
-      msg.setStudent(value);
-      break;
-    case 3:
-      var value = new proto.grpc.gateway.testing.Suject;
-      reader.readMessage(value,proto.grpc.gateway.testing.Suject.deserializeBinaryFromReader);
-      msg.setSuject(value);
-      break;
-    case 4:
-      var value = msg.getKeyvalueMap();
-      reader.readMessage(value, function(message, reader) {
-        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "", "");
-         });
-      break;
-    case 5:
-      var value = msg.getKeyScroeMap();
-      reader.readMessage(value, function(message, reader) {
-        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.grpc.gateway.testing.Score.deserializeBinaryFromReader, "", new proto.grpc.gateway.testing.Score());
-         });
-      break;
-    case 6:
-      var value = new proto.grpc.gateway.testing.OneOfSample;
-      reader.readMessage(value,proto.grpc.gateway.testing.OneOfSample.deserializeBinaryFromReader);
-      msg.setOneOfSample(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value =
+        /** @type {string} */
+        reader.readString();
+        msg.setMessage(value);
+        break;
+
+      case 2:
+        var value = new proto.grpc.gateway.testing.Student();
+        reader.readMessage(value, proto.grpc.gateway.testing.Student.deserializeBinaryFromReader);
+        msg.setStudent(value);
+        break;
+
+      case 3:
+        var value = new proto.grpc.gateway.testing.Suject();
+        reader.readMessage(value, proto.grpc.gateway.testing.Suject.deserializeBinaryFromReader);
+        msg.setSuject(value);
+        break;
+
+      case 4:
+        var value = msg.getKeyvalueMap();
+        reader.readMessage(value, function (message, reader) {
+          jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "", "");
+        });
+        break;
+
+      case 5:
+        var value = msg.getKeyScroeMap();
+        reader.readMessage(value, function (message, reader) {
+          jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.grpc.gateway.testing.Score.deserializeBinaryFromReader, "", new proto.grpc.gateway.testing.Score());
+        });
+        break;
+
+      case 6:
+        var value = new proto.grpc.gateway.testing.OneOfSample();
+        reader.readMessage(value, proto.grpc.gateway.testing.OneOfSample.deserializeBinaryFromReader);
+        msg.setOneOfSample(value);
+        break;
+
+      default:
+        reader.skipField();
+        break;
     }
   }
+
   return msg;
 };
-
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.grpc.gateway.testing.EchoRequest.prototype.serializeBinary = function() {
+
+
+proto.grpc.gateway.testing.EchoRequest.prototype.serializeBinary = function () {
   var writer = new jspb.BinaryWriter();
   proto.grpc.gateway.testing.EchoRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
-
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
@@ -1341,330 +1450,341 @@ proto.grpc.gateway.testing.EchoRequest.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.gateway.testing.EchoRequest.serializeBinaryToWriter = function(message, writer) {
+
+
+proto.grpc.gateway.testing.EchoRequest.serializeBinaryToWriter = function (message, writer) {
   var f = undefined;
   f = message.getMessage();
+
   if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
+    writer.writeString(1, f);
   }
+
   f = message.getStudent();
+
   if (f != null) {
-    writer.writeMessage(
-      2,
-      f,
-      proto.grpc.gateway.testing.Student.serializeBinaryToWriter
-    );
+    writer.writeMessage(2, f, proto.grpc.gateway.testing.Student.serializeBinaryToWriter);
   }
+
   f = message.getSuject();
+
   if (f != null) {
-    writer.writeMessage(
-      3,
-      f,
-      proto.grpc.gateway.testing.Suject.serializeBinaryToWriter
-    );
+    writer.writeMessage(3, f, proto.grpc.gateway.testing.Suject.serializeBinaryToWriter);
   }
+
   f = message.getKeyvalueMap(true);
+
   if (f && f.getLength() > 0) {
     f.serializeBinary(4, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
   }
+
   f = message.getKeyScroeMap(true);
+
   if (f && f.getLength() > 0) {
     f.serializeBinary(5, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeMessage, proto.grpc.gateway.testing.Score.serializeBinaryToWriter);
   }
+
   f = message.getOneOfSample();
+
   if (f != null) {
-    writer.writeMessage(
-      6,
-      f,
-      proto.grpc.gateway.testing.OneOfSample.serializeBinaryToWriter
-    );
+    writer.writeMessage(6, f, proto.grpc.gateway.testing.OneOfSample.serializeBinaryToWriter);
   }
 };
-
-
 /**
  * optional string message = 1;
  * @return {string}
  */
-proto.grpc.gateway.testing.EchoRequest.prototype.getMessage = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+
+
+proto.grpc.gateway.testing.EchoRequest.prototype.getMessage = function () {
+  return (
+    /** @type {string} */
+    jspb.Message.getFieldWithDefault(this, 1, "")
+  );
 };
-
-
 /**
  * @param {string} value
  * @return {!proto.grpc.gateway.testing.EchoRequest} returns this
  */
-proto.grpc.gateway.testing.EchoRequest.prototype.setMessage = function(value) {
+
+
+proto.grpc.gateway.testing.EchoRequest.prototype.setMessage = function (value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
-
-
 /**
  * optional Student student = 2;
  * @return {?proto.grpc.gateway.testing.Student}
  */
-proto.grpc.gateway.testing.EchoRequest.prototype.getStudent = function() {
-  return /** @type{?proto.grpc.gateway.testing.Student} */ (
-    jspb.Message.getWrapperField(this, proto.grpc.gateway.testing.Student, 2));
+
+
+proto.grpc.gateway.testing.EchoRequest.prototype.getStudent = function () {
+  return (
+    /** @type{?proto.grpc.gateway.testing.Student} */
+    jspb.Message.getWrapperField(this, proto.grpc.gateway.testing.Student, 2)
+  );
 };
-
-
 /**
  * @param {?proto.grpc.gateway.testing.Student|undefined} value
  * @return {!proto.grpc.gateway.testing.EchoRequest} returns this
 */
-proto.grpc.gateway.testing.EchoRequest.prototype.setStudent = function(value) {
+
+
+proto.grpc.gateway.testing.EchoRequest.prototype.setStudent = function (value) {
   return jspb.Message.setWrapperField(this, 2, value);
 };
 
-
-proto.grpc.gateway.testing.EchoRequest.prototype.setStudent.getValueType = function() {
+proto.grpc.gateway.testing.EchoRequest.prototype.setStudent.getValueType = function () {
   return proto.grpc.gateway.testing.Student;
-}
-
-
+};
 /**
  * @param {proto.grpc.gateway.testing.Student} value
  * @return {!proto.grpc.gateway.testing.EchoRequest} returns this
 */
+
+
 proto.grpc.gateway.testing.EchoRequest.prototype.setStudent.valueType = proto.grpc.gateway.testing.Student;
 /**
  * Clears the message field making it undefined.
  * @return {!proto.grpc.gateway.testing.EchoRequest} returns this
  */
-proto.grpc.gateway.testing.EchoRequest.prototype.clearStudent = function() {
+
+proto.grpc.gateway.testing.EchoRequest.prototype.clearStudent = function () {
   return this.setStudent(undefined);
 };
-
-
 /**
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.grpc.gateway.testing.EchoRequest.prototype.hasStudent = function() {
+
+
+proto.grpc.gateway.testing.EchoRequest.prototype.hasStudent = function () {
   return jspb.Message.getField(this, 2) != null;
 };
-
-
 /**
  * optional Suject suject = 3;
  * @return {?proto.grpc.gateway.testing.Suject}
  */
-proto.grpc.gateway.testing.EchoRequest.prototype.getSuject = function() {
-  return /** @type{?proto.grpc.gateway.testing.Suject} */ (
-    jspb.Message.getWrapperField(this, proto.grpc.gateway.testing.Suject, 3));
+
+
+proto.grpc.gateway.testing.EchoRequest.prototype.getSuject = function () {
+  return (
+    /** @type{?proto.grpc.gateway.testing.Suject} */
+    jspb.Message.getWrapperField(this, proto.grpc.gateway.testing.Suject, 3)
+  );
 };
-
-
 /**
  * @param {?proto.grpc.gateway.testing.Suject|undefined} value
  * @return {!proto.grpc.gateway.testing.EchoRequest} returns this
 */
-proto.grpc.gateway.testing.EchoRequest.prototype.setSuject = function(value) {
+
+
+proto.grpc.gateway.testing.EchoRequest.prototype.setSuject = function (value) {
   return jspb.Message.setWrapperField(this, 3, value);
 };
 
-
-proto.grpc.gateway.testing.EchoRequest.prototype.setSuject.getValueType = function() {
+proto.grpc.gateway.testing.EchoRequest.prototype.setSuject.getValueType = function () {
   return proto.grpc.gateway.testing.Suject;
-}
-
-
+};
 /**
  * @param {proto.grpc.gateway.testing.Suject} value
  * @return {!proto.grpc.gateway.testing.EchoRequest} returns this
 */
+
+
 proto.grpc.gateway.testing.EchoRequest.prototype.setSuject.valueType = proto.grpc.gateway.testing.Suject;
 /**
  * Clears the message field making it undefined.
  * @return {!proto.grpc.gateway.testing.EchoRequest} returns this
  */
-proto.grpc.gateway.testing.EchoRequest.prototype.clearSuject = function() {
+
+proto.grpc.gateway.testing.EchoRequest.prototype.clearSuject = function () {
   return this.setSuject(undefined);
 };
-
-
 /**
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.grpc.gateway.testing.EchoRequest.prototype.hasSuject = function() {
+
+
+proto.grpc.gateway.testing.EchoRequest.prototype.hasSuject = function () {
   return jspb.Message.getField(this, 3) != null;
 };
-
-
 /**
  * map<string, string> keyValue = 4;
  * @param {boolean=} opt_noLazyCreate Do not create the map if
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
-proto.grpc.gateway.testing.EchoRequest.prototype.getKeyvalueMap = function(opt_noLazyCreate) {
-  return /** @type {!jspb.Map<string,string>} */ (
-      jspb.Message.getMapField(this, 4, opt_noLazyCreate,
-      null));
+
+
+proto.grpc.gateway.testing.EchoRequest.prototype.getKeyvalueMap = function (opt_noLazyCreate) {
+  return (
+    /** @type {!jspb.Map<string,string>} */
+    jspb.Message.getMapField(this, 4, opt_noLazyCreate, null)
+  );
 };
-
-
 /* @param [[key,value]] */
-proto.grpc.gateway.testing.EchoRequest.prototype.setKeyvalueMap = function(k,v) {
-  this.getKeyvalueMap().set(k,v)
-}
+
+
+proto.grpc.gateway.testing.EchoRequest.prototype.setKeyvalueMap = function (k, v) {
+  this.getKeyvalueMap().set(k, v);
+};
 /* generate by Volankey */
-proto.grpc.gateway.testing.EchoRequest.prototype.setKeyvalueMap.getValueType = function() {
-  return this.getKeyvalueMap()
-}
 
 
+proto.grpc.gateway.testing.EchoRequest.prototype.setKeyvalueMap.getValueType = function () {
+  return this.getKeyvalueMap();
+};
 /**
  * Clears values from the map. The map will be non-null.
  * @return {!proto.grpc.gateway.testing.EchoRequest} returns this
  */
-proto.grpc.gateway.testing.EchoRequest.prototype.clearKeyvalueMap = function() {
+
+
+proto.grpc.gateway.testing.EchoRequest.prototype.clearKeyvalueMap = function () {
   this.getKeyvalueMap().clear();
-  return this;};
-
-
+  return this;
+};
 /**
  * map<string, Score> key_scroe = 5;
  * @param {boolean=} opt_noLazyCreate Do not create the map if
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,!proto.grpc.gateway.testing.Score>}
  */
-proto.grpc.gateway.testing.EchoRequest.prototype.getKeyScroeMap = function(opt_noLazyCreate) {
-  return /** @type {!jspb.Map<string,!proto.grpc.gateway.testing.Score>} */ (
-      jspb.Message.getMapField(this, 5, opt_noLazyCreate,
-      proto.grpc.gateway.testing.Score));
+
+
+proto.grpc.gateway.testing.EchoRequest.prototype.getKeyScroeMap = function (opt_noLazyCreate) {
+  return (
+    /** @type {!jspb.Map<string,!proto.grpc.gateway.testing.Score>} */
+    jspb.Message.getMapField(this, 5, opt_noLazyCreate, proto.grpc.gateway.testing.Score)
+  );
 };
-
-
 /* @param [[key,value]] */
-proto.grpc.gateway.testing.EchoRequest.prototype.setKeyScroeMap = function(k,v) {
-  this.getKeyScroeMap().set(k,v)
-}
+
+
+proto.grpc.gateway.testing.EchoRequest.prototype.setKeyScroeMap = function (k, v) {
+  this.getKeyScroeMap().set(k, v);
+};
 /* generate by Volankey */
-proto.grpc.gateway.testing.EchoRequest.prototype.setKeyScroeMap.getValueType = function() {
-  return this.getKeyScroeMap()
-}
 
 
+proto.grpc.gateway.testing.EchoRequest.prototype.setKeyScroeMap.getValueType = function () {
+  return this.getKeyScroeMap();
+};
 /**
  * Clears values from the map. The map will be non-null.
  * @return {!proto.grpc.gateway.testing.EchoRequest} returns this
  */
-proto.grpc.gateway.testing.EchoRequest.prototype.clearKeyScroeMap = function() {
+
+
+proto.grpc.gateway.testing.EchoRequest.prototype.clearKeyScroeMap = function () {
   this.getKeyScroeMap().clear();
-  return this;};
-
-
+  return this;
+};
 /**
  * optional OneOfSample one_of_sample = 6;
  * @return {?proto.grpc.gateway.testing.OneOfSample}
  */
-proto.grpc.gateway.testing.EchoRequest.prototype.getOneOfSample = function() {
-  return /** @type{?proto.grpc.gateway.testing.OneOfSample} */ (
-    jspb.Message.getWrapperField(this, proto.grpc.gateway.testing.OneOfSample, 6));
+
+
+proto.grpc.gateway.testing.EchoRequest.prototype.getOneOfSample = function () {
+  return (
+    /** @type{?proto.grpc.gateway.testing.OneOfSample} */
+    jspb.Message.getWrapperField(this, proto.grpc.gateway.testing.OneOfSample, 6)
+  );
 };
-
-
 /**
  * @param {?proto.grpc.gateway.testing.OneOfSample|undefined} value
  * @return {!proto.grpc.gateway.testing.EchoRequest} returns this
 */
-proto.grpc.gateway.testing.EchoRequest.prototype.setOneOfSample = function(value) {
+
+
+proto.grpc.gateway.testing.EchoRequest.prototype.setOneOfSample = function (value) {
   return jspb.Message.setWrapperField(this, 6, value);
 };
 
-
-proto.grpc.gateway.testing.EchoRequest.prototype.setOneOfSample.getValueType = function() {
+proto.grpc.gateway.testing.EchoRequest.prototype.setOneOfSample.getValueType = function () {
   return proto.grpc.gateway.testing.OneOfSample;
-}
-
-
+};
 /**
  * @param {proto.grpc.gateway.testing.OneOfSample} value
  * @return {!proto.grpc.gateway.testing.EchoRequest} returns this
 */
+
+
 proto.grpc.gateway.testing.EchoRequest.prototype.setOneOfSample.valueType = proto.grpc.gateway.testing.OneOfSample;
 /**
  * Clears the message field making it undefined.
  * @return {!proto.grpc.gateway.testing.EchoRequest} returns this
  */
-proto.grpc.gateway.testing.EchoRequest.prototype.clearOneOfSample = function() {
+
+proto.grpc.gateway.testing.EchoRequest.prototype.clearOneOfSample = function () {
   return this.setOneOfSample(undefined);
 };
-
-
 /**
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.grpc.gateway.testing.EchoRequest.prototype.hasOneOfSample = function() {
+
+
+proto.grpc.gateway.testing.EchoRequest.prototype.hasOneOfSample = function () {
   return jspb.Message.getField(this, 6) != null;
 };
 
-
-
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.grpc.gateway.testing.EchoResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.gateway.testing.EchoResponse.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.grpc.gateway.testing.EchoResponse} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.gateway.testing.EchoResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    message: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    messageCount: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    resp: (f = msg.getResp()) && proto.grpc.gateway.testing.EchoRequest.toObject(includeInstance, f)
+  /**
+   * Creates an object representation of this proto.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * Optional fields that are not set will be set to undefined.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+   * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+   *     JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.grpc.gateway.testing.EchoResponse.prototype.toObject = function (opt_includeInstance) {
+    return proto.grpc.gateway.testing.EchoResponse.toObject(opt_includeInstance, this);
   };
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+   *     the JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.grpc.gateway.testing.EchoResponse} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  proto.grpc.gateway.testing.EchoResponse.toObject = function (includeInstance, msg) {
+    var f,
+        obj = {
+      message: jspb.Message.getFieldWithDefault(msg, 1, ""),
+      messageCount: jspb.Message.getFieldWithDefault(msg, 2, 0),
+      resp: (f = msg.getResp()) && proto.grpc.gateway.testing.EchoRequest.toObject(includeInstance, f)
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+
+    return obj;
+  };
 }
-
-
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.grpc.gateway.testing.EchoResponse}
  */
-proto.grpc.gateway.testing.EchoResponse.deserializeBinary = function(bytes) {
+
+
+proto.grpc.gateway.testing.EchoResponse.deserializeBinary = function (bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.gateway.testing.EchoResponse;
+  var msg = new proto.grpc.gateway.testing.EchoResponse();
   return proto.grpc.gateway.testing.EchoResponse.deserializeBinaryFromReader(msg, reader);
 };
-
-
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
@@ -1672,46 +1792,56 @@ proto.grpc.gateway.testing.EchoResponse.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.grpc.gateway.testing.EchoResponse}
  */
-proto.grpc.gateway.testing.EchoResponse.deserializeBinaryFromReader = function(msg, reader) {
+
+
+proto.grpc.gateway.testing.EchoResponse.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
+
     var field = reader.getFieldNumber();
+
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setMessage(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setMessageCount(value);
-      break;
-    case 3:
-      var value = new proto.grpc.gateway.testing.EchoRequest;
-      reader.readMessage(value,proto.grpc.gateway.testing.EchoRequest.deserializeBinaryFromReader);
-      msg.setResp(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value =
+        /** @type {string} */
+        reader.readString();
+        msg.setMessage(value);
+        break;
+
+      case 2:
+        var value =
+        /** @type {number} */
+        reader.readInt32();
+        msg.setMessageCount(value);
+        break;
+
+      case 3:
+        var value = new proto.grpc.gateway.testing.EchoRequest();
+        reader.readMessage(value, proto.grpc.gateway.testing.EchoRequest.deserializeBinaryFromReader);
+        msg.setResp(value);
+        break;
+
+      default:
+        reader.skipField();
+        break;
     }
   }
+
   return msg;
 };
-
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.grpc.gateway.testing.EchoResponse.prototype.serializeBinary = function() {
+
+
+proto.grpc.gateway.testing.EchoResponse.prototype.serializeBinary = function () {
   var writer = new jspb.BinaryWriter();
   proto.grpc.gateway.testing.EchoResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
-
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
@@ -1719,173 +1849,174 @@ proto.grpc.gateway.testing.EchoResponse.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.gateway.testing.EchoResponse.serializeBinaryToWriter = function(message, writer) {
+
+
+proto.grpc.gateway.testing.EchoResponse.serializeBinaryToWriter = function (message, writer) {
   var f = undefined;
   f = message.getMessage();
+
   if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
+    writer.writeString(1, f);
   }
+
   f = message.getMessageCount();
+
   if (f !== 0) {
-    writer.writeInt32(
-      2,
-      f
-    );
+    writer.writeInt32(2, f);
   }
+
   f = message.getResp();
+
   if (f != null) {
-    writer.writeMessage(
-      3,
-      f,
-      proto.grpc.gateway.testing.EchoRequest.serializeBinaryToWriter
-    );
+    writer.writeMessage(3, f, proto.grpc.gateway.testing.EchoRequest.serializeBinaryToWriter);
   }
 };
-
-
 /**
  * optional string message = 1;
  * @return {string}
  */
-proto.grpc.gateway.testing.EchoResponse.prototype.getMessage = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+
+
+proto.grpc.gateway.testing.EchoResponse.prototype.getMessage = function () {
+  return (
+    /** @type {string} */
+    jspb.Message.getFieldWithDefault(this, 1, "")
+  );
 };
-
-
 /**
  * @param {string} value
  * @return {!proto.grpc.gateway.testing.EchoResponse} returns this
  */
-proto.grpc.gateway.testing.EchoResponse.prototype.setMessage = function(value) {
+
+
+proto.grpc.gateway.testing.EchoResponse.prototype.setMessage = function (value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
-
-
 /**
  * optional int32 message_count = 2;
  * @return {number}
  */
-proto.grpc.gateway.testing.EchoResponse.prototype.getMessageCount = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+
+
+proto.grpc.gateway.testing.EchoResponse.prototype.getMessageCount = function () {
+  return (
+    /** @type {number} */
+    jspb.Message.getFieldWithDefault(this, 2, 0)
+  );
 };
-
-
 /**
  * @param {number} value
  * @return {!proto.grpc.gateway.testing.EchoResponse} returns this
  */
-proto.grpc.gateway.testing.EchoResponse.prototype.setMessageCount = function(value) {
+
+
+proto.grpc.gateway.testing.EchoResponse.prototype.setMessageCount = function (value) {
   return jspb.Message.setProto3IntField(this, 2, value);
 };
-
-
 /**
  * optional EchoRequest resp = 3;
  * @return {?proto.grpc.gateway.testing.EchoRequest}
  */
-proto.grpc.gateway.testing.EchoResponse.prototype.getResp = function() {
-  return /** @type{?proto.grpc.gateway.testing.EchoRequest} */ (
-    jspb.Message.getWrapperField(this, proto.grpc.gateway.testing.EchoRequest, 3));
+
+
+proto.grpc.gateway.testing.EchoResponse.prototype.getResp = function () {
+  return (
+    /** @type{?proto.grpc.gateway.testing.EchoRequest} */
+    jspb.Message.getWrapperField(this, proto.grpc.gateway.testing.EchoRequest, 3)
+  );
 };
-
-
 /**
  * @param {?proto.grpc.gateway.testing.EchoRequest|undefined} value
  * @return {!proto.grpc.gateway.testing.EchoResponse} returns this
 */
-proto.grpc.gateway.testing.EchoResponse.prototype.setResp = function(value) {
+
+
+proto.grpc.gateway.testing.EchoResponse.prototype.setResp = function (value) {
   return jspb.Message.setWrapperField(this, 3, value);
 };
 
-
-proto.grpc.gateway.testing.EchoResponse.prototype.setResp.getValueType = function() {
+proto.grpc.gateway.testing.EchoResponse.prototype.setResp.getValueType = function () {
   return proto.grpc.gateway.testing.EchoRequest;
-}
-
-
+};
 /**
  * @param {proto.grpc.gateway.testing.EchoRequest} value
  * @return {!proto.grpc.gateway.testing.EchoResponse} returns this
 */
+
+
 proto.grpc.gateway.testing.EchoResponse.prototype.setResp.valueType = proto.grpc.gateway.testing.EchoRequest;
 /**
  * Clears the message field making it undefined.
  * @return {!proto.grpc.gateway.testing.EchoResponse} returns this
  */
-proto.grpc.gateway.testing.EchoResponse.prototype.clearResp = function() {
+
+proto.grpc.gateway.testing.EchoResponse.prototype.clearResp = function () {
   return this.setResp(undefined);
 };
-
-
 /**
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.grpc.gateway.testing.EchoResponse.prototype.hasResp = function() {
+
+
+proto.grpc.gateway.testing.EchoResponse.prototype.hasResp = function () {
   return jspb.Message.getField(this, 3) != null;
 };
 
-
-
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.grpc.gateway.testing.ServerStreamingEchoRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.gateway.testing.ServerStreamingEchoRequest.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.grpc.gateway.testing.ServerStreamingEchoRequest} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.gateway.testing.ServerStreamingEchoRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    message: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    messageCount: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    messageInterval: jspb.Message.getFieldWithDefault(msg, 3, 0)
+  /**
+   * Creates an object representation of this proto.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * Optional fields that are not set will be set to undefined.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+   * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+   *     JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.grpc.gateway.testing.ServerStreamingEchoRequest.prototype.toObject = function (opt_includeInstance) {
+    return proto.grpc.gateway.testing.ServerStreamingEchoRequest.toObject(opt_includeInstance, this);
   };
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+   *     the JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.grpc.gateway.testing.ServerStreamingEchoRequest} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  proto.grpc.gateway.testing.ServerStreamingEchoRequest.toObject = function (includeInstance, msg) {
+    var f,
+        obj = {
+      message: jspb.Message.getFieldWithDefault(msg, 1, ""),
+      messageCount: jspb.Message.getFieldWithDefault(msg, 2, 0),
+      messageInterval: jspb.Message.getFieldWithDefault(msg, 3, 0)
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+
+    return obj;
+  };
 }
-
-
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.grpc.gateway.testing.ServerStreamingEchoRequest}
  */
-proto.grpc.gateway.testing.ServerStreamingEchoRequest.deserializeBinary = function(bytes) {
+
+
+proto.grpc.gateway.testing.ServerStreamingEchoRequest.deserializeBinary = function (bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.gateway.testing.ServerStreamingEchoRequest;
+  var msg = new proto.grpc.gateway.testing.ServerStreamingEchoRequest();
   return proto.grpc.gateway.testing.ServerStreamingEchoRequest.deserializeBinaryFromReader(msg, reader);
 };
-
-
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
@@ -1893,45 +2024,57 @@ proto.grpc.gateway.testing.ServerStreamingEchoRequest.deserializeBinary = functi
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.grpc.gateway.testing.ServerStreamingEchoRequest}
  */
-proto.grpc.gateway.testing.ServerStreamingEchoRequest.deserializeBinaryFromReader = function(msg, reader) {
+
+
+proto.grpc.gateway.testing.ServerStreamingEchoRequest.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
+
     var field = reader.getFieldNumber();
+
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setMessage(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setMessageCount(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setMessageInterval(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value =
+        /** @type {string} */
+        reader.readString();
+        msg.setMessage(value);
+        break;
+
+      case 2:
+        var value =
+        /** @type {number} */
+        reader.readInt32();
+        msg.setMessageCount(value);
+        break;
+
+      case 3:
+        var value =
+        /** @type {number} */
+        reader.readInt32();
+        msg.setMessageInterval(value);
+        break;
+
+      default:
+        reader.skipField();
+        break;
     }
   }
+
   return msg;
 };
-
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.grpc.gateway.testing.ServerStreamingEchoRequest.prototype.serializeBinary = function() {
+
+
+proto.grpc.gateway.testing.ServerStreamingEchoRequest.prototype.serializeBinary = function () {
   var writer = new jspb.BinaryWriter();
   proto.grpc.gateway.testing.ServerStreamingEchoRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
-
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
@@ -1939,141 +2082,144 @@ proto.grpc.gateway.testing.ServerStreamingEchoRequest.prototype.serializeBinary 
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.gateway.testing.ServerStreamingEchoRequest.serializeBinaryToWriter = function(message, writer) {
+
+
+proto.grpc.gateway.testing.ServerStreamingEchoRequest.serializeBinaryToWriter = function (message, writer) {
   var f = undefined;
   f = message.getMessage();
+
   if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
+    writer.writeString(1, f);
   }
+
   f = message.getMessageCount();
+
   if (f !== 0) {
-    writer.writeInt32(
-      2,
-      f
-    );
+    writer.writeInt32(2, f);
   }
+
   f = message.getMessageInterval();
+
   if (f !== 0) {
-    writer.writeInt32(
-      3,
-      f
-    );
+    writer.writeInt32(3, f);
   }
 };
-
-
 /**
  * optional string message = 1;
  * @return {string}
  */
-proto.grpc.gateway.testing.ServerStreamingEchoRequest.prototype.getMessage = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+
+
+proto.grpc.gateway.testing.ServerStreamingEchoRequest.prototype.getMessage = function () {
+  return (
+    /** @type {string} */
+    jspb.Message.getFieldWithDefault(this, 1, "")
+  );
 };
-
-
 /**
  * @param {string} value
  * @return {!proto.grpc.gateway.testing.ServerStreamingEchoRequest} returns this
  */
-proto.grpc.gateway.testing.ServerStreamingEchoRequest.prototype.setMessage = function(value) {
+
+
+proto.grpc.gateway.testing.ServerStreamingEchoRequest.prototype.setMessage = function (value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
-
-
 /**
  * optional int32 message_count = 2;
  * @return {number}
  */
-proto.grpc.gateway.testing.ServerStreamingEchoRequest.prototype.getMessageCount = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+
+
+proto.grpc.gateway.testing.ServerStreamingEchoRequest.prototype.getMessageCount = function () {
+  return (
+    /** @type {number} */
+    jspb.Message.getFieldWithDefault(this, 2, 0)
+  );
 };
-
-
 /**
  * @param {number} value
  * @return {!proto.grpc.gateway.testing.ServerStreamingEchoRequest} returns this
  */
-proto.grpc.gateway.testing.ServerStreamingEchoRequest.prototype.setMessageCount = function(value) {
+
+
+proto.grpc.gateway.testing.ServerStreamingEchoRequest.prototype.setMessageCount = function (value) {
   return jspb.Message.setProto3IntField(this, 2, value);
 };
-
-
 /**
  * optional int32 message_interval = 3;
  * @return {number}
  */
-proto.grpc.gateway.testing.ServerStreamingEchoRequest.prototype.getMessageInterval = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+
+
+proto.grpc.gateway.testing.ServerStreamingEchoRequest.prototype.getMessageInterval = function () {
+  return (
+    /** @type {number} */
+    jspb.Message.getFieldWithDefault(this, 3, 0)
+  );
 };
-
-
 /**
  * @param {number} value
  * @return {!proto.grpc.gateway.testing.ServerStreamingEchoRequest} returns this
  */
-proto.grpc.gateway.testing.ServerStreamingEchoRequest.prototype.setMessageInterval = function(value) {
+
+
+proto.grpc.gateway.testing.ServerStreamingEchoRequest.prototype.setMessageInterval = function (value) {
   return jspb.Message.setProto3IntField(this, 3, value);
 };
 
-
-
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.grpc.gateway.testing.ServerStreamingEchoResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.gateway.testing.ServerStreamingEchoResponse.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.grpc.gateway.testing.ServerStreamingEchoResponse} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.gateway.testing.ServerStreamingEchoResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    message: jspb.Message.getFieldWithDefault(msg, 1, "")
+  /**
+   * Creates an object representation of this proto.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * Optional fields that are not set will be set to undefined.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+   * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+   *     JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.grpc.gateway.testing.ServerStreamingEchoResponse.prototype.toObject = function (opt_includeInstance) {
+    return proto.grpc.gateway.testing.ServerStreamingEchoResponse.toObject(opt_includeInstance, this);
   };
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+   *     the JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.grpc.gateway.testing.ServerStreamingEchoResponse} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  proto.grpc.gateway.testing.ServerStreamingEchoResponse.toObject = function (includeInstance, msg) {
+    var f,
+        obj = {
+      message: jspb.Message.getFieldWithDefault(msg, 1, "")
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+
+    return obj;
+  };
 }
-
-
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.grpc.gateway.testing.ServerStreamingEchoResponse}
  */
-proto.grpc.gateway.testing.ServerStreamingEchoResponse.deserializeBinary = function(bytes) {
+
+
+proto.grpc.gateway.testing.ServerStreamingEchoResponse.deserializeBinary = function (bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.gateway.testing.ServerStreamingEchoResponse;
+  var msg = new proto.grpc.gateway.testing.ServerStreamingEchoResponse();
   return proto.grpc.gateway.testing.ServerStreamingEchoResponse.deserializeBinaryFromReader(msg, reader);
 };
-
-
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
@@ -2081,37 +2227,43 @@ proto.grpc.gateway.testing.ServerStreamingEchoResponse.deserializeBinary = funct
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.grpc.gateway.testing.ServerStreamingEchoResponse}
  */
-proto.grpc.gateway.testing.ServerStreamingEchoResponse.deserializeBinaryFromReader = function(msg, reader) {
+
+
+proto.grpc.gateway.testing.ServerStreamingEchoResponse.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
+
     var field = reader.getFieldNumber();
+
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setMessage(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value =
+        /** @type {string} */
+        reader.readString();
+        msg.setMessage(value);
+        break;
+
+      default:
+        reader.skipField();
+        break;
     }
   }
+
   return msg;
 };
-
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.grpc.gateway.testing.ServerStreamingEchoResponse.prototype.serializeBinary = function() {
+
+
+proto.grpc.gateway.testing.ServerStreamingEchoResponse.prototype.serializeBinary = function () {
   var writer = new jspb.BinaryWriter();
   proto.grpc.gateway.testing.ServerStreamingEchoResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
-
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
@@ -2119,91 +2271,90 @@ proto.grpc.gateway.testing.ServerStreamingEchoResponse.prototype.serializeBinary
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.gateway.testing.ServerStreamingEchoResponse.serializeBinaryToWriter = function(message, writer) {
+
+
+proto.grpc.gateway.testing.ServerStreamingEchoResponse.serializeBinaryToWriter = function (message, writer) {
   var f = undefined;
   f = message.getMessage();
+
   if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
+    writer.writeString(1, f);
   }
 };
-
-
 /**
  * optional string message = 1;
  * @return {string}
  */
-proto.grpc.gateway.testing.ServerStreamingEchoResponse.prototype.getMessage = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+
+
+proto.grpc.gateway.testing.ServerStreamingEchoResponse.prototype.getMessage = function () {
+  return (
+    /** @type {string} */
+    jspb.Message.getFieldWithDefault(this, 1, "")
+  );
 };
-
-
 /**
  * @param {string} value
  * @return {!proto.grpc.gateway.testing.ServerStreamingEchoResponse} returns this
  */
-proto.grpc.gateway.testing.ServerStreamingEchoResponse.prototype.setMessage = function(value) {
+
+
+proto.grpc.gateway.testing.ServerStreamingEchoResponse.prototype.setMessage = function (value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
-
-
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.grpc.gateway.testing.ClientStreamingEchoRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.gateway.testing.ClientStreamingEchoRequest.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.grpc.gateway.testing.ClientStreamingEchoRequest} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.gateway.testing.ClientStreamingEchoRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    message: jspb.Message.getFieldWithDefault(msg, 1, "")
+  /**
+   * Creates an object representation of this proto.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * Optional fields that are not set will be set to undefined.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+   * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+   *     JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.grpc.gateway.testing.ClientStreamingEchoRequest.prototype.toObject = function (opt_includeInstance) {
+    return proto.grpc.gateway.testing.ClientStreamingEchoRequest.toObject(opt_includeInstance, this);
   };
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+   *     the JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.grpc.gateway.testing.ClientStreamingEchoRequest} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  proto.grpc.gateway.testing.ClientStreamingEchoRequest.toObject = function (includeInstance, msg) {
+    var f,
+        obj = {
+      message: jspb.Message.getFieldWithDefault(msg, 1, "")
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+
+    return obj;
+  };
 }
-
-
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.grpc.gateway.testing.ClientStreamingEchoRequest}
  */
-proto.grpc.gateway.testing.ClientStreamingEchoRequest.deserializeBinary = function(bytes) {
+
+
+proto.grpc.gateway.testing.ClientStreamingEchoRequest.deserializeBinary = function (bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.gateway.testing.ClientStreamingEchoRequest;
+  var msg = new proto.grpc.gateway.testing.ClientStreamingEchoRequest();
   return proto.grpc.gateway.testing.ClientStreamingEchoRequest.deserializeBinaryFromReader(msg, reader);
 };
-
-
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
@@ -2211,37 +2362,43 @@ proto.grpc.gateway.testing.ClientStreamingEchoRequest.deserializeBinary = functi
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.grpc.gateway.testing.ClientStreamingEchoRequest}
  */
-proto.grpc.gateway.testing.ClientStreamingEchoRequest.deserializeBinaryFromReader = function(msg, reader) {
+
+
+proto.grpc.gateway.testing.ClientStreamingEchoRequest.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
+
     var field = reader.getFieldNumber();
+
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setMessage(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value =
+        /** @type {string} */
+        reader.readString();
+        msg.setMessage(value);
+        break;
+
+      default:
+        reader.skipField();
+        break;
     }
   }
+
   return msg;
 };
-
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.grpc.gateway.testing.ClientStreamingEchoRequest.prototype.serializeBinary = function() {
+
+
+proto.grpc.gateway.testing.ClientStreamingEchoRequest.prototype.serializeBinary = function () {
   var writer = new jspb.BinaryWriter();
   proto.grpc.gateway.testing.ClientStreamingEchoRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
-
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
@@ -2249,91 +2406,90 @@ proto.grpc.gateway.testing.ClientStreamingEchoRequest.prototype.serializeBinary 
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.gateway.testing.ClientStreamingEchoRequest.serializeBinaryToWriter = function(message, writer) {
+
+
+proto.grpc.gateway.testing.ClientStreamingEchoRequest.serializeBinaryToWriter = function (message, writer) {
   var f = undefined;
   f = message.getMessage();
+
   if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
+    writer.writeString(1, f);
   }
 };
-
-
 /**
  * optional string message = 1;
  * @return {string}
  */
-proto.grpc.gateway.testing.ClientStreamingEchoRequest.prototype.getMessage = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+
+
+proto.grpc.gateway.testing.ClientStreamingEchoRequest.prototype.getMessage = function () {
+  return (
+    /** @type {string} */
+    jspb.Message.getFieldWithDefault(this, 1, "")
+  );
 };
-
-
 /**
  * @param {string} value
  * @return {!proto.grpc.gateway.testing.ClientStreamingEchoRequest} returns this
  */
-proto.grpc.gateway.testing.ClientStreamingEchoRequest.prototype.setMessage = function(value) {
+
+
+proto.grpc.gateway.testing.ClientStreamingEchoRequest.prototype.setMessage = function (value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
-
-
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.grpc.gateway.testing.ClientStreamingEchoResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.gateway.testing.ClientStreamingEchoResponse.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.grpc.gateway.testing.ClientStreamingEchoResponse} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.gateway.testing.ClientStreamingEchoResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    messageCount: jspb.Message.getFieldWithDefault(msg, 1, 0)
+  /**
+   * Creates an object representation of this proto.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * Optional fields that are not set will be set to undefined.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+   * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+   *     JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.grpc.gateway.testing.ClientStreamingEchoResponse.prototype.toObject = function (opt_includeInstance) {
+    return proto.grpc.gateway.testing.ClientStreamingEchoResponse.toObject(opt_includeInstance, this);
   };
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+   *     the JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.grpc.gateway.testing.ClientStreamingEchoResponse} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  proto.grpc.gateway.testing.ClientStreamingEchoResponse.toObject = function (includeInstance, msg) {
+    var f,
+        obj = {
+      messageCount: jspb.Message.getFieldWithDefault(msg, 1, 0)
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+
+    return obj;
+  };
 }
-
-
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.grpc.gateway.testing.ClientStreamingEchoResponse}
  */
-proto.grpc.gateway.testing.ClientStreamingEchoResponse.deserializeBinary = function(bytes) {
+
+
+proto.grpc.gateway.testing.ClientStreamingEchoResponse.deserializeBinary = function (bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.gateway.testing.ClientStreamingEchoResponse;
+  var msg = new proto.grpc.gateway.testing.ClientStreamingEchoResponse();
   return proto.grpc.gateway.testing.ClientStreamingEchoResponse.deserializeBinaryFromReader(msg, reader);
 };
-
-
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
@@ -2341,37 +2497,43 @@ proto.grpc.gateway.testing.ClientStreamingEchoResponse.deserializeBinary = funct
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.grpc.gateway.testing.ClientStreamingEchoResponse}
  */
-proto.grpc.gateway.testing.ClientStreamingEchoResponse.deserializeBinaryFromReader = function(msg, reader) {
+
+
+proto.grpc.gateway.testing.ClientStreamingEchoResponse.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
+
     var field = reader.getFieldNumber();
+
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setMessageCount(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value =
+        /** @type {number} */
+        reader.readInt32();
+        msg.setMessageCount(value);
+        break;
+
+      default:
+        reader.skipField();
+        break;
     }
   }
+
   return msg;
 };
-
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.grpc.gateway.testing.ClientStreamingEchoResponse.prototype.serializeBinary = function() {
+
+
+proto.grpc.gateway.testing.ClientStreamingEchoResponse.prototype.serializeBinary = function () {
   var writer = new jspb.BinaryWriter();
   proto.grpc.gateway.testing.ClientStreamingEchoResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
-
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
@@ -2379,34 +2541,37 @@ proto.grpc.gateway.testing.ClientStreamingEchoResponse.prototype.serializeBinary
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.gateway.testing.ClientStreamingEchoResponse.serializeBinaryToWriter = function(message, writer) {
+
+
+proto.grpc.gateway.testing.ClientStreamingEchoResponse.serializeBinaryToWriter = function (message, writer) {
   var f = undefined;
   f = message.getMessageCount();
+
   if (f !== 0) {
-    writer.writeInt32(
-      1,
-      f
-    );
+    writer.writeInt32(1, f);
   }
 };
-
-
 /**
  * optional int32 message_count = 1;
  * @return {number}
  */
-proto.grpc.gateway.testing.ClientStreamingEchoResponse.prototype.getMessageCount = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+
+
+proto.grpc.gateway.testing.ClientStreamingEchoResponse.prototype.getMessageCount = function () {
+  return (
+    /** @type {number} */
+    jspb.Message.getFieldWithDefault(this, 1, 0)
+  );
 };
-
-
 /**
  * @param {number} value
  * @return {!proto.grpc.gateway.testing.ClientStreamingEchoResponse} returns this
  */
-proto.grpc.gateway.testing.ClientStreamingEchoResponse.prototype.setMessageCount = function(value) {
+
+
+proto.grpc.gateway.testing.ClientStreamingEchoResponse.prototype.setMessageCount = function (value) {
   return jspb.Message.setProto3IntField(this, 1, value);
 };
 
-
 goog.object.extend(exports, proto.grpc.gateway.testing);
+export default module.exports;
