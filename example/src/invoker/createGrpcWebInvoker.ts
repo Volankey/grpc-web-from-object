@@ -46,6 +46,9 @@ function setRequestBody (
   Object.entries(data).forEach(([key, value, ]) => {
     const varsNameUpper = firstToUpperCase(key)
     const setMethodName = `set${varsNameUpper}`
+    if (!reqTypeInstance[setMethodName]) {
+      return
+    }
     const setMethodCall = reqTypeInstance[setMethodName].bind(reqTypeInstance)
     let finalVal = null
     const valueTypeCtor = reqTypeInstance[setMethodName].getValueType?.call(reqTypeInstance)
