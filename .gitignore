@@ -1,9 +1,15 @@
-testOut.js
-node_modules
-.vscode
-pnpm-lock.yaml
+# Mac OS
 .DS_Store
-dist
-package-lock.json
+
+# npm
+node_modules
 yarn.lock
-*.log
+package-lock.json
+pnpm-lock.yaml
+
+# IDE
+.vscode
+.idea
+
+# build
+dist
