@@ -1,2 +1,9 @@
 testOut.js
 node_modules
+.vscode
+pnpm-lock.yaml
+.DS_Store
+dist
+package-lock.json
+yarn.lock
+*.log
