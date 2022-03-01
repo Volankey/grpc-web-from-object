@@ -1,11 +1,9 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-// import { invoke } from "./invoker/index";
 import { ref } from "vue";
 import { invoke } from './invoke'
 
 const result = ref('')
+
 function doEcho(){
   invoke("echo", {
     message: "hello volankey",
@@ -21,13 +19,7 @@ function doEcho(){
     'keyScroeMap':[['ss',{'name':'nihao','score':'30'}]],
     'keyvalueMap':[['1','1']],
     'oneOfSample':{
-      name:'红红火火',
-      // or
-
-      // 'subMessage':{
-      //   'name':'a1',
-      //   'score':'100'
-      // }
+      name:'红红火火'
     }
   })
   .then((t) => {
@@ -36,7 +28,6 @@ function doEcho(){
   })
   .catch((e) => {});
 }
-
 </script>
 
 <template>
@@ -52,6 +43,6 @@ function doEcho(){
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  margin-top: 60px;
+  margin: 30px;
 }
 </style>

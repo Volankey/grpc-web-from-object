@@ -12,7 +12,7 @@
     "grpc-web": "file:./grpc-web",
     "lodash-es": "^4.17.21",
     "vue": "^3.2.16",
-    "invoker-grpc": "^1.0.0"
+    "invoker-grpc": "file:../src/invoker"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
