@@ -1,0 +1,34 @@
+{
+  "name": "invoker-grpc",
+  "version": "1.0.3",
+  "description": "",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "keywords": [
+    "gRPC",
+    "grpc-web",
+    "javascript",
+    "typescript"
+  ],
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "dev": "npm run build -- --watch",
+    "dev:example": "npm run dev &  cd ../../ && npm -C example run dev",
+    "build": "tsup index.ts --dts --format cjs,esm --external google-protobuf",
+    "build:example": "cd ../../ && npm -C example run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "grpc-web": "^1.3.1"
+  }
+}
