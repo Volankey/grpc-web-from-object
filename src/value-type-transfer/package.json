@@ -1,15 +1,16 @@
 {
   "name": "pbjs-value-type-transfer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
-  "main": "index.js",
-  "bin": {
-    "transfer": "index.js",
-    "cjs2esm": "cjs2esm.js",
-    "client-transform": "grpc-web-client-transform.js"
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
   },
+  "files": [
+    "src"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx -p typescript tsc src/index.js --declaration --allowJs --emitDeclarationOnly --outDir src"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +18,8 @@
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "babel-plugin-transform-commonjs": "^1.1.6",
-    "gogocode": "^1.0.40"
+    "gogocode": "^1.0.40",
+    "google-protobuf": "^3.19.4",
+    "typescript": "^4.4.3"
   }
 }

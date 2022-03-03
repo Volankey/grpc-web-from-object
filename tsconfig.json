@@ -12,9 +12,9 @@
     "lib": ["esnext", "dom"]
   },
   "include": [
-    "example/src/**/*.ts",
-    "example/src/**/*.d.ts",
-    "example/src/**/*.tsx",
-    "example/src/**/*.vue"
+    "example/frontend/src/**/*.ts",
+    "example/frontend/src/**/*.d.ts",
+    "example/frontend/src/**/*.tsx",
+    "example/frontend/src/**/*.vue"
   ]
 }
