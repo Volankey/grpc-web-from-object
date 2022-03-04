@@ -1,3 +1,3 @@
-import { createInvoker } from "./createGrpcWebInvoker";
+import { createInvoker } from './createGrpcWebInvoker';
 
 export { createInvoker };

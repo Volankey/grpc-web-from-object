@@ -21,10 +21,10 @@ const {
   pbValueTypeTransfer,
   cjs2esm,
   grpcWebClientTransform,
-} = require("value-type-transfer");
+} = require('value-type-transfer');
 
-pbValueTypeTransfer(join(__dirname, "../src/proto/echo_pb.js"));
+pbValueTypeTransfer(join(__dirname, '../src/proto/echo_pb.js'));
 // if you use vite, transform to esm
-cjs2esm(join(__dirname, "../src/proto/echo_pb.js"));
-grpcWebClientTransform(join(__dirname, "../src/proto/EchoServiceClientPb.ts"));
+cjs2esm(join(__dirname, '../src/proto/echo_pb.js'));
+grpcWebClientTransform(join(__dirname, '../src/proto/EchoServiceClientPb.ts'));
 ```

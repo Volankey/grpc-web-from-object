@@ -1,8 +1,8 @@
 /* eslint no-unexpected-multiline: "off" */
-import { isObject, merge } from "lodash-es";
-import { RpcError } from "grpc-web";
-import { Map } from "google-protobuf";
-import { CancelToken } from "./CancelToken";
+import { isObject, merge } from 'lodash-es';
+import { RpcError } from 'grpc-web';
+import { Map } from 'google-protobuf';
+import { CancelToken } from './CancelToken';
 
 type F = (...args: any) => any;
 type InvokeOptions = {
@@ -19,8 +19,8 @@ interface ReplyCom {
 }
 type PromiseCallReturnType<T extends F> = Parameters<Parameters<T>[2]>[1];
 type GrpcMessageToObject<T> = T extends ReplyCom
-  ? T["toObject"] extends F
-    ? ReturnType<T["toObject"]>
+  ? T['toObject'] extends F
+    ? ReturnType<T['toObject']>
     : never
   : never;
 
@@ -30,7 +30,7 @@ function firstToUpperCase(str: string) {
 
 function getMethodInfo(client: unknown, methodName: string) {
   return (client as unknown as any)[
-    "methodInfo" + methodName.replace(/^\S/, (s) => s.toUpperCase())
+    'methodInfo' + methodName.replace(/^\S/, (s) => s.toUpperCase())
   ];
 }
 type DeepPartial<T> = Partial<{
@@ -40,7 +40,7 @@ type DeepPartial<T> = Partial<{
 }>;
 function setRequestBody(
   ReqType: new () => any,
-  data: { [s: string]: unknown } | ArrayLike<unknown>
+  data: { [s: string]: unknown } | ArrayLike<unknown>,
 ) {
   const reqTypeInstance = new ReqType();
   Object.entries(data).forEach(([key, value]) => {
@@ -96,10 +96,10 @@ function capitalizeFirstLetter(str: string) {
 function setRestfulRequestBody(data: any) {
   Object.entries(data).forEach(([key, value]) => {
     if (Array.isArray(value)) {
-      data[key.replace(/List$/, "")] = value;
+      data[key.replace(/List$/, '')] = value;
       setRestfulRequestBody(value);
       delete data[key];
-    } else if (typeof value === "object" && value !== null) {
+    } else if (typeof value === 'object' && value !== null) {
       setRestfulRequestBody(value);
     }
   });
@@ -108,10 +108,10 @@ function setRestfulRequestBody(data: any) {
 function setRestfulResponseBody(data: any) {
   Object.entries(data).forEach(([key, value]) => {
     if (Array.isArray(value)) {
-      data[key + "List"] = value;
+      data[key + 'List'] = value;
       setRestfulResponseBody(value);
       delete data[key];
-    } else if (typeof value === "object" && value !== null) {
+    } else if (typeof value === 'object' && value !== null) {
       setRestfulResponseBody(value);
     }
   });
@@ -120,7 +120,7 @@ function setRestfulResponseBody(data: any) {
 export function createInvoker<C>(
   client: C,
   initConfig?: Config,
-  invokerOptions?: InvokerOptions
+  invokerOptions?: InvokerOptions,
 ) {
   type M = {
     // eslint-disable-next-line @typescript-eslint/ban-types
@@ -142,10 +142,10 @@ export function createInvoker<C>(
   const invoke = function invoke<IM extends M>(
     method: IM extends string ? IM : never,
     data: DeepPartial<
-      ReturnType<C[IM] extends F ? Parameters<C[IM]>[0]["toObject"] : never>
+      ReturnType<C[IM] extends F ? Parameters<C[IM]>[0]['toObject'] : never>
     >,
-    metadata?: Config["globalMeta"],
-    options?: InvokeOptions
+    metadata?: Config['globalMeta'],
+    options?: InvokeOptions,
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
   ): Promise<GrpcMessageToObject<PromiseCallReturnType<C[IM]>>> {
@@ -153,29 +153,29 @@ export function createInvoker<C>(
     const ReqType = methodInfo.getRequestMessageCtor();
     const requestBody = setRequestBody(ReqType, data);
     console.log(
-      "🚀 ~ file: createGrpcWebInvoker.ts ~ line 152 ~ requestBody",
-      requestBody
+      '🚀 ~ file: createGrpcWebInvoker.ts ~ line 152 ~ requestBody',
+      requestBody,
     );
     const tmpMetadata = merge(metadata, config.globalMeta);
     let reqInstance: any = null;
     if (options?.mock || invokerOptions?.mock) {
       if (invokerOptions?.mockServer === undefined) {
-        throw new Error("Mock Server is undefined");
+        throw new Error('Mock Server is undefined');
       }
       return fetch(
-        invokerOptions.mockServer + "/" + capitalizeFirstLetter(method),
+        invokerOptions.mockServer + '/' + capitalizeFirstLetter(method),
         {
           headers: {
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
             ...tmpMetadata,
           },
-          method: "POST",
+          method: 'POST',
           // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore
           body: JSON.stringify(setRestfulRequestBody(data)),
-        }
+        },
       )
         .then((resp) => resp.json())
         .then((respJson) => setRestfulResponseBody(respJson));
@@ -189,7 +189,7 @@ export function createInvoker<C>(
           err: RpcError,
           // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore
-          resp: GrpcMessageToObject<PromiseCallReturnType<C[IM]>>
+          resp: GrpcMessageToObject<PromiseCallReturnType<C[IM]>>,
         ) => {
           if (err) {
             config?.errorHandler?.(err);
@@ -197,7 +197,7 @@ export function createInvoker<C>(
           } else {
             resolve(resp);
           }
-        }
+        },
       );
       if (options?.cancelToken) {
         if (options?.cancelToken.executor) {
