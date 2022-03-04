@@ -31,7 +31,7 @@ function doEcho() {
 </script>
 
 <template>
-  <button @click="doEcho">do echo</button>
+  <button @click="doEcho">Do Echo</button>
   <pre>
     {{ result }}
   </pre>
