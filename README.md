@@ -5,7 +5,7 @@
 ### Clone
 
 ```shell
-git clone git@github.com:coder-chin/grpc-web-from-object.git
+git clone xxx
 ```
 
 ### Install
