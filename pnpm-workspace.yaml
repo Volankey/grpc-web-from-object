@@ -1,5 +1,5 @@
 packages:
   - example/frontend
   - example/backend/echo/node-server
-  - src/value-type-transfer
-  - src/invoker
+  - src/grpc-web-pb-transform
+  - src/grpc-web-invoker

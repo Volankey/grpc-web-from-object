@@ -18,8 +18,8 @@
     "husky": "^7.0.4"
   },
   "scripts": {
-    "dev:example": "npm -C src/invoker run dev &  npm -C example/frontend run dev",
-    "build:example": "npm -C src/invoker run build && npm -C example/frontend run build",
+    "dev:example": "npm -C src/grpc-web-invoker run dev &  npm -C example/frontend run dev",
+    "build:example": "npm -C src/grpc-web-invoker run build && npm -C example/frontend run build",
     "prepare": "husky install",
     "prettier": "prettier --single-quote --trailing-comma all --write **/src/**/*.{ts,js,md,vue} "
   },

@@ -11,7 +11,7 @@
   "dependencies": {
     "google-protobuf": "^3.19.1",
     "grpc-web": "^1.3.1",
-    "invoker-grpc": "file:../../src/invoker",
+    "@Volankey/grpc-web-invoker": "file:../../src/grpc-web-invoker",
     "lodash-es": "^4.17.21",
     "vue": "^3.2.16"
   },
@@ -21,7 +21,7 @@
     "@types/lodash-es": "^4.17.5",
     "@vitejs/plugin-vue": "^1.9.3",
     "typescript": "^4.4.3",
-    "value-type-transfer": "file:../../src/value-type-transfer",
+    "@Volankey/grpc-web-pb-transform": "file:../../src/grpc-web-pb-transform",
     "vite": "^2.6.4",
     "vue-tsc": "^0.3.0"
   }

@@ -1,6 +1,6 @@
 {
-  "name": "pbjs-value-type-transfer",
-  "version": "1.0.1",
+  "name": "@Volankey/grpc-web-pb-transform",
+  "version": "1.0.0",
   "description": "",
   "main": "./src/index.js",
   "exports": {
@@ -10,7 +10,8 @@
     "src"
   ],
   "scripts": {
-    "build:dts": "npx -p typescript tsc src/index.js --declaration --allowJs --emitDeclarationOnly --outDir src"
+    "build:dts": "npx -p typescript tsc src/index.js --declaration --allowJs --emitDeclarationOnly --outDir src",
+    "prepublishOnly": "npm run build:dts"
   },
   "keywords": [],
   "author": "",
