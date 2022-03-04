@@ -1,4 +1,5 @@
 packages:
-  - example
-  - value-type-transfer
-  - server/echo/node-server
+  - example/frontend
+  - example/backend/echo/node-server
+  - src/value-type-transfer
+  - src/invoker

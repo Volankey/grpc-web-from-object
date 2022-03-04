@@ -1,74 +1,10 @@
 # Happy Grpc Web
 
-## Run Demo
-
-### Clone
-
-```shell
-git clone xxx
-```
-
-### Install
-
-```shell
-pnpm install
-```
-
-### generate protobuf for js
-
-```
-cd example/frontend
-pnpm gen-proto
-```
-
-### start backend
-
-```
-cd example/backend/echo/node-server
-node server.js
-```
-
-### start envoy
-
-```
-cd example/backend/docker/envoy
-sh run.sh
-```
-
-### build invoker & start frontend
-
-```
-cd src/invoker
-pnpm dev:example
-```
-
-### open browser see the result
-
-http://localhost:3000/
-
-## Invoker-grpc
-
 Support Typescript & Easy to invoke grpc method from web
 
-### Install
-npm
-```
-npm install invoker-grpc
-```
-
-yarn
-```
-yarn add invoker-grpc
-```
-pnpm
-```
-pnpm install invoker-grpc
-```
-### Usage
 ```
 import { EchoServiceClient } from "../proto/EchoServiceClientPb";
-import { createInvoker } from "invoker-grpc";
-
+import { createInvoker } from "./createGrpcWebInvoker";
 const client = new EchoServiceClient("http://localhost:8080", null);
 
 const invoke = createInvoker(client).invoke;
@@ -103,24 +39,46 @@ invoke("echo", {
   .catch((e) => {});
 ```
 
-## value-type-transfer
 
-### Usage
-
-```js
-const {
-  pbValueTypeTransfer,
-  cjs2esm,
-  grpcWebClientTransform,
-} = require("value-type-transfer");
-
-pbValueTypeTransfer(join(__dirname, "../src/proto/echo_pb.js"));
-// if you use vite, transform to esm
-cjs2esm(join(__dirname, "../src/proto/echo_pb.js"));
-grpcWebClientTransform(join(__dirname, "../src/proto/EchoServiceClientPb.ts"))
+```
+sh gen-proto
 ```
 
+# Run Demo
 
+### install
+
+```
+pnpm install
+```
+
+### Start Dev
+
+generate protobuf for js
+```
+sh gen-proto.sh
+```
+
+start frontend
+```
+cd ./example
+npm run dev
+```
+start backend
+```
+cd server/echo/node-server
+node server.js
+```
+
+start envoy
+```
+cd server/docker/envoy
+sh run.sh
+```
+
+open browser see the log
+
+http://localhost:3000/
 
 # TO-DO
 

@@ -19,27 +19,7 @@ var exports = module.exports;
 // @ts-nocheck
 var jspb = _googleProtobuf;
 var goog = jspb;
-
-var global = function () {
-  if (this) {
-    return this;
-  }
-
-  if (typeof window !== 'undefined') {
-    return window;
-  }
-
-  if (typeof global !== 'undefined') {
-    return global;
-  }
-
-  if (typeof self !== 'undefined') {
-    return self;
-  }
-
-  return Function('return this')();
-}.call(null);
-
+var global = Function('return this')();
 goog.exportSymbol('proto.grpc.gateway.testing.ClientStreamingEchoRequest', null, global);
 goog.exportSymbol('proto.grpc.gateway.testing.ClientStreamingEchoResponse', null, global);
 goog.exportSymbol('proto.grpc.gateway.testing.EchoRequest', null, global);
@@ -818,17 +798,11 @@ proto.grpc.gateway.testing.Suject.prototype.setLiberalArtsList.getValueType = fu
   return proto.grpc.gateway.testing.Score;
 };
 /**
- * @param {proto.grpc.gateway.testing.Score} value
- * @return {!proto.grpc.gateway.testing.Suject} returns this
-*/
-
-
-proto.grpc.gateway.testing.Suject.prototype.setLiberalArtsList.valueType = proto.grpc.gateway.testing.Score;
-/**
  * @param {!proto.grpc.gateway.testing.Score=} opt_value
  * @param {number=} opt_index
  * @return {!proto.grpc.gateway.testing.Score}
  */
+
 
 proto.grpc.gateway.testing.Suject.prototype.addLiberalArts = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.grpc.gateway.testing.Score, opt_index);
@@ -868,17 +842,11 @@ proto.grpc.gateway.testing.Suject.prototype.setScienceList.getValueType = functi
   return proto.grpc.gateway.testing.Score;
 };
 /**
- * @param {proto.grpc.gateway.testing.Score} value
- * @return {!proto.grpc.gateway.testing.Suject} returns this
-*/
-
-
-proto.grpc.gateway.testing.Suject.prototype.setScienceList.valueType = proto.grpc.gateway.testing.Score;
-/**
  * @param {!proto.grpc.gateway.testing.Score=} opt_value
  * @param {number=} opt_index
  * @return {!proto.grpc.gateway.testing.Score}
  */
+
 
 proto.grpc.gateway.testing.Suject.prototype.addScience = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.grpc.gateway.testing.Score, opt_index);
@@ -1286,16 +1254,10 @@ proto.grpc.gateway.testing.OneOfSample.prototype.setSubMessage.getValueType = fu
   return proto.grpc.gateway.testing.Score;
 };
 /**
- * @param {proto.grpc.gateway.testing.Score} value
- * @return {!proto.grpc.gateway.testing.OneOfSample} returns this
-*/
-
-
-proto.grpc.gateway.testing.OneOfSample.prototype.setSubMessage.valueType = proto.grpc.gateway.testing.Score;
-/**
  * Clears the message field making it undefined.
  * @return {!proto.grpc.gateway.testing.OneOfSample} returns this
  */
+
 
 proto.grpc.gateway.testing.OneOfSample.prototype.clearSubMessage = function () {
   return this.setSubMessage(undefined);
@@ -1537,16 +1499,10 @@ proto.grpc.gateway.testing.EchoRequest.prototype.setStudent.getValueType = funct
   return proto.grpc.gateway.testing.Student;
 };
 /**
- * @param {proto.grpc.gateway.testing.Student} value
- * @return {!proto.grpc.gateway.testing.EchoRequest} returns this
-*/
-
-
-proto.grpc.gateway.testing.EchoRequest.prototype.setStudent.valueType = proto.grpc.gateway.testing.Student;
-/**
  * Clears the message field making it undefined.
  * @return {!proto.grpc.gateway.testing.EchoRequest} returns this
  */
+
 
 proto.grpc.gateway.testing.EchoRequest.prototype.clearStudent = function () {
   return this.setStudent(undefined);
@@ -1586,16 +1542,10 @@ proto.grpc.gateway.testing.EchoRequest.prototype.setSuject.getValueType = functi
   return proto.grpc.gateway.testing.Suject;
 };
 /**
- * @param {proto.grpc.gateway.testing.Suject} value
- * @return {!proto.grpc.gateway.testing.EchoRequest} returns this
-*/
-
-
-proto.grpc.gateway.testing.EchoRequest.prototype.setSuject.valueType = proto.grpc.gateway.testing.Suject;
-/**
  * Clears the message field making it undefined.
  * @return {!proto.grpc.gateway.testing.EchoRequest} returns this
  */
+
 
 proto.grpc.gateway.testing.EchoRequest.prototype.clearSuject = function () {
   return this.setSuject(undefined);
@@ -1707,16 +1657,10 @@ proto.grpc.gateway.testing.EchoRequest.prototype.setOneOfSample.getValueType = f
   return proto.grpc.gateway.testing.OneOfSample;
 };
 /**
- * @param {proto.grpc.gateway.testing.OneOfSample} value
- * @return {!proto.grpc.gateway.testing.EchoRequest} returns this
-*/
-
-
-proto.grpc.gateway.testing.EchoRequest.prototype.setOneOfSample.valueType = proto.grpc.gateway.testing.OneOfSample;
-/**
  * Clears the message field making it undefined.
  * @return {!proto.grpc.gateway.testing.EchoRequest} returns this
  */
+
 
 proto.grpc.gateway.testing.EchoRequest.prototype.clearOneOfSample = function () {
   return this.setOneOfSample(undefined);
@@ -1939,16 +1883,10 @@ proto.grpc.gateway.testing.EchoResponse.prototype.setResp.getValueType = functio
   return proto.grpc.gateway.testing.EchoRequest;
 };
 /**
- * @param {proto.grpc.gateway.testing.EchoRequest} value
- * @return {!proto.grpc.gateway.testing.EchoResponse} returns this
-*/
-
-
-proto.grpc.gateway.testing.EchoResponse.prototype.setResp.valueType = proto.grpc.gateway.testing.EchoRequest;
-/**
  * Clears the message field making it undefined.
  * @return {!proto.grpc.gateway.testing.EchoResponse} returns this
  */
+
 
 proto.grpc.gateway.testing.EchoResponse.prototype.clearResp = function () {
   return this.setResp(undefined);
