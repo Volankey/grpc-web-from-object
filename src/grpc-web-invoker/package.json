@@ -1,6 +1,6 @@
 {
-  "name": "invoker-grpc",
-  "version": "1.0.4",
+  "name": "@Volankey/grpc-web-invoker",
+  "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -22,9 +22,8 @@
   },
   "scripts": {
     "dev": "npm run build -- --watch",
-    "dev:example": "npm run dev &  cd ../../ && npm -C example/frontend run dev",
     "build": "tsup index.ts --dts --format cjs,esm --external google-protobuf",
-    "build:example": "cd ../../ && npm -C example/frontend run build"
+    "prepublishOnly": "npm run build"
   },
   "author": "",
   "license": "ISC",

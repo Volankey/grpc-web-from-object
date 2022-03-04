@@ -51,20 +51,27 @@ http://localhost:3000/
 Support Typescript & Easy to invoke grpc method from web
 
 ### Install
+
 npm
+
 ```
 npm install invoker-grpc
 ```
 
 yarn
+
 ```
 yarn add invoker-grpc
 ```
+
 pnpm
+
 ```
 pnpm install invoker-grpc
 ```
+
 ### Usage
+
 ```
 import { EchoServiceClient } from "../proto/EchoServiceClientPb";
 import { createInvoker } from "invoker-grpc";
@@ -117,10 +124,8 @@ const {
 pbValueTypeTransfer(join(__dirname, "../src/proto/echo_pb.js"));
 // if you use vite, transform to esm
 cjs2esm(join(__dirname, "../src/proto/echo_pb.js"));
-grpcWebClientTransform(join(__dirname, "../src/proto/EchoServiceClientPb.ts"))
+grpcWebClientTransform(join(__dirname, "../src/proto/EchoServiceClientPb.ts"));
 ```
-
-
 
 # TO-DO
 
