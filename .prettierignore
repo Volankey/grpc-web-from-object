@@ -1,0 +1,9 @@
+dist
+node_modules
+example/dist
+*.yaml
+*_pb.js
+*_pb.d.ts
+*Pb.js
+*Pb.ts
+.*

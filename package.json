@@ -1,0 +1,36 @@
+{
+  "name": "grpc-web-protojs-transformer",
+  "version": "1.0.0",
+  "description": "## Run Demo",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {
+    "ast-types-yx": "^0.14.2",
+    "doctypes": "^1.1.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.6.2",
+    "vscode-languageserver-types": "^3.16.0",
+    "vscode-typescript-languageservice": "^0.27.25"
+  },
+  "devDependencies": {
+    "husky": "^7.0.4"
+  },
+  "scripts": {
+    "dev:example": "npm -C src/invoker run dev &  npm -C example/frontend run dev",
+    "build:example": "npm -C src/invoker run build && npm -C example/frontend run build",
+    "prepare": "husky install",
+    "prettier": "prettier --single-quote --trailing-comma all --write **/src/**/*.{ts,js,md,vue} "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Volankey/grpc-web-protojs-transformer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Volankey/grpc-web-protojs-transformer/issues"
+  },
+  "homepage": "https://github.com/Volankey/grpc-web-protojs-transformer#readme"
+}

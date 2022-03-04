@@ -1,24 +1,37 @@
 /* eslint @typescript-eslint/no-var-requires: "off" */
-const plugin = require("babel-plugin-transform-commonjs");
-const fs = require("fs");
-const { transformAsync } = require("@babel/core");
-const path = require("path");
+const fs = require('fs');
+// const { transformAsync } = require("@babel/core");
+const path = require('path');
+const esbuild = require('esbuild');
 
-const defaults = {
-  plugins: [plugin],
-  sourceType: "module",
-};
-
-async function cjs2esm(filePath) {
-  console.log("🚀 ~ file: cjs2esm.js ~ line 6 ~ filePath", filePath);
-
-  const p = path.resolve(filePath);
-  const input = fs.readFileSync(p, "utf-8");
-  const { code } = await transformAsync(input, {
-    ...defaults,
-    compact: false,
+const externalCjsToEsmPlugin = (external) => ({
+  name: 'external',
+  setup(build) {
+    let escape = (text) =>
+      `^${text.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')}$`;
+    let filter = new RegExp(external.map(escape).join('|'));
+    build.onResolve({ filter: /.*/, namespace: 'external' }, (args) => ({
+      path: args.path,
+      external: true,
+    }));
+    build.onResolve({ filter }, (args) => ({
+      path: args.path,
+      namespace: 'external',
+    }));
+    build.onLoad({ filter: /.*/, namespace: 'external' }, (args) => ({
+      contents: `export * from ${JSON.stringify(args.path)}`,
+    }));
+  },
+});
+async function cjs2esm(entryPoints, outdir) {
+  console.log('🚀 ~ file: cjs2esm.js ~ line 24 ~ cjs2esm ~ outdir', outdir);
+  await esbuild.build({
+    format: 'esm',
+    bundle: true,
+    plugins: [externalCjsToEsmPlugin(['google-protobuf'])],
+    entryPoints,
+    outdir,
+    allowOverwrite: true,
   });
-  fs.writeFileSync(p, code);
 }
-
-module.exports = { cjs2esm }
+module.exports = { cjs2esm };

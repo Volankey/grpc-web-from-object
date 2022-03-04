@@ -1,1 +1,1 @@
-export function cjs2esm(filePath: any): Promise<void>;
+export function cjs2esm(entryPoints: any, outdir: any): Promise<void>;

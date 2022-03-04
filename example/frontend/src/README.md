@@ -39,7 +39,6 @@ invoke("echo", {
   .catch((e) => {});
 ```
 
-
 ```
 sh gen-proto
 ```
@@ -55,22 +54,27 @@ pnpm install
 ### Start Dev
 
 generate protobuf for js
+
 ```
 sh gen-proto.sh
 ```
 
 start frontend
+
 ```
 cd ./example
 npm run dev
 ```
+
 start backend
+
 ```
 cd server/echo/node-server
 node server.js
 ```
 
 start envoy
+
 ```
 cd server/docker/envoy
 sh run.sh
