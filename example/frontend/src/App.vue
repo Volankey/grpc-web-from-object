@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { invoke } from './invoke'
+import { invoke } from "./invoke";
 
-const result = ref('')
+const result = ref("");
 
-function doEcho(){
+function doEcho() {
   invoke("echo", {
     message: "hello volankey",
     student: {
@@ -16,24 +16,24 @@ function doEcho(){
       liberalArtsList: [{ name: "piano", score: "12" }],
       scienceList: [{ name: "math", score: "23" }],
     },
-    'keyScroeMap':[['ss',{'name':'nihao','score':'30'}]],
-    'keyvalueMap':[['1','1']],
-    'oneOfSample':{
-      name:'红红火火'
-    }
+    keyScroeMap: [["ss", { name: "nihao", score: "30" }]],
+    keyvalueMap: [["1", "1"]],
+    oneOfSample: {
+      name: "红红火火",
+    },
   })
-  .then((t) => {
-    console.log(t.resp);
-    result.value = JSON.stringify(t.resp,null,' ')
-  })
-  .catch((e) => {});
+    .then((t) => {
+      console.log(t.resp);
+      result.value = JSON.stringify(t.resp, null, " ");
+    })
+    .catch((e) => {});
 }
 </script>
 
 <template>
   <button @click="doEcho">do echo</button>
   <pre>
-    {{result}}
+    {{ result }}
   </pre>
 </template>
 

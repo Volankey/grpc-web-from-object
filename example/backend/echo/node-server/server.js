@@ -16,21 +16,20 @@
  *
  */
 
-var PROTO_PATH = __dirname + '/../../../echo.proto';
+var PROTO_PATH = __dirname + "/../../../echo.proto";
 
-var assert = require('assert');
-var async = require('async');
-var _ = require('lodash');
-var grpc = require('@grpc/grpc-js');
-var protoLoader = require('@grpc/proto-loader');
-var packageDefinition = protoLoader.loadSync(
-    PROTO_PATH,
-    {keepCase: true,
-     longs: String,
-     enums: String,
-     defaults: true,
-     oneofs: true
-    });
+var assert = require("assert");
+var async = require("async");
+var _ = require("lodash");
+var grpc = require("@grpc/grpc-js");
+var protoLoader = require("@grpc/proto-loader");
+var packageDefinition = protoLoader.loadSync(PROTO_PATH, {
+  keepCase: true,
+  longs: String,
+  enums: String,
+  defaults: true,
+  oneofs: true,
+});
 var protoDescriptor = grpc.loadPackageDefinition(packageDefinition);
 var echo = protoDescriptor.grpc.gateway.testing;
 
@@ -52,10 +51,14 @@ function copyMetadata(call) {
  * @param {function():?} callback
  */
 function doEcho(call, callback) {
-  callback(null, {
-    message: 'ok',
-    resp: call.request
-  }, copyMetadata(call));
+  callback(
+    null,
+    {
+      message: "ok",
+      resp: call.request,
+    },
+    copyMetadata(call)
+  );
 }
 
 /**
@@ -65,7 +68,7 @@ function doEcho(call, callback) {
 function doEchoAbort(call, callback) {
   callback({
     code: grpc.status.ABORTED,
-    message: 'Aborted from server side.'
+    message: "Aborted from server side.",
   });
 }
 
@@ -77,7 +80,7 @@ function doServerStreamingEcho(call) {
   function sender(message, interval) {
     return (callback) => {
       call.write({
-        message: message
+        message: message,
       });
       _.delay(callback, interval);
     };
@@ -108,10 +111,13 @@ function getServer() {
 if (require.main === module) {
   var echoServer = getServer();
   echoServer.bindAsync(
-    '0.0.0.0:9090', grpc.ServerCredentials.createInsecure(), (err, port) => {
+    "0.0.0.0:9090",
+    grpc.ServerCredentials.createInsecure(),
+    (err, port) => {
       assert.ifError(err);
       echoServer.start();
-  });
+    }
+  );
 }
 
 exports.getServer = getServer;

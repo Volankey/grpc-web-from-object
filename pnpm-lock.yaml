@@ -6,15 +6,20 @@ importers:
     specifiers:
       ast-types-yx: ^0.14.2
       doctypes: ^1.1.0
+      husky: ^7.0.4
+      prettier: ^2.5.1
       typescript: ^4.6.2
       vscode-languageserver-types: ^3.16.0
       vscode-typescript-languageservice: ^0.27.25
     dependencies:
       ast-types-yx: 0.14.2
       doctypes: 1.1.0
+      prettier: 2.5.1
       typescript: 4.6.2
       vscode-languageserver-types: 3.16.0
       vscode-typescript-languageservice: 0.27.25
+    devDependencies:
+      husky: 7.0.4
 
   example/backend/echo/node-server:
     specifiers:
@@ -489,7 +494,7 @@ packages:
     dev: true
 
   /@volar/shared/0.27.24:
-    resolution: {integrity: sha1-ozRX7IrAsNNn7VTJ4hkTpfjC1sI=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/@volar/shared/-/shared-0.27.24.tgz}
+    resolution: {integrity: sha1-ozRX7IrAsNNn7VTJ4hkTpfjC1sI=}
     dependencies:
       upath: 2.0.1
       vscode-jsonrpc: 8.0.0-next.7
@@ -1685,6 +1690,12 @@ packages:
     engines: {node: '>=10.17.0'}
     dev: true
 
+  /husky/7.0.4:
+    resolution: {integrity: sha1-JCBIJF3EnI+xvwzHz7mN1yJTFTU=}
+    engines: {node: '>=12'}
+    hasBin: true
+    dev: true
+
   /hyntax-yx/1.0.8:
     resolution: {integrity: sha512-f95Dbi8UsCpvKbi7vV9j1VNQtTgZdP4DUBgwZjkq6b0tve8W61eeqDKOh++9gy2TJKJZLiqJuVDzLzZwNjBugQ==}
     engines: {node: '>=6.11.1', npm: '>=5.3.0'}
@@ -2127,6 +2138,12 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.2
 
+  /prettier/2.5.1:
+    resolution: {integrity: sha1-//dfqdUZxUzw/OMowQF9lFRrxWo=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/prettier/-/prettier-2.5.1.tgz}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: false
+
   /private/0.1.8:
     resolution: {integrity: sha512-VvivMrbvd2nKkiG38qjULzlc+4Vx4wm/whI9pQD35YrARNnhxeiRktSOhSukRLFNlzg6Br/cJPet5J/u19r/mg==}
     engines: {node: '>= 0.6'}
@@ -2325,7 +2342,7 @@ packages:
     hasBin: true
 
   /semver/7.3.5:
-    resolution: {integrity: sha1-C2Ich5NI2JmOSw5L6Us/EuYBjvc=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/semver/-/semver-7.3.5.tgz}
+    resolution: {integrity: sha1-C2Ich5NI2JmOSw5L6Us/EuYBjvc=}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
@@ -2466,7 +2483,7 @@ packages:
     dev: true
 
   /tslib/2.3.1:
-    resolution: {integrity: sha1-6KM1rdXOrlGqJh0ypJAVjvBC7wE=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/tslib/-/tslib-2.3.1.tgz}
+    resolution: {integrity: sha1-6KM1rdXOrlGqJh0ypJAVjvBC7wE=}
 
   /tsup/5.11.13_typescript@4.6.2:
     resolution: {integrity: sha512-NVMK01gVmojZn7+iZwxRK1CzW2BIabaVMyEjs7Nm9lm4DrSf7IAqs2F3fg0vT7rH72x1cIBsW9U/TlWrCvHVQQ==}
@@ -2503,7 +2520,7 @@ packages:
     hasBin: true
 
   /upath/2.0.1:
-    resolution: {integrity: sha1-UMc96mjW9rmQ9R0nnOYIFmXWGos=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/upath/-/upath-2.0.1.tgz}
+    resolution: {integrity: sha1-UMc96mjW9rmQ9R0nnOYIFmXWGos=}
     engines: {node: '>=4'}
 
   /util-deprecate/1.0.2:
@@ -2568,26 +2585,26 @@ packages:
     dev: true
 
   /vscode-jsonrpc/8.0.0-next.7:
-    resolution: {integrity: sha1-aBnukrP0OUO5NfEbgU2OCL2rrTU=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/vscode-jsonrpc/-/vscode-jsonrpc-8.0.0-next.7.tgz}
+    resolution: {integrity: sha1-aBnukrP0OUO5NfEbgU2OCL2rrTU=}
     engines: {node: '>=14.0.0'}
 
   /vscode-languageserver-protocol/3.17.0-next.15:
-    resolution: {integrity: sha1-abelL7ZpcHGbYo3ZyRklgg8v07c=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/vscode-languageserver-protocol/-/vscode-languageserver-protocol-3.17.0-next.15.tgz}
+    resolution: {integrity: sha1-abelL7ZpcHGbYo3ZyRklgg8v07c=}
     dependencies:
       vscode-jsonrpc: 8.0.0-next.7
       vscode-languageserver-types: 3.17.0-next.8
 
   /vscode-languageserver-textdocument/1.0.4:
-    resolution: {integrity: sha1-PNVt0UzsHQnobEuwSwmiRss98Vc=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/vscode-languageserver-textdocument/-/vscode-languageserver-textdocument-1.0.4.tgz}
+    resolution: {integrity: sha1-PNVt0UzsHQnobEuwSwmiRss98Vc=}
 
   /vscode-languageserver-types/3.16.0:
     resolution: {integrity: sha1-7POT/BIexpdLLaPvsxVWRMUU4kc=}
 
   /vscode-languageserver-types/3.17.0-next.8:
-    resolution: {integrity: sha1-6GGe6RMZmkf3qcCI7GOhvVnbPd0=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/vscode-languageserver-types/-/vscode-languageserver-types-3.17.0-next.8.tgz}
+    resolution: {integrity: sha1-6GGe6RMZmkf3qcCI7GOhvVnbPd0=}
 
   /vscode-languageserver/8.0.0-next.9:
-    resolution: {integrity: sha1-LZwQ0Prv0gALts95Uw1Ro1v5W08=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/vscode-languageserver/-/vscode-languageserver-8.0.0-next.9.tgz}
+    resolution: {integrity: sha1-LZwQ0Prv0gALts95Uw1Ro1v5W08=}
     hasBin: true
     dependencies:
       vscode-languageserver-protocol: 3.17.0-next.15
@@ -2622,7 +2639,7 @@ packages:
     dev: true
 
   /vscode-uri/3.0.3:
-    resolution: {integrity: sha1-qVwc4ub0G3VJ+GJ50Z9HlR5PTYQ=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/vscode-uri/-/vscode-uri-3.0.3.tgz}
+    resolution: {integrity: sha1-qVwc4ub0G3VJ+GJ50Z9HlR5PTYQ=}
 
   /vscode-vue-languageservice/0.27.30:
     resolution: {integrity: sha512-nPnUNCMqqHfxcCPLyLWvmgbNCgos3SwvPcl/CzAnMbqcjLtNZppsdI7bKX3EEj0Jbg6SGLQ9NanIvZaMI1bsUA==}

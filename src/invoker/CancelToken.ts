@@ -1,20 +1,20 @@
-export type Executor = (cancel?: (...args: any[]) => unknown) => void
+export type Executor = (cancel?: (...args: any[]) => unknown) => void;
 
 export class CancelToken {
-  executor?: Executor
-  static source () {
+  executor?: Executor;
+  static source() {
     const data = {
       token: new CancelToken(),
-      cancel () {
-        data.token?.executor?.()
+      cancel() {
+        data.token?.executor?.();
       },
-    }
-    return data
+    };
+    return data;
   }
 
-  constructor (executor?: Executor) {
+  constructor(executor?: Executor) {
     if (executor) {
-      this.executor = executor
+      this.executor = executor;
     }
   }
 }
