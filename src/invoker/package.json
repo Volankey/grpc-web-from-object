@@ -22,9 +22,7 @@
   },
   "scripts": {
     "dev": "npm run build -- --watch",
-    "dev:example": "npm run dev &  cd ../../ && npm -C example/frontend run dev",
-    "build": "tsup index.ts --dts --format cjs,esm --external google-protobuf",
-    "build:example": "cd ../../ && npm -C example/frontend run build"
+    "build": "tsup index.ts --dts --format cjs,esm --external google-protobuf"
   },
   "author": "",
   "license": "ISC",
