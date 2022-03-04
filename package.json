@@ -21,7 +21,7 @@
     "dev:example": "npm -C src/invoker run dev &  npm -C example/frontend run dev",
     "build:example": "npm -C src/invoker run build && npm -C example/frontend run build",
     "prepare": "husky install",
-    "prettier": "prettier --single-quote --trailing-comma all --write **/src/**/*.{ts,js,md,vue}"
+    "prettier": "prettier --single-quote --trailing-comma all --write **/src/**/*.{ts,js,md,vue} "
   },
   "repository": {
     "type": "git",
