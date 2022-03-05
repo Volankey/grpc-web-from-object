@@ -1,7 +1,7 @@
 {
-  "name": "@Volankey/grpc-web-pb-transform",
+  "name": "@volankey/grpc-web-pb-transform",
   "version": "1.0.0",
-  "description": "",
+  "description": "GRPC WEB from object transform",
   "main": "./src/index.js",
   "exports": {
     ".": "./src/index.js"
