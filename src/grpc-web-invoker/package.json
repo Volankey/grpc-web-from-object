@@ -1,7 +1,7 @@
 {
   "name": "@Volankey/grpc-web-invoker",
   "version": "1.0.0",
-  "description": "",
+  "description": "GRPC-WEB from object invoker",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -9,11 +9,21 @@
     "gRPC",
     "grpc-web",
     "javascript",
-    "typescript"
+    "typescript",
+    "grpc-web from object"
   ],
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Volankey/grpc-web-from-object.git",
+    "directory": "src/grpc-web-invoker"
+  },
+  "bugs": {
+    "url": "https://github.com/Volankey/grpc-web-from-object/issues"
+  },
+  "homepage": "https://github.com/Volankey/grpc-web-from-object",
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
@@ -25,8 +35,12 @@
     "build": "tsup index.ts --dts --format cjs,esm --external google-protobuf",
     "prepublishOnly": "npm run build"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Volankey",
+  "license": "MIT",
+  "peerDependencies": {
+    "google-protobuf": "^3.19.0",
+    "grpc-web": "^1.3.1"
+  },
   "dependencies": {
     "google-protobuf": "^3.19.4",
     "grpc-web": "^1.3.1",

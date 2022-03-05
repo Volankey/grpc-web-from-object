@@ -9,17 +9,37 @@
   "files": [
     "src"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Volankey/grpc-web-from-object.git",
+    "directory": "src/grpc-web-pb-transform"
+  },
+  "bugs": {
+    "url": "https://github.com/Volankey/grpc-web-from-object/issues"
+  },
+  "homepage": "https://github.com/Volankey/grpc-web-from-object",
   "scripts": {
     "build:dts": "npx -p typescript tsc src/index.js --declaration --allowJs --emitDeclarationOnly --outDir src",
     "prepublishOnly": "npm run build:dts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
+  "keywords": [
+    "gRPC",
+    "grpc-web",
+    "javascript",
+    "typescript",
+    "grpc web from object"
+  ],
+  "author": "Volankey",
+  "license": "MIT",
+  "peerDependencies": {
+    "google-protobuf": "^3.19.0",
+    "grpc-web": "^1.3.1"
+  },
+  "dependencies": {
     "esbuild": "^0.14.25",
-    "gogocode": "^1.0.40",
-    "google-protobuf": "^3.19.4",
+    "gogocode": "^1.0.40"
+  },
+  "devDependencies": {
     "typescript": "^4.4.3"
   }
 }
