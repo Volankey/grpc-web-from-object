@@ -6,16 +6,14 @@
   "directories": {
     "example": "example"
   },
-  "dependencies": {
+  "devDependencies": {
+    "husky": "^7.0.4",
+    "prettier": "^2.5.1",
     "ast-types-yx": "^0.14.2",
     "doctypes": "^1.1.0",
-    "prettier": "^2.5.1",
     "typescript": "^4.6.2",
     "vscode-languageserver-types": "^3.16.0",
     "vscode-typescript-languageservice": "^0.27.25"
-  },
-  "devDependencies": {
-    "husky": "^7.0.4"
   },
   "scripts": {
     "dev:example": "npm -C src/grpc-web-invoker run dev &  npm -C example/frontend run dev",

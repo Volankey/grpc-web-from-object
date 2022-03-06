@@ -2,7 +2,7 @@ const { exec } = require('child_process');
 const {
   pbValueTypeTransfer,
   cjs2esm,
-} = require('@Volankey/grpc-web-pb-transform');
+} = require('@volankey/grpc-web-pb-transform');
 const { join } = require('path');
 const startTime = Date.now();
 console.log(new Date().toLocaleString(), 'start handle pb files...');

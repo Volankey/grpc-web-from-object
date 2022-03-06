@@ -1,5 +1,5 @@
 import { EchoServiceClient } from './proto/EchoServiceClientPb';
-import { createInvoker } from '@Volankey/grpc-web-invoker';
+import { createInvoker } from '@volankey/grpc-web-invoker';
 
 const client = new EchoServiceClient('http://localhost:8080', null);
 //@ts-ignore
