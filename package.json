@@ -7,10 +7,17 @@
     "example": "example"
   },
   "devDependencies": {
-    "husky": "^7.0.4",
-    "prettier": "^2.5.1",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/jest": "^27.4.1",
     "ast-types-yx": "^0.14.2",
+    "babel-jest": "^27.5.1",
     "doctypes": "^1.1.0",
+    "husky": "^7.0.4",
+    "jest": "^27.5.1",
+    "prettier": "^2.5.1",
+    "ts-jest": "^27.1.3",
     "typescript": "^4.6.2",
     "vscode-languageserver-types": "^3.16.0",
     "vscode-typescript-languageservice": "^0.27.25"
@@ -19,7 +26,8 @@
     "dev:example": "npm -C src/grpc-web-invoker run dev &  npm -C example/frontend run dev",
     "build:example": "npm -C src/grpc-web-invoker run build && npm -C example/frontend run build",
     "prepare": "husky install",
-    "prettier": "prettier --single-quote --trailing-comma all --write **/src/**/*.{ts,js,md,vue} "
+    "prettier": "prettier --single-quote --trailing-comma all --write **/src/**/*.{ts,js,md,vue} ",
+    "test": "node example/backend/echo/node-server/server.js & jest"
   },
   "repository": {
     "type": "git",
