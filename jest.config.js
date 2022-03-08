@@ -1,7 +1,7 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  collectCoverage: false,
+  collectCoverage: true,
   collectCoverageFrom: ['./src/grpc-web-invoker/index.ts'],
   transform: {
     '^.+\\.(jsx|js)?$': 'babel-jest',

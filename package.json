@@ -27,7 +27,7 @@
     "build:example": "npm -C src/grpc-web-invoker run build && npm -C example/frontend run build",
     "prepare": "husky install",
     "prettier": "prettier --single-quote --trailing-comma all --write **/src/**/*.{ts,js,md,vue} ",
-    "test": "jest"
+    "test": "node example/backend/echo/node-server/server.js & jest"
   },
   "repository": {
     "type": "git",
