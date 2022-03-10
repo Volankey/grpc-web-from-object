@@ -172,7 +172,7 @@ const timeoutAbort = new Promise((resolve,reject)=>{
   },2000)
 }).then((e)=>{
   alert((e as Error).message)
-  return e
+  return Promise.reject(e)
 })
 const invokePromise = invoke('echo', {
   message: 'hello volankey',
@@ -205,6 +205,7 @@ Promise.race([invokePromise,timeoutAbort]).then((t) => {
   });
 
 ```
+
 ## Contributor
 
 [./CONTRIBUTE.md](CONTRIBUTE.md)

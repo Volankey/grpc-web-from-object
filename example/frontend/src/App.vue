@@ -17,7 +17,7 @@ function doEcho(mockDelay?: number) {
     }, 2000);
   }).then((e) => {
     alert((e as Error).message);
-    return e;
+    return Promise.reject(e);
   });
   console.log('mock-delay: ', mockDelay);
   sending.value = true;
