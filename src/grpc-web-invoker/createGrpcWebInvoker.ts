@@ -87,7 +87,7 @@ function setRequestBody(
   return reqTypeInstance;
 }
 interface Config {
-  globalMeta?: Record<string, string>;
+  globalMeta?: Record<string, string | number | boolean>;
   errorHandler?: (e: RpcError) => void;
 }
 function capitalizeFirstLetter(str: string) {
@@ -152,10 +152,7 @@ export function createInvoker<C>(
     const methodInfo = getMethodInfo(client, method);
     const ReqType = methodInfo.getRequestMessageCtor();
     const requestBody = setRequestBody(ReqType, data);
-    console.log(
-      '🚀 ~ file: createGrpcWebInvoker.ts ~ line 152 ~ requestBody',
-      requestBody,
-    );
+
     const tmpMetadata = merge(metadata, config.globalMeta);
     let reqInstance: any = null;
     if (options?.mock || invokerOptions?.mock) {
@@ -201,9 +198,9 @@ export function createInvoker<C>(
       );
       if (options?.cancelToken) {
         if (options?.cancelToken.executor) {
-          options?.cancelToken.executor(reqInstance.abort);
+          options?.cancelToken.executor(reqInstance.cancel.bind(reqInstance));
         } else {
-          options.cancelToken.executor = reqInstance.abort;
+          options.cancelToken.executor = reqInstance.cancel.bind(reqInstance);
         }
       }
     })
@@ -214,7 +211,7 @@ export function createInvoker<C>(
       });
   };
 
-  const setGlobalMetaData = (key: string, value: string) => {
+  const setGlobalMetaData = (key: string, value: string | number | boolean) => {
     config.globalMeta![key] = value;
   };
   return {

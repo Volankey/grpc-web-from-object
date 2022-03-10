@@ -11,15 +11,14 @@ importers:
       typescript: ^4.6.2
       vscode-languageserver-types: ^3.16.0
       vscode-typescript-languageservice: ^0.27.25
-    dependencies:
+    devDependencies:
       ast-types-yx: 0.14.2
       doctypes: 1.1.0
+      husky: 7.0.4
       prettier: 2.5.1
       typescript: 4.6.2
       vscode-languageserver-types: 3.16.0
       vscode-typescript-languageservice: 0.27.25
-    devDependencies:
-      husky: 7.0.4
 
   example/backend/echo/node-server:
     specifiers:
@@ -41,8 +40,8 @@ importers:
       '@types/google-protobuf': ^3.15.5
       '@types/lodash-es': ^4.17.5
       '@vitejs/plugin-vue': ^1.9.3
-      '@Volankey/grpc-web-invoker': file:../../src/grpc-web-invoker
-      '@Volankey/grpc-web-pb-transform': file:../../src/grpc-web-pb-transform
+      '@volankey/grpc-web-invoker': file:../../src/grpc-web-invoker
+      '@volankey/grpc-web-pb-transform': file:../../src/grpc-web-pb-transform
       google-protobuf: ^3.19.1
       grpc-web: ^1.3.1
       lodash-es: ^4.17.21
@@ -51,7 +50,7 @@ importers:
       vue: ^3.2.16
       vue-tsc: ^0.3.0
     dependencies:
-      '@Volankey/grpc-web-invoker': link:../../src/grpc-web-invoker
+      '@volankey/grpc-web-invoker': link:../../src/grpc-web-invoker
       google-protobuf: 3.19.4
       grpc-web: 1.3.1
       lodash-es: 4.17.21
@@ -61,7 +60,7 @@ importers:
       '@types/google-protobuf': 3.15.5
       '@types/lodash-es': 4.17.6
       '@vitejs/plugin-vue': 1.10.2_vite@2.8.6
-      '@Volankey/grpc-web-pb-transform': link:../../src/grpc-web-pb-transform
+      '@volankey/grpc-web-pb-transform': link:../../src/grpc-web-pb-transform
       typescript: 4.6.2
       vite: 2.8.6
       vue-tsc: 0.3.0_typescript@4.6.2
@@ -357,7 +356,7 @@ packages:
     dev: true
 
   /@nodelib/fs.scandir/2.1.5:
-    resolution: {integrity: sha1-dhnC6yGyVIP20WdUi0z9WnSIw9U=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz}
+    resolution: {integrity: sha1-dhnC6yGyVIP20WdUi0z9WnSIw9U=}
     engines: {node: '>= 8'}
     dependencies:
       '@nodelib/fs.stat': 2.0.5
@@ -365,12 +364,12 @@ packages:
     dev: true
 
   /@nodelib/fs.stat/2.0.5:
-    resolution: {integrity: sha1-W9Jir5Tp0lvR5xsF3u1Eh2oiLos=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/@nodelib/fs.stat/-/fs.stat-2.0.5.tgz}
+    resolution: {integrity: sha1-W9Jir5Tp0lvR5xsF3u1Eh2oiLos=}
     engines: {node: '>= 8'}
     dev: true
 
   /@nodelib/fs.walk/1.2.8:
-    resolution: {integrity: sha1-6Vc36LtnRt3t9pxVaVNJTxlv5po=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/@nodelib/fs.walk/-/fs.walk-1.2.8.tgz}
+    resolution: {integrity: sha1-6Vc36LtnRt3t9pxVaVNJTxlv5po=}
     engines: {node: '>= 8'}
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
@@ -477,6 +476,7 @@ packages:
       upath: 2.0.1
       vscode-jsonrpc: 8.0.0-next.7
       vscode-uri: 3.0.3
+    dev: true
 
   /@volar/source-map/0.27.24:
     resolution: {integrity: sha512-2I5a7cXqekZ66D6lHep7ttJgvVVtPEBUIe1hnpcGbnXWNA2ya6f6jKNNyTmrXQyfkh32IEuaUd4kocR+3AKMag==}
@@ -503,7 +503,7 @@ packages:
     dev: true
 
   /@vue/compiler-core/3.0.11:
-    resolution: {integrity: sha1-XvV55G17M2uHNSKHWNHCxQWq5po=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/@vue/compiler-core/-/compiler-core-3.0.11.tgz}
+    resolution: {integrity: sha1-XvV55G17M2uHNSKHWNHCxQWq5po=}
     dependencies:
       '@babel/parser': 7.17.3
       '@babel/types': 7.17.0
@@ -521,7 +521,7 @@ packages:
       source-map: 0.6.1
 
   /@vue/compiler-dom/3.0.11:
-    resolution: {integrity: sha1-sV/ByQk3H9ZxdGAgulW12rSnMO4=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/@vue/compiler-dom/-/compiler-dom-3.0.11.tgz}
+    resolution: {integrity: sha1-sV/ByQk3H9ZxdGAgulW12rSnMO4=}
     dependencies:
       '@vue/compiler-core': 3.0.11
       '@vue/shared': 3.0.11
@@ -549,7 +549,7 @@ packages:
     dev: false
 
   /@vue/compiler-ssr/3.0.11:
-    resolution: {integrity: sha1-rFoF/RJXQS+mYHnII9ggO2qImhM=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/@vue/compiler-ssr/-/compiler-ssr-3.0.11.tgz}
+    resolution: {integrity: sha1-rFoF/RJXQS+mYHnII9ggO2qImhM=}
     dependencies:
       '@vue/compiler-dom': 3.0.11
       '@vue/shared': 3.0.11
@@ -603,7 +603,7 @@ packages:
     dev: false
 
   /@vue/shared/3.0.11:
-    resolution: {integrity: sha1-INIt0Np9NYuyHBf5vehigVJkLHc=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/@vue/shared/-/shared-3.0.11.tgz}
+    resolution: {integrity: sha1-INIt0Np9NYuyHBf5vehigVJkLHc=}
     dev: false
 
   /@vue/shared/3.2.31:
@@ -651,11 +651,11 @@ packages:
     dev: false
 
   /any-promise/1.3.0:
-    resolution: {integrity: sha1-q8av7tzqUugJzcA3au0845Y10X8=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/any-promise/-/any-promise-1.3.0.tgz}
+    resolution: {integrity: sha1-q8av7tzqUugJzcA3au0845Y10X8=}
     dev: true
 
   /anymatch/3.1.2:
-    resolution: {integrity: sha1-wFV8CWrzLxBhmPT04qODU343hxY=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/anymatch/-/anymatch-3.1.2.tgz}
+    resolution: {integrity: sha1-wFV8CWrzLxBhmPT04qODU343hxY=}
     engines: {node: '>= 8'}
     dependencies:
       normalize-path: 3.0.0
@@ -663,7 +663,7 @@ packages:
     dev: true
 
   /array-union/2.1.0:
-    resolution: {integrity: sha1-t5hCCtvrHego2ErNii4j0+/oXo0=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/array-union/-/array-union-2.1.0.tgz}
+    resolution: {integrity: sha1-t5hCCtvrHego2ErNii4j0+/oXo0=}
     engines: {node: '>=8'}
     dev: true
 
@@ -685,7 +685,6 @@ packages:
     engines: {node: '>=4'}
     dependencies:
       tslib: 2.3.1
-    dev: false
 
   /async/1.5.2:
     resolution: {integrity: sha1-7GphrlZIDAw8skHJVhjiCJL5Zyo=}
@@ -699,7 +698,7 @@ packages:
     dev: true
 
   /balanced-match/1.0.2:
-    resolution: {integrity: sha1-6D46fj8wCzTLnYf2FfoMvzV2kO4=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/balanced-match/-/balanced-match-1.0.2.tgz}
+    resolution: {integrity: sha1-6D46fj8wCzTLnYf2FfoMvzV2kO4=}
 
   /base64-js/1.5.1:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
@@ -710,18 +709,18 @@ packages:
     dev: false
 
   /binary-extensions/2.2.0:
-    resolution: {integrity: sha1-dfUC7q+f/eQvyYgpZFvk6na9ni0=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/binary-extensions/-/binary-extensions-2.2.0.tgz}
+    resolution: {integrity: sha1-dfUC7q+f/eQvyYgpZFvk6na9ni0=}
     engines: {node: '>=8'}
     dev: true
 
   /brace-expansion/1.1.11:
-    resolution: {integrity: sha1-PH/L9SnYcibz0vUrlm/1Jx60Qd0=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/brace-expansion/-/brace-expansion-1.1.11.tgz}
+    resolution: {integrity: sha1-PH/L9SnYcibz0vUrlm/1Jx60Qd0=}
     dependencies:
       balanced-match: 1.0.2
       concat-map: 0.0.1
 
   /braces/3.0.2:
-    resolution: {integrity: sha1-NFThpGLujVmeI23zNs2epPiv4Qc=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/braces/-/braces-3.0.2.tgz}
+    resolution: {integrity: sha1-NFThpGLujVmeI23zNs2epPiv4Qc=}
     engines: {node: '>=8'}
     dependencies:
       fill-range: 7.0.1
@@ -744,7 +743,7 @@ packages:
     dev: false
 
   /bundle-require/3.0.4_esbuild@0.14.25:
-    resolution: {integrity: sha1-K1K6d9mcClhrWFTNIdNpVOY8wRA=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/bundle-require/-/bundle-require-3.0.4.tgz}
+    resolution: {integrity: sha1-K1K6d9mcClhrWFTNIdNpVOY8wRA=}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     peerDependencies:
       esbuild: '>=0.13'
@@ -754,7 +753,7 @@ packages:
     dev: true
 
   /cac/6.7.12:
-    resolution: {integrity: sha1-b7XqL/UL0BSQ29pJf0rnWplBUZM=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/cac/-/cac-6.7.12.tgz}
+    resolution: {integrity: sha1-b7XqL/UL0BSQ29pJf0rnWplBUZM=}
     engines: {node: '>=8'}
     dev: true
 
@@ -785,7 +784,7 @@ packages:
     dev: true
 
   /chokidar/3.5.3:
-    resolution: {integrity: sha1-HPN8hwe5Mr0a8a4iwEMuKs0ZA70=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/chokidar/-/chokidar-3.5.3.tgz}
+    resolution: {integrity: sha1-HPN8hwe5Mr0a8a4iwEMuKs0ZA70=}
     engines: {node: '>= 8.10.0'}
     dependencies:
       anymatch: 3.1.2
@@ -796,7 +795,7 @@ packages:
       normalize-path: 3.0.0
       readdirp: 3.6.0
     optionalDependencies:
-      fsevents: registry.npmmirror.com/fsevents/2.3.2
+      fsevents: 2.3.2
     dev: true
 
   /cliui/7.0.4:
@@ -829,12 +828,12 @@ packages:
     dev: false
 
   /commander/4.1.1:
-    resolution: {integrity: sha1-n9YCvZNilOnp70aj9NaWQESxgGg=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/commander/-/commander-4.1.1.tgz}
+    resolution: {integrity: sha1-n9YCvZNilOnp70aj9NaWQESxgGg=}
     engines: {node: '>= 6'}
     dev: true
 
   /concat-map/0.0.1:
-    resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/concat-map/-/concat-map-0.0.1.tgz}
+    resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
 
   /constantinople/4.0.1:
     resolution: {integrity: sha512-vCrqcSIq4//Gx74TXXCGnHpulY1dskqLTFGDmhrGxzeXL8lF8kvXv6mpNWlJj1uD4DW23D4ljAqbY4RRaaUZIw==}
@@ -850,7 +849,7 @@ packages:
     dev: true
 
   /cross-spawn/7.0.3:
-    resolution: {integrity: sha1-9zqFudXUHQRVUcF34ogtSshXKKY=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/cross-spawn/-/cross-spawn-7.0.3.tgz}
+    resolution: {integrity: sha1-9zqFudXUHQRVUcF34ogtSshXKKY=}
     engines: {node: '>= 8'}
     dependencies:
       path-key: 3.1.1
@@ -859,7 +858,7 @@ packages:
     dev: true
 
   /cssesc/3.0.0:
-    resolution: {integrity: sha1-N3QZGZA7hoVl4cCep0dEXNGJg+4=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/cssesc/-/cssesc-3.0.0.tgz}
+    resolution: {integrity: sha1-N3QZGZA7hoVl4cCep0dEXNGJg+4=}
     engines: {node: '>=4'}
     hasBin: true
     dev: false
@@ -880,7 +879,7 @@ packages:
       ms: 2.1.2
 
   /dir-glob/3.0.1:
-    resolution: {integrity: sha1-Vtv3PZkqSpO6FYT0U0Bj/S5BcX8=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/dir-glob/-/dir-glob-3.0.1.tgz}
+    resolution: {integrity: sha1-Vtv3PZkqSpO6FYT0U0Bj/S5BcX8=}
     engines: {node: '>=8'}
     dependencies:
       path-type: 4.0.0
@@ -888,6 +887,7 @@ packages:
 
   /doctypes/1.1.0:
     resolution: {integrity: sha1-6oCxBqh1OHdOijpKWv4pPeSJ4Kk=}
+    dev: true
 
   /dom-serializer/1.3.2:
     resolution: {integrity: sha512-5c54Bk5Dw4qAxNOI1pFEizPSjVsx5+bpJKmL2kPn8JhBUq2q09tTCa3mjijun2NfK78NMouDYNMBkOrPZiS+ig==}
@@ -941,60 +941,400 @@ packages:
     resolution: {integrity: sha512-p92if5Nz619I0w+akJrLZH0MX0Pb5DX39XOwQTtXSdQQOaYH03S1uIQp4mhOZtAXrxq4ViO67YTiLBo2638o9A==}
     dev: true
 
+  /esbuild-android-64/0.14.24:
+    resolution: {integrity: sha1-2CasKam5g9wgCgykB8NMZNJICzg=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-android-64/-/esbuild-android-64-0.14.24.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [android]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-android-64/0.14.25:
+    resolution: {integrity: sha1-1TLTjLX+CuRRZ8419LvHhMY2vkA=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-android-64/-/esbuild-android-64-0.14.25.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [android]
+    requiresBuild: true
+    optional: true
+
+  /esbuild-android-arm64/0.14.24:
+    resolution: {integrity: sha1-+Kryjb1Ne4DTCwMjx6ZF46ErXek=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-android-arm64/-/esbuild-android-arm64-0.14.24.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [android]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-android-arm64/0.14.25:
+    resolution: {integrity: sha1-nFuzNmqr/RShxybTaXi3lEHfy24=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-android-arm64/-/esbuild-android-arm64-0.14.25.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [android]
+    requiresBuild: true
+    optional: true
+
+  /esbuild-darwin-64/0.14.24:
+    resolution: {integrity: sha1-n25LlAZunF5SGxkXaoXt1/lKwHQ=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-darwin-64/-/esbuild-darwin-64-0.14.24.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-darwin-64/0.14.25:
+    resolution: {integrity: sha1-BdzbbYhPQnA5/+5ekv+XUn5Wwm0=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-darwin-64/-/esbuild-darwin-64-0.14.25.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    optional: true
+
+  /esbuild-darwin-arm64/0.14.24:
+    resolution: {integrity: sha1-a4zn8qPhIQzGcsc9ZYZp5fiLjvs=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-darwin-arm64/-/esbuild-darwin-arm64-0.14.24.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-darwin-arm64/0.14.25:
+    resolution: {integrity: sha1-KOCA2k6gz+lJgHHn+AYEmMruGpU=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-darwin-arm64/-/esbuild-darwin-arm64-0.14.25.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    optional: true
+
+  /esbuild-freebsd-64/0.14.24:
+    resolution: {integrity: sha1-tYbYqikL/N8Kpz/fz2TAktSXlfI=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-freebsd-64/-/esbuild-freebsd-64-0.14.24.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [freebsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-freebsd-64/0.14.25:
+    resolution: {integrity: sha1-IA02ZKO5Rbyf3LpzYUtJoR69HPo=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-freebsd-64/-/esbuild-freebsd-64-0.14.25.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [freebsd]
+    requiresBuild: true
+    optional: true
+
+  /esbuild-freebsd-arm64/0.14.24:
+    resolution: {integrity: sha1-TnCY3gd5EIm272tPF6jOYSTae+w=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-freebsd-arm64/-/esbuild-freebsd-arm64-0.14.24.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [freebsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-freebsd-arm64/0.14.25:
+    resolution: {integrity: sha1-YksIxdpgE73DEqqiPE/0CVgPXDw=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-freebsd-arm64/-/esbuild-freebsd-arm64-0.14.25.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [freebsd]
+    requiresBuild: true
+    optional: true
+
+  /esbuild-linux-32/0.14.24:
+    resolution: {integrity: sha1-r+c0Xz6O5Y7t42wCVOEokkaAswU=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-linux-32/-/esbuild-linux-32-0.14.24.tgz}
+    engines: {node: '>=12'}
+    cpu: [ia32]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-linux-32/0.14.25:
+    resolution: {integrity: sha1-Ajjll+sLYKoGx+mPzLv9a7mg1sU=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-linux-32/-/esbuild-linux-32-0.14.25.tgz}
+    engines: {node: '>=12'}
+    cpu: [ia32]
+    os: [linux]
+    requiresBuild: true
+    optional: true
+
+  /esbuild-linux-64/0.14.24:
+    resolution: {integrity: sha1-znuV6O2WB23LMp0dNOS57whOAs8=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-linux-64/-/esbuild-linux-64-0.14.24.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-linux-64/0.14.25:
+    resolution: {integrity: sha1-iouM9H384SfIWOcSKdmjhagsYug=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-linux-64/-/esbuild-linux-64-0.14.25.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    optional: true
+
+  /esbuild-linux-arm/0.14.24:
+    resolution: {integrity: sha1-6szApNfRfnKQ5bIMOD5pacZ2m/c=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-linux-arm/-/esbuild-linux-arm-0.14.24.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-linux-arm/0.14.25:
+    resolution: {integrity: sha1-A0vRjpMQufAQyJ+Q738FcGaJYAs=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-linux-arm/-/esbuild-linux-arm-0.14.25.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm]
+    os: [linux]
+    requiresBuild: true
+    optional: true
+
+  /esbuild-linux-arm64/0.14.24:
+    resolution: {integrity: sha1-+K7k63gwn9PAZOhjk6aY4zkI6Ow=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-linux-arm64/-/esbuild-linux-arm64-0.14.24.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-linux-arm64/0.14.25:
+    resolution: {integrity: sha1-eslDcUGKJkC6QTvBcAqu3rJ5TlI=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-linux-arm64/-/esbuild-linux-arm64-0.14.25.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    optional: true
+
+  /esbuild-linux-mips64le/0.14.24:
+    resolution: {integrity: sha1-nblLYrvLqtYikIfqJ6bX3D/IeNY=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-linux-mips64le/-/esbuild-linux-mips64le-0.14.24.tgz}
+    engines: {node: '>=12'}
+    cpu: [mips64el]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-linux-mips64le/0.14.25:
+    resolution: {integrity: sha1-BfmKjPa1eOq2tOawqwlPN1MJNPQ=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-linux-mips64le/-/esbuild-linux-mips64le-0.14.25.tgz}
+    engines: {node: '>=12'}
+    cpu: [mips64el]
+    os: [linux]
+    requiresBuild: true
+    optional: true
+
+  /esbuild-linux-ppc64le/0.14.24:
+    resolution: {integrity: sha1-GU1Zpev82/x+cQ0TiT5sYiFrqnc=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-linux-ppc64le/-/esbuild-linux-ppc64le-0.14.24.tgz}
+    engines: {node: '>=12'}
+    cpu: [ppc64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-linux-ppc64le/0.14.25:
+    resolution: {integrity: sha1-Rv0K3Y2FNWeEOdepwodq0gBC2VI=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-linux-ppc64le/-/esbuild-linux-ppc64le-0.14.25.tgz}
+    engines: {node: '>=12'}
+    cpu: [ppc64]
+    os: [linux]
+    requiresBuild: true
+    optional: true
+
+  /esbuild-linux-riscv64/0.14.24:
+    resolution: {integrity: sha1-DYy7zS87fMQ2XryPrI0A/clWkdI=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-linux-riscv64/-/esbuild-linux-riscv64-0.14.24.tgz}
+    engines: {node: '>=12'}
+    cpu: [riscv64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-linux-riscv64/0.14.25:
+    resolution: {integrity: sha1-6i6Ybw8+Xfc8Y1E13XeAUXNPxgU=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-linux-riscv64/-/esbuild-linux-riscv64-0.14.25.tgz}
+    engines: {node: '>=12'}
+    cpu: [riscv64]
+    os: [linux]
+    requiresBuild: true
+    optional: true
+
+  /esbuild-linux-s390x/0.14.24:
+    resolution: {integrity: sha1-Rg5yb12CfxFx+erIybvK2OZXTsU=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-linux-s390x/-/esbuild-linux-s390x-0.14.24.tgz}
+    engines: {node: '>=12'}
+    cpu: [s390x]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-linux-s390x/0.14.25:
+    resolution: {integrity: sha1-7+iUhumhsVCJJQSAduPzpmmKpqM=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-linux-s390x/-/esbuild-linux-s390x-0.14.25.tgz}
+    engines: {node: '>=12'}
+    cpu: [s390x]
+    os: [linux]
+    requiresBuild: true
+    optional: true
+
+  /esbuild-netbsd-64/0.14.24:
+    resolution: {integrity: sha1-j29MaLjoTh4BEzAJbxGAE8wnVgE=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-netbsd-64/-/esbuild-netbsd-64-0.14.24.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [netbsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-netbsd-64/0.14.25:
+    resolution: {integrity: sha1-Q5/ifY7jtYh1Ae5jmI6F+SAQfbY=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-netbsd-64/-/esbuild-netbsd-64-0.14.25.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [netbsd]
+    requiresBuild: true
+    optional: true
+
+  /esbuild-openbsd-64/0.14.24:
+    resolution: {integrity: sha1-b7/AiRA9FU101OpaOu/ChEGJCUo=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-openbsd-64/-/esbuild-openbsd-64-0.14.24.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [openbsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-openbsd-64/0.14.25:
+    resolution: {integrity: sha1-Mev2FqrfbmBnRGnyuSzskigNmTA=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-openbsd-64/-/esbuild-openbsd-64-0.14.25.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [openbsd]
+    requiresBuild: true
+    optional: true
+
+  /esbuild-sunos-64/0.14.24:
+    resolution: {integrity: sha1-CZMdu8YQ+I/tocBx8oROfYhn9G4=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-sunos-64/-/esbuild-sunos-64-0.14.24.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [sunos]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-sunos-64/0.14.25:
+    resolution: {integrity: sha1-gV5Pk210lwKSpjzP1Xkf5eNWn18=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-sunos-64/-/esbuild-sunos-64-0.14.25.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [sunos]
+    requiresBuild: true
+    optional: true
+
+  /esbuild-windows-32/0.14.24:
+    resolution: {integrity: sha1-PI3d/67G3OmjrI7yvsk57Frxfmg=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-windows-32/-/esbuild-windows-32-0.14.24.tgz}
+    engines: {node: '>=12'}
+    cpu: [ia32]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-windows-32/0.14.25:
+    resolution: {integrity: sha1-GJ4U3yR48sGTyGloqx+1Thzqr9I=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-windows-32/-/esbuild-windows-32-0.14.25.tgz}
+    engines: {node: '>=12'}
+    cpu: [ia32]
+    os: [win32]
+    requiresBuild: true
+    optional: true
+
+  /esbuild-windows-64/0.14.24:
+    resolution: {integrity: sha1-6XCB7hbVHFohDNHeFUVGiawJ/Is=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-windows-64/-/esbuild-windows-64-0.14.24.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-windows-64/0.14.25:
+    resolution: {integrity: sha1-PV+/3DhWhQu0dDkpnjtg3Ri+ER8=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-windows-64/-/esbuild-windows-64-0.14.25.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    optional: true
+
+  /esbuild-windows-arm64/0.14.24:
+    resolution: {integrity: sha1-D8/ytYx3KHT43FJjhVf4F2Ce1pk=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-windows-arm64/-/esbuild-windows-arm64-0.14.24.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-windows-arm64/0.14.25:
+    resolution: {integrity: sha1-iyQ8u62Khs+YaX2pzLiMBd8u9Fg=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/esbuild-windows-arm64/-/esbuild-windows-arm64-0.14.25.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [win32]
+    requiresBuild: true
+    optional: true
+
   /esbuild/0.14.24:
     resolution: {integrity: sha512-NjfmycVQqY0+iKXoHXsvMAKx4XF/bD/dDm8pK6C/3aJO/i/uby+7AR4z8vu0qkiihkB5Y43+9BjdY2MGnswC/A==}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true
     optionalDependencies:
-      esbuild-android-64: registry.npmmirror.com/esbuild-android-64/0.14.24
-      esbuild-android-arm64: registry.npmmirror.com/esbuild-android-arm64/0.14.24
-      esbuild-darwin-64: registry.npmmirror.com/esbuild-darwin-64/0.14.24
-      esbuild-darwin-arm64: registry.npmmirror.com/esbuild-darwin-arm64/0.14.24
-      esbuild-freebsd-64: registry.npmmirror.com/esbuild-freebsd-64/0.14.24
-      esbuild-freebsd-arm64: registry.npmmirror.com/esbuild-freebsd-arm64/0.14.24
-      esbuild-linux-32: registry.npmmirror.com/esbuild-linux-32/0.14.24
-      esbuild-linux-64: registry.npmmirror.com/esbuild-linux-64/0.14.24
-      esbuild-linux-arm: registry.npmmirror.com/esbuild-linux-arm/0.14.24
-      esbuild-linux-arm64: registry.npmmirror.com/esbuild-linux-arm64/0.14.24
-      esbuild-linux-mips64le: registry.npmmirror.com/esbuild-linux-mips64le/0.14.24
-      esbuild-linux-ppc64le: registry.npmmirror.com/esbuild-linux-ppc64le/0.14.24
-      esbuild-linux-riscv64: registry.npmmirror.com/esbuild-linux-riscv64/0.14.24
-      esbuild-linux-s390x: registry.npmmirror.com/esbuild-linux-s390x/0.14.24
-      esbuild-netbsd-64: registry.npmmirror.com/esbuild-netbsd-64/0.14.24
-      esbuild-openbsd-64: registry.npmmirror.com/esbuild-openbsd-64/0.14.24
-      esbuild-sunos-64: registry.npmmirror.com/esbuild-sunos-64/0.14.24
-      esbuild-windows-32: registry.npmmirror.com/esbuild-windows-32/0.14.24
-      esbuild-windows-64: registry.npmmirror.com/esbuild-windows-64/0.14.24
-      esbuild-windows-arm64: registry.npmmirror.com/esbuild-windows-arm64/0.14.24
+      esbuild-android-64: 0.14.24
+      esbuild-android-arm64: 0.14.24
+      esbuild-darwin-64: 0.14.24
+      esbuild-darwin-arm64: 0.14.24
+      esbuild-freebsd-64: 0.14.24
+      esbuild-freebsd-arm64: 0.14.24
+      esbuild-linux-32: 0.14.24
+      esbuild-linux-64: 0.14.24
+      esbuild-linux-arm: 0.14.24
+      esbuild-linux-arm64: 0.14.24
+      esbuild-linux-mips64le: 0.14.24
+      esbuild-linux-ppc64le: 0.14.24
+      esbuild-linux-riscv64: 0.14.24
+      esbuild-linux-s390x: 0.14.24
+      esbuild-netbsd-64: 0.14.24
+      esbuild-openbsd-64: 0.14.24
+      esbuild-sunos-64: 0.14.24
+      esbuild-windows-32: 0.14.24
+      esbuild-windows-64: 0.14.24
+      esbuild-windows-arm64: 0.14.24
     dev: true
 
   /esbuild/0.14.25:
-    resolution: {integrity: sha1-3bnUe5HKdqu32FDOPf7QvD3IjRY=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/esbuild/-/esbuild-0.14.25.tgz}
+    resolution: {integrity: sha1-3bnUe5HKdqu32FDOPf7QvD3IjRY=}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true
     optionalDependencies:
-      esbuild-android-64: registry.npmmirror.com/esbuild-android-64/0.14.25
-      esbuild-android-arm64: registry.npmmirror.com/esbuild-android-arm64/0.14.25
-      esbuild-darwin-64: registry.npmmirror.com/esbuild-darwin-64/0.14.25
-      esbuild-darwin-arm64: registry.npmmirror.com/esbuild-darwin-arm64/0.14.25
-      esbuild-freebsd-64: registry.npmmirror.com/esbuild-freebsd-64/0.14.25
-      esbuild-freebsd-arm64: registry.npmmirror.com/esbuild-freebsd-arm64/0.14.25
-      esbuild-linux-32: registry.npmmirror.com/esbuild-linux-32/0.14.25
-      esbuild-linux-64: registry.npmmirror.com/esbuild-linux-64/0.14.25
-      esbuild-linux-arm: registry.npmmirror.com/esbuild-linux-arm/0.14.25
-      esbuild-linux-arm64: registry.npmmirror.com/esbuild-linux-arm64/0.14.25
-      esbuild-linux-mips64le: registry.npmmirror.com/esbuild-linux-mips64le/0.14.25
-      esbuild-linux-ppc64le: registry.npmmirror.com/esbuild-linux-ppc64le/0.14.25
-      esbuild-linux-riscv64: registry.npmmirror.com/esbuild-linux-riscv64/0.14.25
-      esbuild-linux-s390x: registry.npmmirror.com/esbuild-linux-s390x/0.14.25
-      esbuild-netbsd-64: registry.npmmirror.com/esbuild-netbsd-64/0.14.25
-      esbuild-openbsd-64: registry.npmmirror.com/esbuild-openbsd-64/0.14.25
-      esbuild-sunos-64: registry.npmmirror.com/esbuild-sunos-64/0.14.25
-      esbuild-windows-32: registry.npmmirror.com/esbuild-windows-32/0.14.25
-      esbuild-windows-64: registry.npmmirror.com/esbuild-windows-64/0.14.25
-      esbuild-windows-arm64: registry.npmmirror.com/esbuild-windows-arm64/0.14.25
+      esbuild-android-64: 0.14.25
+      esbuild-android-arm64: 0.14.25
+      esbuild-darwin-64: 0.14.25
+      esbuild-darwin-arm64: 0.14.25
+      esbuild-freebsd-64: 0.14.25
+      esbuild-freebsd-arm64: 0.14.25
+      esbuild-linux-32: 0.14.25
+      esbuild-linux-64: 0.14.25
+      esbuild-linux-arm: 0.14.25
+      esbuild-linux-arm64: 0.14.25
+      esbuild-linux-mips64le: 0.14.25
+      esbuild-linux-ppc64le: 0.14.25
+      esbuild-linux-riscv64: 0.14.25
+      esbuild-linux-s390x: 0.14.25
+      esbuild-netbsd-64: 0.14.25
+      esbuild-openbsd-64: 0.14.25
+      esbuild-sunos-64: 0.14.25
+      esbuild-windows-32: 0.14.25
+      esbuild-windows-64: 0.14.25
+      esbuild-windows-arm64: 0.14.25
 
   /escalade/3.1.1:
     resolution: {integrity: sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==}
@@ -1006,7 +1346,7 @@ packages:
     dev: true
 
   /esprima/4.0.1:
-    resolution: {integrity: sha1-E7BM2z5sXRnfkatph6hpVhmwqnE=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/esprima/-/esprima-4.0.1.tgz}
+    resolution: {integrity: sha1-E7BM2z5sXRnfkatph6hpVhmwqnE=}
     engines: {node: '>=4'}
     hasBin: true
     dev: false
@@ -1020,7 +1360,7 @@ packages:
     dev: false
 
   /execa/5.1.1:
-    resolution: {integrity: sha1-+ArZy/Qpj3vR1MlVXCHpN0HEEd0=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/execa/-/execa-5.1.1.tgz}
+    resolution: {integrity: sha1-+ArZy/Qpj3vR1MlVXCHpN0HEEd0=}
     engines: {node: '>=10'}
     dependencies:
       cross-spawn: 7.0.3
@@ -1039,7 +1379,7 @@ packages:
     dev: false
 
   /fast-glob/3.2.11:
-    resolution: {integrity: sha1-oRcq2VzrihbiDKpcXlZIDlEpwdk=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/fast-glob/-/fast-glob-3.2.11.tgz}
+    resolution: {integrity: sha1-oRcq2VzrihbiDKpcXlZIDlEpwdk=}
     engines: {node: '>=8.6.0'}
     dependencies:
       '@nodelib/fs.stat': 2.0.5
@@ -1054,20 +1394,28 @@ packages:
     dev: false
 
   /fastq/1.13.0:
-    resolution: {integrity: sha1-YWdg+Ip1Jr38WWt8q4wYk4w2uYw=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/fastq/-/fastq-1.13.0.tgz}
+    resolution: {integrity: sha1-YWdg+Ip1Jr38WWt8q4wYk4w2uYw=}
     dependencies:
       reusify: 1.0.4
     dev: true
 
   /fill-range/7.0.1:
-    resolution: {integrity: sha1-GRmmp8df44ssfHflGYU12prN2kA=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/fill-range/-/fill-range-7.0.1.tgz}
+    resolution: {integrity: sha1-GRmmp8df44ssfHflGYU12prN2kA=}
     engines: {node: '>=8'}
     dependencies:
       to-regex-range: 5.0.1
     dev: true
 
   /fs.realpath/1.0.0:
-    resolution: {integrity: sha1-FQStJSMVjKpA20onh8sBQRmU6k8=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/fs.realpath/-/fs.realpath-1.0.0.tgz}
+    resolution: {integrity: sha1-FQStJSMVjKpA20onh8sBQRmU6k8=}
+
+  /fsevents/2.3.2:
+    resolution: {integrity: sha1-ilJveLj99GI7cJ4Ll1xSwkwC/Ro=, tarball: https://artifactory.tusimple.ai:443/artifactory/api/npm/npm-infra-common/fsevents/-/fsevents-2.3.2.tgz}
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
 
   /function-bind/1.1.1:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==}
@@ -1099,7 +1447,7 @@ packages:
     dev: false
 
   /generic-names/4.0.0:
-    resolution: {integrity: sha1-C9ii/SP+jqFsvQonms1pwGkz2aM=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/generic-names/-/generic-names-4.0.0.tgz}
+    resolution: {integrity: sha1-C9ii/SP+jqFsvQonms1pwGkz2aM=}
     dependencies:
       loader-utils: 3.2.0
     dev: false
@@ -1123,19 +1471,19 @@ packages:
     dev: true
 
   /get-stream/6.0.1:
-    resolution: {integrity: sha1-omLY7vZ6ztV8KFKtYWdSakPL97c=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/get-stream/-/get-stream-6.0.1.tgz}
+    resolution: {integrity: sha1-omLY7vZ6ztV8KFKtYWdSakPL97c=}
     engines: {node: '>=10'}
     dev: true
 
   /glob-parent/5.1.2:
-    resolution: {integrity: sha1-hpgyxYA0/mikCTwX3BXoNA2EAcQ=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/glob-parent/-/glob-parent-5.1.2.tgz}
+    resolution: {integrity: sha1-hpgyxYA0/mikCTwX3BXoNA2EAcQ=}
     engines: {node: '>= 6'}
     dependencies:
       is-glob: 4.0.3
     dev: true
 
   /glob/7.1.6:
-    resolution: {integrity: sha1-FB8zuBp8JJLhJVlDB0gMRmeSeKY=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/glob/-/glob-7.1.6.tgz}
+    resolution: {integrity: sha1-FB8zuBp8JJLhJVlDB0gMRmeSeKY=}
     dependencies:
       fs.realpath: 1.0.0
       inflight: 1.0.6
@@ -1146,7 +1494,7 @@ packages:
     dev: true
 
   /glob/7.2.0:
-    resolution: {integrity: sha1-0VU1r3cy4C6Uj0xBYovZECk/YCM=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/glob/-/glob-7.2.0.tgz}
+    resolution: {integrity: sha1-0VU1r3cy4C6Uj0xBYovZECk/YCM=}
     dependencies:
       fs.realpath: 1.0.0
       inflight: 1.0.6
@@ -1162,7 +1510,7 @@ packages:
     dev: true
 
   /globby/11.1.0:
-    resolution: {integrity: sha1-vUvpi7BC+D15b344EZkfvoKg00s=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/globby/-/globby-11.1.0.tgz}
+    resolution: {integrity: sha1-vUvpi7BC+D15b344EZkfvoKg00s=}
     engines: {node: '>=10'}
     dependencies:
       array-union: 2.1.0
@@ -1174,7 +1522,7 @@ packages:
     dev: true
 
   /gogocode/1.0.49:
-    resolution: {integrity: sha1-vZ5GpTvYRs2Uq3JzNo9GX5JsHbA=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/gogocode/-/gogocode-1.0.49.tgz}
+    resolution: {integrity: sha1-vZ5GpTvYRs2Uq3JzNo9GX5JsHbA=}
     dependencies:
       '@babel/parser': 7.17.3
       glob: 7.2.0
@@ -1261,7 +1609,7 @@ packages:
     dev: true
 
   /hash-sum/2.0.0:
-    resolution: {integrity: sha1-gdAbtd6OpKIUrV1urRtSNGCwtFo=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/hash-sum/-/hash-sum-2.0.0.tgz}
+    resolution: {integrity: sha1-gdAbtd6OpKIUrV1urRtSNGCwtFo=}
     dev: false
 
   /htmlparser2/6.1.0:
@@ -1284,7 +1632,7 @@ packages:
     dev: false
 
   /human-signals/2.1.0:
-    resolution: {integrity: sha1-3JH8ukLk0G5Kuu0zs+ejwC9RTqA=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/human-signals/-/human-signals-2.1.0.tgz}
+    resolution: {integrity: sha1-3JH8ukLk0G5Kuu0zs+ejwC9RTqA=}
     engines: {node: '>=10.17.0'}
     dev: true
 
@@ -1295,16 +1643,16 @@ packages:
     dev: true
 
   /hyntax-yx/1.0.8:
-    resolution: {integrity: sha1-imoQanMgb6dghk8XMt4KzgOIh9A=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/hyntax-yx/-/hyntax-yx-1.0.8.tgz}
+    resolution: {integrity: sha1-imoQanMgb6dghk8XMt4KzgOIh9A=}
     engines: {node: '>=6.11.1', npm: '>=5.3.0'}
     dev: false
 
   /icss-replace-symbols/1.1.0:
-    resolution: {integrity: sha1-Bupvg2ead0njhs/h/oEq5dsiPe0=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/icss-replace-symbols/-/icss-replace-symbols-1.1.0.tgz}
+    resolution: {integrity: sha1-Bupvg2ead0njhs/h/oEq5dsiPe0=}
     dev: false
 
   /icss-utils/5.1.0_postcss@8.4.7:
-    resolution: {integrity: sha1-xr5oWKvQE9do6YNmrkfiXViHsa4=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/icss-utils/-/icss-utils-5.1.0.tgz}
+    resolution: {integrity: sha1-xr5oWKvQE9do6YNmrkfiXViHsa4=}
     engines: {node: ^10 || ^12 || >= 14}
     peerDependencies:
       postcss: ^8.1.0
@@ -1313,26 +1661,26 @@ packages:
     dev: false
 
   /ignore/5.2.0:
-    resolution: {integrity: sha1-bTusj6f+DUXZ+b57rC/CeVd+NFo=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/ignore/-/ignore-5.2.0.tgz}
+    resolution: {integrity: sha1-bTusj6f+DUXZ+b57rC/CeVd+NFo=}
     engines: {node: '>= 4'}
     dev: true
 
   /indent-string/4.0.0:
-    resolution: {integrity: sha1-Yk+PRJfWGbLZdoUx1Y9BIoVNclE=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/indent-string/-/indent-string-4.0.0.tgz}
+    resolution: {integrity: sha1-Yk+PRJfWGbLZdoUx1Y9BIoVNclE=}
     engines: {node: '>=8'}
     dev: false
 
   /inflight/1.0.6:
-    resolution: {integrity: sha1-Sb1jMdfQLQwJvJEKEHW6gWW1bfk=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/inflight/-/inflight-1.0.6.tgz}
+    resolution: {integrity: sha1-Sb1jMdfQLQwJvJEKEHW6gWW1bfk=}
     dependencies:
       once: 1.4.0
       wrappy: 1.0.2
 
   /inherits/2.0.4:
-    resolution: {integrity: sha1-D6LGT5MpF8NDOg3tVTY6rjdBa3w=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/inherits/-/inherits-2.0.4.tgz}
+    resolution: {integrity: sha1-D6LGT5MpF8NDOg3tVTY6rjdBa3w=}
 
   /is-binary-path/2.1.0:
-    resolution: {integrity: sha1-6h9/O4DwZCNug0cPhsCcJU+0Wwk=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/is-binary-path/-/is-binary-path-2.1.0.tgz}
+    resolution: {integrity: sha1-6h9/O4DwZCNug0cPhsCcJU+0Wwk=}
     engines: {node: '>=8'}
     dependencies:
       binary-extensions: 2.2.0
@@ -1352,7 +1700,7 @@ packages:
     dev: true
 
   /is-extglob/2.1.1:
-    resolution: {integrity: sha1-qIwCU1eR8C7TfHahueqXc8gz+MI=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/is-extglob/-/is-extglob-2.1.1.tgz}
+    resolution: {integrity: sha1-qIwCU1eR8C7TfHahueqXc8gz+MI=}
     engines: {node: '>=0.10.0'}
     dev: true
 
@@ -1362,14 +1710,14 @@ packages:
     dev: false
 
   /is-glob/4.0.3:
-    resolution: {integrity: sha1-ZPYeQsu7LuwgcanawLKLoeZdUIQ=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/is-glob/-/is-glob-4.0.3.tgz}
+    resolution: {integrity: sha1-ZPYeQsu7LuwgcanawLKLoeZdUIQ=}
     engines: {node: '>=0.10.0'}
     dependencies:
       is-extglob: 2.1.1
     dev: true
 
   /is-number/7.0.0:
-    resolution: {integrity: sha1-dTU0W4lnNNX4DE0GxQlVUnoU8Ss=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/is-number/-/is-number-7.0.0.tgz}
+    resolution: {integrity: sha1-dTU0W4lnNNX4DE0GxQlVUnoU8Ss=}
     engines: {node: '>=0.12.0'}
     dev: true
 
@@ -1390,11 +1738,11 @@ packages:
     engines: {node: '>=8'}
 
   /isexe/2.0.0:
-    resolution: {integrity: sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/isexe/-/isexe-2.0.0.tgz}
+    resolution: {integrity: sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=}
     dev: true
 
   /joycon/3.1.1:
-    resolution: {integrity: sha1-vOhZbWroCPi2gWj1/GkoCZaJTwM=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/joycon/-/joycon-3.1.1.tgz}
+    resolution: {integrity: sha1-vOhZbWroCPi2gWj1/GkoCZaJTwM=}
     engines: {node: '>=10'}
     dev: true
 
@@ -1457,21 +1805,21 @@ packages:
     dev: false
 
   /lilconfig/2.0.4:
-    resolution: {integrity: sha1-9FB9BD1wWLOAtqj1y3vNSzTO4II=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/lilconfig/-/lilconfig-2.0.4.tgz}
+    resolution: {integrity: sha1-9FB9BD1wWLOAtqj1y3vNSzTO4II=}
     engines: {node: '>=10'}
     dev: true
 
   /lines-and-columns/1.2.4:
-    resolution: {integrity: sha1-7KKE910pZQeTCdwK2SVauy68FjI=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/lines-and-columns/-/lines-and-columns-1.2.4.tgz}
+    resolution: {integrity: sha1-7KKE910pZQeTCdwK2SVauy68FjI=}
     dev: true
 
   /load-tsconfig/0.2.3:
-    resolution: {integrity: sha1-CK8+d0SUPKqwx1+K9/FwNjnD7x8=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/load-tsconfig/-/load-tsconfig-0.2.3.tgz}
+    resolution: {integrity: sha1-CK8+d0SUPKqwx1+K9/FwNjnD7x8=}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dev: true
 
   /loader-utils/3.2.0:
-    resolution: {integrity: sha1-vOzFGniYvudHPUvGuEWyOvgwTU8=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/loader-utils/-/loader-utils-3.2.0.tgz}
+    resolution: {integrity: sha1-vOzFGniYvudHPUvGuEWyOvgwTU8=}
     engines: {node: '>= 12.13.0'}
     dev: false
 
@@ -1492,7 +1840,7 @@ packages:
     dev: false
 
   /lru-cache/5.1.1:
-    resolution: {integrity: sha1-HaJ+ZxAnGUdpXa9oSOhH8B2EuSA=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/lru-cache/-/lru-cache-5.1.1.tgz}
+    resolution: {integrity: sha1-HaJ+ZxAnGUdpXa9oSOhH8B2EuSA=}
     dependencies:
       yallist: 3.1.1
     dev: false
@@ -1510,22 +1858,22 @@ packages:
     dev: false
 
   /merge-source-map/1.1.0:
-    resolution: {integrity: sha1-L93n5gIJOfcJBqaPLXrmheTIxkY=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/merge-source-map/-/merge-source-map-1.1.0.tgz}
+    resolution: {integrity: sha1-L93n5gIJOfcJBqaPLXrmheTIxkY=}
     dependencies:
       source-map: 0.6.1
     dev: false
 
   /merge-stream/2.0.0:
-    resolution: {integrity: sha1-UoI2KaFN0AyXcPtq1H3GMQ8sH2A=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/merge-stream/-/merge-stream-2.0.0.tgz}
+    resolution: {integrity: sha1-UoI2KaFN0AyXcPtq1H3GMQ8sH2A=}
     dev: true
 
   /merge2/1.4.1:
-    resolution: {integrity: sha1-Q2iJL4hekHRVpv19xVwMnUBJkK4=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/merge2/-/merge2-1.4.1.tgz}
+    resolution: {integrity: sha1-Q2iJL4hekHRVpv19xVwMnUBJkK4=}
     engines: {node: '>= 8'}
     dev: true
 
   /micromatch/4.0.4:
-    resolution: {integrity: sha1-iW1Rnf6dsl/OlM63pQCRm/iB6/k=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/micromatch/-/micromatch-4.0.4.tgz}
+    resolution: {integrity: sha1-iW1Rnf6dsl/OlM63pQCRm/iB6/k=}
     engines: {node: '>=8.6'}
     dependencies:
       braces: 3.0.2
@@ -1533,12 +1881,12 @@ packages:
     dev: true
 
   /mimic-fn/2.1.0:
-    resolution: {integrity: sha1-ftLCzMyvhNP/y3pptXcR/CCDQBs=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/mimic-fn/-/mimic-fn-2.1.0.tgz}
+    resolution: {integrity: sha1-ftLCzMyvhNP/y3pptXcR/CCDQBs=}
     engines: {node: '>=6'}
     dev: true
 
   /minimatch/3.1.2:
-    resolution: {integrity: sha1-Gc0ZS/0+Qo8EmnCBfAONiatL41s=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/minimatch/-/minimatch-3.1.2.tgz}
+    resolution: {integrity: sha1-Gc0ZS/0+Qo8EmnCBfAONiatL41s=}
     dependencies:
       brace-expansion: 1.1.11
 
@@ -1550,7 +1898,7 @@ packages:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
 
   /mz/2.7.0:
-    resolution: {integrity: sha1-lQCAV6Vsr63CvGPd5/n/aVWUjjI=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/mz/-/mz-2.7.0.tgz}
+    resolution: {integrity: sha1-lQCAV6Vsr63CvGPd5/n/aVWUjjI=}
     dependencies:
       any-promise: 1.3.0
       object-assign: 4.1.1
@@ -1584,12 +1932,12 @@ packages:
     dev: true
 
   /normalize-path/3.0.0:
-    resolution: {integrity: sha1-Dc1p/yOhybEf0JeDFmRKA4ghamU=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/normalize-path/-/normalize-path-3.0.0.tgz}
+    resolution: {integrity: sha1-Dc1p/yOhybEf0JeDFmRKA4ghamU=}
     engines: {node: '>=0.10.0'}
     dev: true
 
   /npm-run-path/4.0.1:
-    resolution: {integrity: sha1-t+zR5e1T2o43pV4cImnguX7XSOo=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/npm-run-path/-/npm-run-path-4.0.1.tgz}
+    resolution: {integrity: sha1-t+zR5e1T2o43pV4cImnguX7XSOo=}
     engines: {node: '>=8'}
     dependencies:
       path-key: 3.1.1
@@ -1601,23 +1949,23 @@ packages:
     dev: true
 
   /once/1.4.0:
-    resolution: {integrity: sha1-WDsap3WWHUsROsF9nFC6753Xa9E=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/once/-/once-1.4.0.tgz}
+    resolution: {integrity: sha1-WDsap3WWHUsROsF9nFC6753Xa9E=}
     dependencies:
       wrappy: 1.0.2
 
   /onetime/5.1.2:
-    resolution: {integrity: sha1-0Oluu1awdHbfHdnEgG5SN5hcpF4=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/onetime/-/onetime-5.1.2.tgz}
+    resolution: {integrity: sha1-0Oluu1awdHbfHdnEgG5SN5hcpF4=}
     engines: {node: '>=6'}
     dependencies:
       mimic-fn: 2.1.0
     dev: true
 
   /path-is-absolute/1.0.1:
-    resolution: {integrity: sha1-F0uSaHNVNP+8es5r9TpanhtcX18=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/path-is-absolute/-/path-is-absolute-1.0.1.tgz}
+    resolution: {integrity: sha1-F0uSaHNVNP+8es5r9TpanhtcX18=}
     engines: {node: '>=0.10.0'}
 
   /path-key/3.1.1:
-    resolution: {integrity: sha1-WB9q3mWMu6ZaDTOA3ndTKVBU83U=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/path-key/-/path-key-3.1.1.tgz}
+    resolution: {integrity: sha1-WB9q3mWMu6ZaDTOA3ndTKVBU83U=}
     engines: {node: '>=8'}
     dev: true
 
@@ -1626,7 +1974,7 @@ packages:
     dev: true
 
   /path-type/4.0.0:
-    resolution: {integrity: sha1-hO0BwKe6OAr+CdkKjBgNzZ0DBDs=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/path-type/-/path-type-4.0.0.tgz}
+    resolution: {integrity: sha1-hO0BwKe6OAr+CdkKjBgNzZ0DBDs=}
     engines: {node: '>=8'}
     dev: true
 
@@ -1634,17 +1982,17 @@ packages:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
 
   /picomatch/2.3.1:
-    resolution: {integrity: sha1-O6ODNzNkbZ0+SZWUbBNlpn+wekI=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/picomatch/-/picomatch-2.3.1.tgz}
+    resolution: {integrity: sha1-O6ODNzNkbZ0+SZWUbBNlpn+wekI=}
     engines: {node: '>=8.6'}
     dev: true
 
   /pirates/4.0.5:
-    resolution: {integrity: sha1-/uw1LqXDJo+yOjfHAqsWmfNaXzs=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/pirates/-/pirates-4.0.5.tgz}
+    resolution: {integrity: sha1-/uw1LqXDJo+yOjfHAqsWmfNaXzs=}
     engines: {node: '>= 6'}
     dev: true
 
   /postcss-load-config/3.1.3:
-    resolution: {integrity: sha1-IZNbLEO5qG5lgaV2yn7hveK9HSM=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/postcss-load-config/-/postcss-load-config-3.1.3.tgz}
+    resolution: {integrity: sha1-IZNbLEO5qG5lgaV2yn7hveK9HSM=}
     engines: {node: '>= 10'}
     peerDependencies:
       ts-node: '>=9.0.0'
@@ -1657,7 +2005,7 @@ packages:
     dev: true
 
   /postcss-modules-extract-imports/3.0.0_postcss@8.4.7:
-    resolution: {integrity: sha1-zaHwR8CugMl9vijD52pDuIAldB0=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/postcss-modules-extract-imports/-/postcss-modules-extract-imports-3.0.0.tgz}
+    resolution: {integrity: sha1-zaHwR8CugMl9vijD52pDuIAldB0=}
     engines: {node: ^10 || ^12 || >= 14}
     peerDependencies:
       postcss: ^8.1.0
@@ -1666,7 +2014,7 @@ packages:
     dev: false
 
   /postcss-modules-local-by-default/4.0.0_postcss@8.4.7:
-    resolution: {integrity: sha1-67tU+uFZjuz99pGgKz/zs5ClpRw=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/postcss-modules-local-by-default/-/postcss-modules-local-by-default-4.0.0.tgz}
+    resolution: {integrity: sha1-67tU+uFZjuz99pGgKz/zs5ClpRw=}
     engines: {node: ^10 || ^12 || >= 14}
     peerDependencies:
       postcss: ^8.1.0
@@ -1678,7 +2026,7 @@ packages:
     dev: false
 
   /postcss-modules-scope/3.0.0_postcss@8.4.7:
-    resolution: {integrity: sha1-nvMVFFbTu/oSDKRImN/Kby+gHwY=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/postcss-modules-scope/-/postcss-modules-scope-3.0.0.tgz}
+    resolution: {integrity: sha1-nvMVFFbTu/oSDKRImN/Kby+gHwY=}
     engines: {node: ^10 || ^12 || >= 14}
     peerDependencies:
       postcss: ^8.1.0
@@ -1688,7 +2036,7 @@ packages:
     dev: false
 
   /postcss-modules-values/4.0.0_postcss@8.4.7:
-    resolution: {integrity: sha1-18Xn5ow7s8myfL9Iyguz/7RgLJw=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/postcss-modules-values/-/postcss-modules-values-4.0.0.tgz}
+    resolution: {integrity: sha1-18Xn5ow7s8myfL9Iyguz/7RgLJw=}
     engines: {node: ^10 || ^12 || >= 14}
     peerDependencies:
       postcss: ^8.1.0
@@ -1698,7 +2046,7 @@ packages:
     dev: false
 
   /postcss-modules/4.3.1_postcss@8.4.7:
-    resolution: {integrity: sha1-UXwGwJ6rB9Ezrg7/yixRCruhgEg=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/postcss-modules/-/postcss-modules-4.3.1.tgz}
+    resolution: {integrity: sha1-UXwGwJ6rB9Ezrg7/yixRCruhgEg=}
     peerDependencies:
       postcss: ^8.0.0
     dependencies:
@@ -1714,7 +2062,7 @@ packages:
     dev: false
 
   /postcss-selector-parser/6.0.9:
-    resolution: {integrity: sha1-7nHDuf9j2c0TCDiHbBOi7BqZKy8=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/postcss-selector-parser/-/postcss-selector-parser-6.0.9.tgz}
+    resolution: {integrity: sha1-7nHDuf9j2c0TCDiHbBOi7BqZKy8=}
     engines: {node: '>=4'}
     dependencies:
       cssesc: 3.0.0
@@ -1722,7 +2070,7 @@ packages:
     dev: false
 
   /postcss-value-parser/4.2.0:
-    resolution: {integrity: sha1-cjwJkgg2um0+WvAZ+SvAlxwC5RQ=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz}
+    resolution: {integrity: sha1-cjwJkgg2um0+WvAZ+SvAlxwC5RQ=}
     dev: false
 
   /postcss/8.4.7:
@@ -1737,10 +2085,10 @@ packages:
     resolution: {integrity: sha1-//dfqdUZxUzw/OMowQF9lFRrxWo=}
     engines: {node: '>=10.13.0'}
     hasBin: true
-    dev: false
+    dev: true
 
   /private/0.1.8:
-    resolution: {integrity: sha1-I4Hts2ifelPWUxkAYPz4ItLzaP8=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/private/-/private-0.1.8.tgz}
+    resolution: {integrity: sha1-I4Hts2ifelPWUxkAYPz4ItLzaP8=}
     engines: {node: '>= 0.6'}
     dev: false
 
@@ -1862,18 +2210,18 @@ packages:
     dev: true
 
   /queue-microtask/1.2.3:
-    resolution: {integrity: sha1-SSkii7xyTfrEPg77BYyve2z7YkM=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/queue-microtask/-/queue-microtask-1.2.3.tgz}
+    resolution: {integrity: sha1-SSkii7xyTfrEPg77BYyve2z7YkM=}
     dev: true
 
   /readdirp/3.6.0:
-    resolution: {integrity: sha1-dKNwvYVxFuJFspzJc0DNQxoCpsc=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/readdirp/-/readdirp-3.6.0.tgz}
+    resolution: {integrity: sha1-dKNwvYVxFuJFspzJc0DNQxoCpsc=}
     engines: {node: '>=8.10.0'}
     dependencies:
       picomatch: 2.3.1
     dev: true
 
   /recast-yx/0.18.12:
-    resolution: {integrity: sha1-Bu/Wc2duLjBiFj0Bg/9Wh6cNxxg=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/recast-yx/-/recast-yx-0.18.12.tgz}
+    resolution: {integrity: sha1-Bu/Wc2duLjBiFj0Bg/9Wh6cNxxg=}
     engines: {node: '>= 4'}
     dependencies:
       ast-types-yx: 0.14.2
@@ -1892,7 +2240,7 @@ packages:
     dev: false
 
   /resolve-from/5.0.0:
-    resolution: {integrity: sha1-w1IlhD3493bfIcV1V7wIfp39/Gk=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/resolve-from/-/resolve-from-5.0.0.tgz}
+    resolution: {integrity: sha1-w1IlhD3493bfIcV1V7wIfp39/Gk=}
     engines: {node: '>=8'}
     dev: true
 
@@ -1906,7 +2254,7 @@ packages:
     dev: true
 
   /reusify/1.0.4:
-    resolution: {integrity: sha1-kNo4Kx4SbvwCFG6QhFqI2xKSXXY=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/reusify/-/reusify-1.0.4.tgz}
+    resolution: {integrity: sha1-kNo4Kx4SbvwCFG6QhFqI2xKSXXY=}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
     dev: true
 
@@ -1915,11 +2263,11 @@ packages:
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
-      fsevents: registry.npmmirror.com/fsevents/2.3.2
+      fsevents: 2.3.2
     dev: true
 
   /run-parallel/1.2.0:
-    resolution: {integrity: sha1-ZtE2jae9+SHrnZW9GpIp5/IaQ+4=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/run-parallel/-/run-parallel-1.2.0.tgz}
+    resolution: {integrity: sha1-ZtE2jae9+SHrnZW9GpIp5/IaQ+4=}
     dependencies:
       queue-microtask: 1.2.3
     dev: true
@@ -1942,25 +2290,26 @@ packages:
     hasBin: true
     dependencies:
       lru-cache: 6.0.0
+    dev: true
 
   /shebang-command/2.0.0:
-    resolution: {integrity: sha1-zNCvT4g1+9wmW4JGGq8MNmY/NOo=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/shebang-command/-/shebang-command-2.0.0.tgz}
+    resolution: {integrity: sha1-zNCvT4g1+9wmW4JGGq8MNmY/NOo=}
     engines: {node: '>=8'}
     dependencies:
       shebang-regex: 3.0.0
     dev: true
 
   /shebang-regex/3.0.0:
-    resolution: {integrity: sha1-rhbxZE2HPsrYQ7AwexQzYtTEIXI=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/shebang-regex/-/shebang-regex-3.0.0.tgz}
+    resolution: {integrity: sha1-rhbxZE2HPsrYQ7AwexQzYtTEIXI=}
     engines: {node: '>=8'}
     dev: true
 
   /signal-exit/3.0.7:
-    resolution: {integrity: sha1-qaF2f4r4QVURTqq9c/mSc8j1mtk=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/signal-exit/-/signal-exit-3.0.7.tgz}
+    resolution: {integrity: sha1-qaF2f4r4QVURTqq9c/mSc8j1mtk=}
     dev: true
 
   /slash/3.0.0:
-    resolution: {integrity: sha1-ZTm+hwwWWtvVJAIg2+Nh8bxNRjQ=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/slash/-/slash-3.0.0.tgz}
+    resolution: {integrity: sha1-ZTm+hwwWWtvVJAIg2+Nh8bxNRjQ=}
     engines: {node: '>=8'}
     dev: true
 
@@ -1978,7 +2327,7 @@ packages:
     engines: {node: '>=0.10.0'}
 
   /source-map/0.7.3:
-    resolution: {integrity: sha1-UwL4FpAxc1ImVECS5kmB91F1A4M=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/source-map/-/source-map-0.7.3.tgz}
+    resolution: {integrity: sha1-UwL4FpAxc1ImVECS5kmB91F1A4M=}
     engines: {node: '>= 8'}
     dev: true
 
@@ -1987,7 +2336,7 @@ packages:
     dev: false
 
   /string-hash/1.1.3:
-    resolution: {integrity: sha1-6Kr8CsGFW0Zmkp7X3RJ1311sgRs=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/string-hash/-/string-hash-1.1.3.tgz}
+    resolution: {integrity: sha1-6Kr8CsGFW0Zmkp7X3RJ1311sgRs=}
     dev: false
 
   /string-width/4.2.3:
@@ -2007,12 +2356,12 @@ packages:
     dev: false
 
   /strip-final-newline/2.0.0:
-    resolution: {integrity: sha1-ibhS+y/L6Tb29LMYevsKEsGrWK0=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/strip-final-newline/-/strip-final-newline-2.0.0.tgz}
+    resolution: {integrity: sha1-ibhS+y/L6Tb29LMYevsKEsGrWK0=}
     engines: {node: '>=6'}
     dev: true
 
   /sucrase/3.20.3:
-    resolution: {integrity: sha1-Qk8edbd/lVcksGBg8a5wj18JNc8=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/sucrase/-/sucrase-3.20.3.tgz}
+    resolution: {integrity: sha1-Qk8edbd/lVcksGBg8a5wj18JNc8=}
     engines: {node: '>=8'}
     hasBin: true
     dependencies:
@@ -2037,14 +2386,14 @@ packages:
     dev: true
 
   /thenify-all/1.6.0:
-    resolution: {integrity: sha1-GhkY1ALY/D+Y+/I02wvMjMEOlyY=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/thenify-all/-/thenify-all-1.6.0.tgz}
+    resolution: {integrity: sha1-GhkY1ALY/D+Y+/I02wvMjMEOlyY=}
     engines: {node: '>=0.8'}
     dependencies:
       thenify: 3.3.1
     dev: true
 
   /thenify/3.3.1:
-    resolution: {integrity: sha1-iTLmhqQGYDigFt2eLKRq3Zg4qV8=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/thenify/-/thenify-3.3.1.tgz}
+    resolution: {integrity: sha1-iTLmhqQGYDigFt2eLKRq3Zg4qV8=}
     dependencies:
       any-promise: 1.3.0
     dev: true
@@ -2054,7 +2403,7 @@ packages:
     engines: {node: '>=4'}
 
   /to-regex-range/5.0.1:
-    resolution: {integrity: sha1-FkjESq58jZiKMmAY7XL1tN0DkuQ=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/to-regex-range/-/to-regex-range-5.0.1.tgz}
+    resolution: {integrity: sha1-FkjESq58jZiKMmAY7XL1tN0DkuQ=}
     engines: {node: '>=8.0'}
     dependencies:
       is-number: 7.0.0
@@ -2069,20 +2418,19 @@ packages:
     dev: false
 
   /tree-kill/1.2.2:
-    resolution: {integrity: sha1-TKCakJLIi3OnzcXooBtQeweQoMw=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/tree-kill/-/tree-kill-1.2.2.tgz}
+    resolution: {integrity: sha1-TKCakJLIi3OnzcXooBtQeweQoMw=}
     hasBin: true
     dev: true
 
   /ts-interface-checker/0.1.13:
-    resolution: {integrity: sha1-eE/T1nlyK8EDsbS4AwvN212yppk=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/ts-interface-checker/-/ts-interface-checker-0.1.13.tgz}
+    resolution: {integrity: sha1-eE/T1nlyK8EDsbS4AwvN212yppk=}
     dev: true
 
   /tslib/2.3.1:
     resolution: {integrity: sha1-6KM1rdXOrlGqJh0ypJAVjvBC7wE=}
-    dev: false
 
   /tsup/5.11.13_typescript@4.6.2:
-    resolution: {integrity: sha1-3Zs3VROgfByEYgsi1BZOQpPWors=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/tsup/-/tsup-5.11.13.tgz}
+    resolution: {integrity: sha1-3Zs3VROgfByEYgsi1BZOQpPWors=}
     hasBin: true
     peerDependencies:
       typescript: ^4.1.0
@@ -2114,13 +2462,15 @@ packages:
     resolution: {integrity: sha512-HM/hFigTBHZhLXshn9sN37H085+hQGeJHJ/X7LpBWLID/fbc2acUMfU+lGD98X81sKP+pFa9f0DZmCwB9GnbAg==}
     engines: {node: '>=4.2.0'}
     hasBin: true
+    dev: true
 
   /upath/2.0.1:
     resolution: {integrity: sha1-UMc96mjW9rmQ9R0nnOYIFmXWGos=}
     engines: {node: '>=4'}
+    dev: true
 
   /util-deprecate/1.0.2:
-    resolution: {integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/util-deprecate/-/util-deprecate-1.0.2.tgz}
+    resolution: {integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=}
     dev: false
 
   /vite/2.8.6:
@@ -2144,7 +2494,7 @@ packages:
       resolve: 1.22.0
       rollup: 2.69.0
     optionalDependencies:
-      fsevents: registry.npmmirror.com/fsevents/2.3.2
+      fsevents: 2.3.2
     dev: true
 
   /void-elements/3.1.0:
@@ -2183,27 +2533,33 @@ packages:
   /vscode-jsonrpc/8.0.0-next.7:
     resolution: {integrity: sha1-aBnukrP0OUO5NfEbgU2OCL2rrTU=}
     engines: {node: '>=14.0.0'}
+    dev: true
 
   /vscode-languageserver-protocol/3.17.0-next.15:
     resolution: {integrity: sha1-abelL7ZpcHGbYo3ZyRklgg8v07c=}
     dependencies:
       vscode-jsonrpc: 8.0.0-next.7
       vscode-languageserver-types: 3.17.0-next.8
+    dev: true
 
   /vscode-languageserver-textdocument/1.0.4:
     resolution: {integrity: sha1-PNVt0UzsHQnobEuwSwmiRss98Vc=}
+    dev: true
 
   /vscode-languageserver-types/3.16.0:
     resolution: {integrity: sha1-7POT/BIexpdLLaPvsxVWRMUU4kc=}
+    dev: true
 
   /vscode-languageserver-types/3.17.0-next.8:
     resolution: {integrity: sha1-6GGe6RMZmkf3qcCI7GOhvVnbPd0=}
+    dev: true
 
   /vscode-languageserver/8.0.0-next.9:
     resolution: {integrity: sha1-LZwQ0Prv0gALts95Uw1Ro1v5W08=}
     hasBin: true
     dependencies:
       vscode-languageserver-protocol: 3.17.0-next.15
+    dev: true
 
   /vscode-nls/5.0.0:
     resolution: {integrity: sha512-u0Lw+IYlgbEJFF6/qAqG2d1jQmJl0eyAGJHoAJqr2HT4M2BNuQYSEiSE75f52pXHSJm8AlTjnLLbBFPrdz2hpA==}
@@ -2229,6 +2585,7 @@ packages:
       upath: 2.0.1
       vscode-languageserver: 8.0.0-next.9
       vscode-languageserver-textdocument: 1.0.4
+    dev: true
 
   /vscode-uri/2.1.2:
     resolution: {integrity: sha512-8TEXQxlldWAuIODdukIb+TR5s+9Ds40eSJrw+1iDDA9IFORPjMELarNQE3myz5XIkWWpdprmJjm1/SxMlWOC8A==}
@@ -2236,6 +2593,7 @@ packages:
 
   /vscode-uri/3.0.3:
     resolution: {integrity: sha1-qVwc4ub0G3VJ+GJ50Z9HlR5PTYQ=}
+    dev: true
 
   /vscode-vue-languageservice/0.27.30:
     resolution: {integrity: sha512-nPnUNCMqqHfxcCPLyLWvmgbNCgos3SwvPcl/CzAnMbqcjLtNZppsdI7bKX3EEj0Jbg6SGLQ9NanIvZaMI1bsUA==}
@@ -2281,7 +2639,7 @@ packages:
     dev: false
 
   /vue3-browser-compiler-yx/1.0.1:
-    resolution: {integrity: sha1-AHulyAKQhaMavMmRUHrnPcJ9LhI=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/vue3-browser-compiler-yx/-/vue3-browser-compiler-yx-1.0.1.tgz}
+    resolution: {integrity: sha1-AHulyAKQhaMavMmRUHrnPcJ9LhI=}
     peerDependencies:
       vue: 3.0.11
     dependencies:
@@ -2314,7 +2672,7 @@ packages:
     dev: false
 
   /which/2.0.2:
-    resolution: {integrity: sha1-fGqN0KY2oDJ+ELWckobu6T8/UbE=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/which/-/which-2.0.2.tgz}
+    resolution: {integrity: sha1-fGqN0KY2oDJ+ELWckobu6T8/UbE=}
     engines: {node: '>= 8'}
     hasBin: true
     dependencies:
@@ -2341,7 +2699,7 @@ packages:
     dev: false
 
   /wrappy/1.0.2:
-    resolution: {integrity: sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/wrappy/-/wrappy-1.0.2.tgz}
+    resolution: {integrity: sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=}
 
   /y18n/5.0.8:
     resolution: {integrity: sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA==}
@@ -2349,14 +2707,14 @@ packages:
     dev: false
 
   /yallist/3.1.1:
-    resolution: {integrity: sha1-27fa+b/YusmrRev2ArjLrQ1dCP0=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/yallist/-/yallist-3.1.1.tgz}
+    resolution: {integrity: sha1-27fa+b/YusmrRev2ArjLrQ1dCP0=}
     dev: false
 
   /yallist/4.0.0:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
 
   /yaml/1.10.2:
-    resolution: {integrity: sha1-IwHF/78StGfejaIzOkWeKeeSDks=, tarball: https://artifactory.tusimple.ai/artifactory/api/npm/npm-infra-common/yaml/-/yaml-1.10.2.tgz}
+    resolution: {integrity: sha1-IwHF/78StGfejaIzOkWeKeeSDks=}
     engines: {node: '>= 6'}
     dev: true
 
@@ -2377,433 +2735,3 @@ packages:
       y18n: 5.0.8
       yargs-parser: 20.2.9
     dev: false
-
-  registry.npmmirror.com/esbuild-android-64/0.14.24:
-    resolution: {integrity: sha512-mbhO8NepmUZ84cP/axGR8IzH1Trth+uknEJzz36cZl8FfMA3ooaiBsMyzJ35s70QEAreiEt1XzltZ4pcfOsVUA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-android-64/-/esbuild-android-64-0.14.24.tgz}
-    name: esbuild-android-64
-    version: 0.14.24
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [android]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-android-64/0.14.25:
-    resolution: {integrity: sha512-L5vCUk7TzFbBnoESNoXjU3x9+/+7TDIE/1mTfy/erAfvZAqC+S3sp/Qa9wkypFMcFvN9FzvESkTlpeQDolREtQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-android-64/-/esbuild-android-64-0.14.25.tgz}
-    name: esbuild-android-64
-    version: 0.14.25
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [android]
-    requiresBuild: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-android-arm64/0.14.24:
-    resolution: {integrity: sha512-wM3iuLZjaA9BhlMOH6mWvTGXwPJsLOuAbMkGiczSY+NLeG2WF1ouCcuhFz2jZCbnw9lnI30QWgzebNBQi9K8SA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-android-arm64/-/esbuild-android-arm64-0.14.24.tgz}
-    name: esbuild-android-arm64
-    version: 0.14.24
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [android]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-android-arm64/0.14.25:
-    resolution: {integrity: sha512-4jv5xPjM/qNm27T5j3ZEck0PvjgQtoMHnz4FzwF5zNP56PvY2CT0WStcAIl6jNlsuDdN63rk2HRBIsO6xFbcFw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-android-arm64/-/esbuild-android-arm64-0.14.25.tgz}
-    name: esbuild-android-arm64
-    version: 0.14.25
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [android]
-    requiresBuild: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-darwin-64/0.14.24:
-    resolution: {integrity: sha512-GDaCV5e9mdrJkrGT91W8WCqQ/+fvB/nsULIu4l7Ik7dlQd5uB4qeKRcFFl5Vz5ODK/C/UWZmKmMQWokZsLNWLQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-darwin-64/-/esbuild-darwin-64-0.14.24.tgz}
-    name: esbuild-darwin-64
-    version: 0.14.24
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-darwin-64/0.14.25:
-    resolution: {integrity: sha512-TGp8tuudIxOyWd1+8aYPxQmC1ZQyvij/AfNBa35RubixD0zJ1vkKHVAzo0Zao1zcG6pNqiSyzfPto8vmg0s7oA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-darwin-64/-/esbuild-darwin-64-0.14.25.tgz}
-    name: esbuild-darwin-64
-    version: 0.14.25
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [darwin]
-    requiresBuild: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-darwin-arm64/0.14.24:
-    resolution: {integrity: sha512-reU7/vEdXsg+zZWxKL/gaHsJkGMCC49Y4pqbsaBmx0YAF00K0+V7w5BHBF+iY5jvtJ1ZCYRHTN/iAbYVOnoV0w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-darwin-arm64/-/esbuild-darwin-arm64-0.14.24.tgz}
-    name: esbuild-darwin-arm64
-    version: 0.14.24
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-darwin-arm64/0.14.25:
-    resolution: {integrity: sha512-oTcDgdm0MDVEmw2DWu8BV68pYuImpFgvWREPErBZmNA4MYKGuBRaCiJqq6jZmBR1x+3y1DWCjez+5uLtuAm6mw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-darwin-arm64/-/esbuild-darwin-arm64-0.14.25.tgz}
-    name: esbuild-darwin-arm64
-    version: 0.14.25
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [darwin]
-    requiresBuild: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-freebsd-64/0.14.24:
-    resolution: {integrity: sha512-Mp35Rz/XoixG7Uka6l54hU/XUxAEwQozgKoHPusJzX+Fu1vANil0Ypos0RJkidu7skSkd0xisNIT+gtD36BxpA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-freebsd-64/-/esbuild-freebsd-64-0.14.24.tgz}
-    name: esbuild-freebsd-64
-    version: 0.14.24
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [freebsd]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-freebsd-64/0.14.25:
-    resolution: {integrity: sha512-ueAqbnMZ8arnuLH8tHwTCQYeptnHOUV7vA6px6j4zjjQwDx7TdP7kACPf3TLZLdJQ3CAD1XCvQ2sPhX+8tacvQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-freebsd-64/-/esbuild-freebsd-64-0.14.25.tgz}
-    name: esbuild-freebsd-64
-    version: 0.14.25
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [freebsd]
-    requiresBuild: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-freebsd-arm64/0.14.24:
-    resolution: {integrity: sha512-+tf4a4zYaHP1XXPt286mxOc2bmj13K57GZYjqYz/G3c3sgNXa0JBkcPlUATIj96WfXhWM115n3nHe9wF88+ZGQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-freebsd-arm64/-/esbuild-freebsd-arm64-0.14.24.tgz}
-    name: esbuild-freebsd-arm64
-    version: 0.14.24
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [freebsd]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-freebsd-arm64/0.14.25:
-    resolution: {integrity: sha512-+ZVWud2HKh+Ob6k/qiJWjBtUg4KmJGGmbvEXXW1SNKS7hW7HU+Zq2ZCcE1akFxOPkVB+EhOty/sSek30tkCYug==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-freebsd-arm64/-/esbuild-freebsd-arm64-0.14.25.tgz}
-    name: esbuild-freebsd-arm64
-    version: 0.14.25
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [freebsd]
-    requiresBuild: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-linux-32/0.14.24:
-    resolution: {integrity: sha512-8jMZErn5aLnlSQqzK365yoWRr67ZkGNcoTmk1CK5Bk1EB9g7uwCfdZsmWcclLWPGkIhMbdk4OvzQ+Wp0popwWA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-linux-32/-/esbuild-linux-32-0.14.24.tgz}
-    name: esbuild-linux-32
-    version: 0.14.24
-    engines: {node: '>=12'}
-    cpu: [ia32]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-linux-32/0.14.25:
-    resolution: {integrity: sha512-3OP/lwV3kCzEz45tobH9nj+uE4ubhGsfx+tn0L26WAGtUbmmcRpqy7XRG/qK7h1mClZ+eguIANcQntYMdYklfw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-linux-32/-/esbuild-linux-32-0.14.25.tgz}
-    name: esbuild-linux-32
-    version: 0.14.25
-    engines: {node: '>=12'}
-    cpu: [ia32]
-    os: [linux]
-    requiresBuild: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-linux-64/0.14.24:
-    resolution: {integrity: sha512-D/JCsk9OY2IZj+fkU74pKD4rD2pjeiYUbze1cS5D6+U0pz8j71GjZY5UkfwHhBBbNyPe6DPCyex97txQUlHwWw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-linux-64/-/esbuild-linux-64-0.14.24.tgz}
-    name: esbuild-linux-64
-    version: 0.14.24
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-linux-64/0.14.25:
-    resolution: {integrity: sha512-+aKHdHZmX9qwVlQmu5xYXh7GsBFf4TWrePgeJTalhXHOG7NNuUwoHmketGiZEoNsWyyqwH9rE5BC+iwcLY30Ug==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-linux-64/-/esbuild-linux-64-0.14.25.tgz}
-    name: esbuild-linux-64
-    version: 0.14.25
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [linux]
-    requiresBuild: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-linux-arm/0.14.24:
-    resolution: {integrity: sha512-N+vvGpJAUWv3j+YZGOMEtrHwrrSG582TuAThBwoRE7d2N4zFE2WQBCiSYaAVckMQhvMOPqnCdqeTDUse5nlKTw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-linux-arm/-/esbuild-linux-arm-0.14.24.tgz}
-    name: esbuild-linux-arm
-    version: 0.14.24
-    engines: {node: '>=12'}
-    cpu: [arm]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-linux-arm/0.14.25:
-    resolution: {integrity: sha512-aTLcE2VBoLydL943REcAcgnDi3bHtmULSXWLbjtBdtykRatJVSxKMjK9YlBXUZC4/YcNQfH7AxwVeQr9fNxPhw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-linux-arm/-/esbuild-linux-arm-0.14.25.tgz}
-    name: esbuild-linux-arm
-    version: 0.14.25
-    engines: {node: '>=12'}
-    cpu: [arm]
-    os: [linux]
-    requiresBuild: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-linux-arm64/0.14.24:
-    resolution: {integrity: sha512-DypWEDQLE+PoHGMa4FLcmKvS+yQLsYlsN03R496rTpDOiVQGrRdo0LbYtf+uHpDxa1KRrHZsQim6n8m3VBHP6g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-linux-arm64/-/esbuild-linux-arm64-0.14.24.tgz}
-    name: esbuild-linux-arm64
-    version: 0.14.24
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-linux-arm64/0.14.25:
-    resolution: {integrity: sha512-UxfenPx/wSZx55gScCImPtXekvZQLI2GW3qe5dtlmU7luiqhp5GWPzGeQEbD3yN3xg/pHc671m5bma5Ns7lBHw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-linux-arm64/-/esbuild-linux-arm64-0.14.25.tgz}
-    name: esbuild-linux-arm64
-    version: 0.14.25
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [linux]
-    requiresBuild: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-linux-mips64le/0.14.24:
-    resolution: {integrity: sha512-eMk9pEHba1yd5bOuPZUJfFucigvysdcE2d/wV4M0eUdb/VjyH9fcGqz8byvSjmYSOt3WCn/V4jLVI+pwDSHWYw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-linux-mips64le/-/esbuild-linux-mips64le-0.14.24.tgz}
-    name: esbuild-linux-mips64le
-    version: 0.14.24
-    engines: {node: '>=12'}
-    cpu: [mips64el]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-linux-mips64le/0.14.25:
-    resolution: {integrity: sha512-wLWYyqVfYx9Ur6eU5RT92yJVsaBGi5RdkoWqRHOqcJ38Kn60QMlcghsKeWfe9jcYut8LangYZ98xO1LxIoSXrQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-linux-mips64le/-/esbuild-linux-mips64le-0.14.25.tgz}
-    name: esbuild-linux-mips64le
-    version: 0.14.25
-    engines: {node: '>=12'}
-    cpu: [mips64el]
-    os: [linux]
-    requiresBuild: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-linux-ppc64le/0.14.24:
-    resolution: {integrity: sha512-4vQ/Y6EV5Z2BjO7RdpEyTCv702WmOPc95d2CbUcFvg78FpGQAmrbIrHXu/yX4+rdUU6vMNBn3M+7M7/lxmxjjg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-linux-ppc64le/-/esbuild-linux-ppc64le-0.14.24.tgz}
-    name: esbuild-linux-ppc64le
-    version: 0.14.24
-    engines: {node: '>=12'}
-    cpu: [ppc64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-linux-ppc64le/0.14.25:
-    resolution: {integrity: sha512-0dR6Csl6Zas3g4p9ULckEl8Mo8IInJh33VCJ3eaV1hj9+MHGdmDOakYMN8MZP9/5nl+NU/0ygpd14cWgy8uqRw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-linux-ppc64le/-/esbuild-linux-ppc64le-0.14.25.tgz}
-    name: esbuild-linux-ppc64le
-    version: 0.14.25
-    engines: {node: '>=12'}
-    cpu: [ppc64]
-    os: [linux]
-    requiresBuild: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-linux-riscv64/0.14.24:
-    resolution: {integrity: sha512-pAN9/+NZ487Wo9PmlOM6Ra95SrhG8JQw7fCgi3z7dUufwTApTNTPGs5UOMD4Bmorju+DeGb0f0GddLaeabvqDg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-linux-riscv64/-/esbuild-linux-riscv64-0.14.24.tgz}
-    name: esbuild-linux-riscv64
-    version: 0.14.24
-    engines: {node: '>=12'}
-    cpu: [riscv64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-linux-riscv64/0.14.25:
-    resolution: {integrity: sha512-J4d20HDmTrgvhR0bdkDhvvJGaikH3LzXQnNaseo8rcw9Yqby9A90gKUmWpfwqLVNRILvNnAmKLfBjCKU9ajg8w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-linux-riscv64/-/esbuild-linux-riscv64-0.14.25.tgz}
-    name: esbuild-linux-riscv64
-    version: 0.14.25
-    engines: {node: '>=12'}
-    cpu: [riscv64]
-    os: [linux]
-    requiresBuild: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-linux-s390x/0.14.24:
-    resolution: {integrity: sha512-ZR+VMHP2WS3022x2sK/85cBfKGgPalIZzpquDWjra9nUb+WdEzuK9i9bRsstLmjIPs3uIkGfe6xXUh/7PNLllw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-linux-s390x/-/esbuild-linux-s390x-0.14.24.tgz}
-    name: esbuild-linux-s390x
-    version: 0.14.24
-    engines: {node: '>=12'}
-    cpu: [s390x]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-linux-s390x/0.14.25:
-    resolution: {integrity: sha512-YI2d5V6nTE73ZnhEKQD7MtsPs1EtUZJ3obS21oxQxGbbRw1G+PtJKjNyur+3t6nzHP9oTg6GHQ3S3hOLLmbDIQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-linux-s390x/-/esbuild-linux-s390x-0.14.25.tgz}
-    name: esbuild-linux-s390x
-    version: 0.14.25
-    engines: {node: '>=12'}
-    cpu: [s390x]
-    os: [linux]
-    requiresBuild: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-netbsd-64/0.14.24:
-    resolution: {integrity: sha512-1PzXU++e0PEaSuGpkhrVb+fDUw9mSp4laY9KRsjJkAuXPDj0rHz7KxK7CAbzY/ucufeIR9Ca8/oMpdVyWdaOGw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-netbsd-64/-/esbuild-netbsd-64-0.14.24.tgz}
-    name: esbuild-netbsd-64
-    version: 0.14.24
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [netbsd]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-netbsd-64/0.14.25:
-    resolution: {integrity: sha512-TKIVgNWLUOkr+Exrye70XTEE1lJjdQXdM4tAXRzfHE9iBA7LXWcNtVIuSnphTqpanPzTDFarF0yqq4kpbC6miA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-netbsd-64/-/esbuild-netbsd-64-0.14.25.tgz}
-    name: esbuild-netbsd-64
-    version: 0.14.25
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [netbsd]
-    requiresBuild: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-openbsd-64/0.14.24:
-    resolution: {integrity: sha512-PvXh7JJAFM1kR87XDWbRrUkaOGVMS6Dq/IRXE2E02maio21JELk/jNRijTe81ztr8v+8K9osB3rG9zKqIdTxhQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-openbsd-64/-/esbuild-openbsd-64-0.14.24.tgz}
-    name: esbuild-openbsd-64
-    version: 0.14.24
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [openbsd]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-openbsd-64/0.14.25:
-    resolution: {integrity: sha512-QgFJ37A15D7NIXBTYEqz29+uw3nNBOIyog+3kFidANn6kjw0GHZ0lEYQn+cwjyzu94WobR+fes7cTl/ZYlHb1A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-openbsd-64/-/esbuild-openbsd-64-0.14.25.tgz}
-    name: esbuild-openbsd-64
-    version: 0.14.25
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [openbsd]
-    requiresBuild: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-sunos-64/0.14.24:
-    resolution: {integrity: sha512-5iYi76kGQdyCqvSUknqjTZ0T19KvQD6hiklPAY6kVoQ1YoDUGCGILRI9eM/3zLNLG1bUFgcdJ2ktaBxwyXuHyA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-sunos-64/-/esbuild-sunos-64-0.14.24.tgz}
-    name: esbuild-sunos-64
-    version: 0.14.24
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [sunos]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-sunos-64/0.14.25:
-    resolution: {integrity: sha512-rmWfjUItYIVlqr5EnTH1+GCxXiBOC42WBZ3w++qh7n2cS9Xo0lO5pGSG2N+huOU2fX5L+6YUuJ78/vOYvefeFw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-sunos-64/-/esbuild-sunos-64-0.14.25.tgz}
-    name: esbuild-sunos-64
-    version: 0.14.25
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [sunos]
-    requiresBuild: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-windows-32/0.14.24:
-    resolution: {integrity: sha512-oDxcNu4P1FWTk2ompKB0uKHfxYw1QuubH189+PlfrrWT9tVu+mxT9dSwJu2erfUDz5dnr6h8rgkg95NGboeJxg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-windows-32/-/esbuild-windows-32-0.14.24.tgz}
-    name: esbuild-windows-32
-    version: 0.14.24
-    engines: {node: '>=12'}
-    cpu: [ia32]
-    os: [win32]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-windows-32/0.14.25:
-    resolution: {integrity: sha512-HGAxVUofl3iUIz9W10Y9XKtD0bNsK9fBXv1D55N/ljNvkrAYcGB8YCm0v7DjlwtyS6ws3dkdQyXadbxkbzaKOA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-windows-32/-/esbuild-windows-32-0.14.25.tgz}
-    name: esbuild-windows-32
-    version: 0.14.25
-    engines: {node: '>=12'}
-    cpu: [ia32]
-    os: [win32]
-    requiresBuild: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-windows-64/0.14.24:
-    resolution: {integrity: sha512-0uxXF1yLcGEM2es0OMDgQYQGZXQEEIdq8cG3IWhY2GGfFRLXpMgic1iUE+SKCh+b82t1ftUVoyG0zIFRn5NOIA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-windows-64/-/esbuild-windows-64-0.14.24.tgz}
-    name: esbuild-windows-64
-    version: 0.14.24
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [win32]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-windows-64/0.14.25:
-    resolution: {integrity: sha512-TirEohRkfWU9hXLgoDxzhMQD1g8I2mOqvdQF2RS9E/wbkORTAqJHyh7wqGRCQAwNzdNXdg3JAyhQ9/177AadWA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-windows-64/-/esbuild-windows-64-0.14.25.tgz}
-    name: esbuild-windows-64
-    version: 0.14.25
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [win32]
-    requiresBuild: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-windows-arm64/0.14.24:
-    resolution: {integrity: sha512-unwaYRaIK/4OaZm0jnM3pLKMPEjaQqmT5teTciSZ86VYaiYZF27Ki7BW7R5ngk27gIw0ovIfUcn9DhJgp7qAlw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-windows-arm64/-/esbuild-windows-arm64-0.14.24.tgz}
-    name: esbuild-windows-arm64
-    version: 0.14.24
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [win32]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/esbuild-windows-arm64/0.14.25:
-    resolution: {integrity: sha512-4ype9ERiI45rSh+R8qUoBtaj6kJvUOI7oVLhKqPEpcF4Pa5PpT3hm/mXAyotJHREkHpM87PAJcA442mLnbtlNA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild-windows-arm64/-/esbuild-windows-arm64-0.14.25.tgz}
-    name: esbuild-windows-arm64
-    version: 0.14.25
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [win32]
-    requiresBuild: true
-    optional: true
-
-  registry.npmmirror.com/fsevents/2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/fsevents/-/fsevents-2.3.2.tgz}
-    name: fsevents
-    version: 2.3.2
-    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-    optional: true

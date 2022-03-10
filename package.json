@@ -16,7 +16,8 @@
     "vscode-typescript-languageservice": "^0.27.25"
   },
   "scripts": {
-    "dev:example": "npm -C src/grpc-web-invoker run dev &  npm -C example/frontend run dev",
+    "dev:example": "npm -C example/frontend run dev",
+    "dev:package": "npm -C src/grpc-web-invoker run dev",
     "build:example": "npm -C src/grpc-web-invoker run build && npm -C example/frontend run build",
     "prepare": "husky install",
     "prettier": "prettier --single-quote --trailing-comma all --write **/src/**/*.{ts,js,md,vue} "

@@ -16,13 +16,13 @@
  *
  */
 
-var PROTO_PATH = __dirname + "/../../../echo.proto";
+var PROTO_PATH = __dirname + '/../../../echo.proto';
 
-var assert = require("assert");
-var async = require("async");
-var _ = require("lodash");
-var grpc = require("@grpc/grpc-js");
-var protoLoader = require("@grpc/proto-loader");
+var assert = require('assert');
+var async = require('async');
+var _ = require('lodash');
+var grpc = require('@grpc/grpc-js');
+var protoLoader = require('@grpc/proto-loader');
 var packageDefinition = protoLoader.loadSync(PROTO_PATH, {
   keepCase: true,
   longs: String,
@@ -51,14 +51,18 @@ function copyMetadata(call) {
  * @param {function():?} callback
  */
 function doEcho(call, callback) {
-  callback(
-    null,
-    {
-      message: "ok",
-      resp: call.request,
-    },
-    copyMetadata(call)
-  );
+  var metadata = call.metadata.getMap();
+  var delay = +(metadata['mock-delay'] || 0);
+  setTimeout(() => {
+    callback(
+      null,
+      {
+        message: 'ok',
+        resp: call.request,
+      },
+      copyMetadata(call),
+    );
+  }, delay);
 }
 
 /**
@@ -68,7 +72,7 @@ function doEcho(call, callback) {
 function doEchoAbort(call, callback) {
   callback({
     code: grpc.status.ABORTED,
-    message: "Aborted from server side.",
+    message: 'Aborted from server side.',
   });
 }
 
@@ -111,12 +115,12 @@ function getServer() {
 if (require.main === module) {
   var echoServer = getServer();
   echoServer.bindAsync(
-    "0.0.0.0:9090",
+    '0.0.0.0:9090',
     grpc.ServerCredentials.createInsecure(),
     (err, port) => {
       assert.ifError(err);
       echoServer.start();
-    }
+    },
   );
 }
 
