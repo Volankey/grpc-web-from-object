@@ -18,6 +18,9 @@
   "bugs": {
     "url": "https://github.com/Volankey/grpc-web-from-object/issues"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.com/"
+  },
   "homepage": "https://github.com/Volankey/grpc-web-from-object",
   "scripts": {
     "build:dts": "npx -p typescript tsc src/index.js --declaration --allowJs --emitDeclarationOnly --outDir src",
