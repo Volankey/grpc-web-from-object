@@ -6,23 +6,10 @@ Support Typescript & Easy to invoke grpc method(fromObject) from web
 
 ### Install
 
-npm
-
-```
-npm install invoker-grpc
+```bash
+npm install @volankey/grpc-web-invoker
 ```
 
-yarn
-
-```
-yarn add invoker-grpc
-```
-
-pnpm
-
-```
-pnpm install invoker-grpc
-```
 
 ### Usage
 
@@ -65,6 +52,12 @@ invoke("echo", {
 ```
 
 ## grpc-web-pb-transform
+
+### Install
+
+```bash
+npm install @volankey/grpc-web-pb-transform -D
+```
 
 ### Usage
 
