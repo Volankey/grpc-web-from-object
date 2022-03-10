@@ -26,7 +26,7 @@ pnpm install invoker-grpc
 
 ### Usage
 
-```
+```ts
 import { EchoServiceClient } from "../proto/EchoServiceClientPb";
 import { createInvoker } from "invoker-grpc";
 
@@ -89,7 +89,7 @@ grpcWebClientTransform(join(__dirname, '../src/proto/EchoServiceClientPb.ts'));
 
 ## How to generate protobuf
 
-```
+```js
 const { exec } = require('child_process');
 const {
   pbValueTypeTransfer,
@@ -129,7 +129,7 @@ exec(
 
 ## Add MetaData
 
-```
+```ts
 import { EchoServiceClient } from './proto/EchoServiceClientPb';
 import { createInvoker } from '@volankey/grpc-web-invoker';
 
@@ -162,7 +162,7 @@ invoke('echo', {
 
 ## Cancel Request
 
-```
+```ts
 import {CancelToken} from '@volankey/grpc-web-invoker'
 const cancelToken = CancelToken.source()
 const timeoutAbort = new Promise((resolve,reject)=>{
