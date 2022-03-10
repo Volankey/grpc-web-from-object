@@ -157,10 +157,10 @@ invoke('echo', {
 
 ```ts
 import {CancelToken} from '@volankey/grpc-web-invoker'
-const cancelToken = CancelToken.source()
+const cancelToken = CancelToken.source() // generage cancelToken
 const timeoutAbort = new Promise((resolve,reject)=>{
   setTimeout(()=>{
-    cancelToken.cancel()
+    cancelToken.cancel() // cancel request after 2000ms
     resolve(new Error('Cancel By Client' + ', mock-delay is ' + mockDelay))
   },2000)
 }).then((e)=>{
@@ -183,8 +183,10 @@ const invokePromise = invoke('echo', {
   oneOfSample: {
     name: '红红火火',
   },
-},{},{
-  'cancelToken': cancelToken.token
+},{
+  'mock-delay': 3000
+},{
+  'cancelToken': cancelToken.token // pass the token to invoke
 })
 Promise.race([invokePromise,timeoutAbort]).then((t) => {
   const resp = (t as UnPromise<typeof invokePromise>).resp
