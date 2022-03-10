@@ -205,7 +205,7 @@ Promise.race([invokePromise,timeoutAbort]).then((t) => {
   });
 
 ```
-## Contributor
+## CONTRIBUTE
 
 [./CONTRIBUTE.md](CONTRIBUTE.md)
 
