@@ -7,7 +7,8 @@
     ".": "./src/index.js"
   },
   "files": [
-    "src"
+    "src",
+    "*.d.ts"
   ],
   "repository": {
     "type": "git",
