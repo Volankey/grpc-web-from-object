@@ -52,6 +52,8 @@ invoke('echo', {
 
 ## grpc-web-pb-transform
 
+transform the pb.js file which generate by protoc and grpc-web
+
 ### Install
 
 ```bash
