@@ -1,6 +1,6 @@
 {
   "name": "@volankey/grpc-web-invoker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "GRPC WEB from object invoker",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
