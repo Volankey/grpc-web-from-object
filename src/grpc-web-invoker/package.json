@@ -1,6 +1,6 @@
 {
   "name": "@volankey/grpc-web-invoker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "GRPC WEB from object invoker",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -32,7 +32,7 @@
   },
   "scripts": {
     "dev": "npm run build -- --watch",
-    "build": "tsup index.ts --dts --format cjs,esm --external google-protobuf",
+    "build": "tsup index.ts --dts --format cjs,esm --target es2018 --external google-protobuf",
     "prepublishOnly": "npm run build"
   },
   "publishConfig": {
