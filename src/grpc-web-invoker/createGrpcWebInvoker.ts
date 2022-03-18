@@ -29,9 +29,13 @@ function firstToUpperCase(str: string) {
 }
 
 function getMethodInfo(client: unknown, methodName: string) {
-  return (client as unknown as any)[
-    'methodInfo' + methodName.replace(/^\S/, (s) => s.toUpperCase())
+  // 兼容 grpc-web protoc 编译
+  const methodNameCamel = methodName.replace(/^\S/, (s) => s.toUpperCase());
+  const MethodInfo = (client as unknown as any)['methodInfo' + methodNameCamel];
+  const MethodDesc = (client as unknown as any)[
+    'methodDescriptor' + methodNameCamel
   ];
+  return MethodInfo || MethodDesc;
 }
 type DeepPartial<T> = Partial<{
   [index in keyof T]: T[index] extends Record<string, any>
