@@ -158,7 +158,7 @@ const {
   pbValueTypeTransfer,
   cjs2esm,
   grpcWebClientTransform,
-} = require('value-type-transfer');
+} = require('@volankey/grpc-web-pb-transform');
 
 pbValueTypeTransfer(join(__dirname, '../src/proto/echo_pb.js'));
 // if you use vite, transform to esm
