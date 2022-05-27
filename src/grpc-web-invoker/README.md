@@ -12,7 +12,12 @@ npm install @volankey/grpc-web-invoker
 
 ```ts
 import { EchoServiceClient } from '../proto/EchoServiceClientPb';
-import { createInvoker } from 'invoker-grpc';
+import {
+  createInvoker,
+  GetInvokeMethodParams,
+} from '@volankey/grpc-web-invoker';
+
+type TEchoParams = GetInvokeMethodParams<EchoServiceClient, 'echo'>;
 
 const client = new EchoServiceClient('http://localhost:8080', null);
 
