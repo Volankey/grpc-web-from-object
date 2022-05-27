@@ -65,13 +65,17 @@ function setRequestBody(
         // 处理MAP类型
         // @ts-ignore
         const mapValueCtor = valueTypeCtor.valueCtor_;
-        const [k, v] = (value as [[any, any]])[0];
-        // wrapperd field
-        if (mapValueCtor) {
-          setMethodCall(k, setRequestBody(mapValueCtor, v));
-        } else {
-          setMethodCall(k, v);
-        }
+
+        (value as [[any, any]]).forEach((item: [any, any][]) => {
+          const [k, v] = item;
+          // wrapperd field
+          if (mapValueCtor) {
+            setMethodCall(k, setRequestBody(mapValueCtor, v));
+          } else {
+            setMethodCall(k, v);
+          }
+        });
+
         return reqTypeInstance;
       } else if (Array.isArray(value)) {
         finalVal = value.map((item) => {

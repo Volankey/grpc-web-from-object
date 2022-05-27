@@ -11,6 +11,9 @@ function doEcho(mockDelay?: number) {
   // cancel
   const cancelToken = CancelToken.source();
   const timeoutAbort = new Promise((resolve, reject) => {
+    if (!mockDelay) {
+      return;
+    }
     setTimeout(() => {
       cancelToken.cancel();
       resolve(new Error('Cancel By Client' + ', mock-delay is ' + mockDelay));
@@ -26,20 +29,26 @@ function doEcho(mockDelay?: number) {
     'echo',
     {
       message: 'hello volankey',
-      student: {
-        favoratesList: ['basketball', 'football'],
-        name: 'volankey',
-        sex: 'man',
-      },
-      suject: {
-        liberalArtsList: [{ name: 'piano', score: '12' }],
-        scienceList: [{ name: 'math', score: '23' }],
-      },
-      keyScroeMap: [['ss', { name: 'nihao', score: '30' }]],
-      keyvalueMap: [['1', '1']],
-      oneOfSample: {
-        name: '红红火火',
-      },
+      // student: {
+      //   favoratesList: ['basketball', 'football'],
+      //   name: 'volankey',
+      //   sex: 'man',
+      // },
+      // suject: {
+      //   liberalArtsList: [{ name: 'piano', score: '12' }],
+      //   scienceList: [{ name: 'math', score: '23' }],
+      // },
+      keyScroeMap: [
+        ['ss', { name: 'nihao', score: '30' }],
+        ['ssg', { name: 'nihao', score: '30' }],
+      ],
+      keyvalueMap: [
+        ['1', '1'],
+        ['2', '2'],
+      ],
+      // oneOfSample: {
+      //   name: '红红火火',
+      // },
     },
     {
       'mock-delay': mockDelay || 0,
