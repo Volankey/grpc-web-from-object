@@ -29,15 +29,15 @@ function doEcho(mockDelay?: number) {
     'echo',
     {
       message: 'hello volankey',
-      // student: {
-      //   favoratesList: ['basketball', 'football'],
-      //   name: 'volankey',
-      //   sex: 'man',
-      // },
-      // suject: {
-      //   liberalArtsList: [{ name: 'piano', score: '12' }],
-      //   scienceList: [{ name: 'math', score: '23' }],
-      // },
+      student: {
+        favoratesList: ['basketball', 'football'],
+        name: 'volankey',
+        sex: 'man',
+      },
+      suject: {
+        liberalArtsList: [{ name: 'piano', score: '12' }],
+        scienceList: [{ name: 'math', score: '23' }],
+      },
       keyScroeMap: [
         ['ss', { name: 'nihao', score: '30' }],
         ['ssg', { name: 'nihao', score: '30' }],
@@ -46,9 +46,9 @@ function doEcho(mockDelay?: number) {
         ['1', '1'],
         ['2', '2'],
       ],
-      // oneOfSample: {
-      //   name: '红红火火',
-      // },
+      oneOfSample: {
+        name: '红红火火',
+      },
     },
     {
       'mock-delay': mockDelay || 0,
