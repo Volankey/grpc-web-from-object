@@ -65,13 +65,17 @@ function setRequestBody(
         // 处理MAP类型
         // @ts-ignore
         const mapValueCtor = valueTypeCtor.valueCtor_;
-        const [k, v] = (value as [[any, any]])[0];
-        // wrapperd field
-        if (mapValueCtor) {
-          setMethodCall(k, setRequestBody(mapValueCtor, v));
-        } else {
-          setMethodCall(k, v);
-        }
+
+        (value as [[any, any]]).forEach((item: [any, any][]) => {
+          const [k, v] = item;
+          // wrapperd field
+          if (mapValueCtor) {
+            setMethodCall(k, setRequestBody(mapValueCtor, v));
+          } else {
+            setMethodCall(k, v);
+          }
+        });
+
         return reqTypeInstance;
       } else if (Array.isArray(value)) {
         finalVal = value.map((item) => {
@@ -121,6 +125,26 @@ function setRestfulResponseBody(data: any) {
   });
   return data;
 }
+export type GetInvokeMethodParams<
+  Client,
+  MethodName extends {
+    // eslint-disable-next-line @typescript-eslint/ban-types
+    [K in keyof Client]: Client[K] extends Function
+      ? // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        // eslint-disable-next-line no-unused-vars
+        K extends `methodInfo${infer P}`
+        ? never
+        : K
+      : never;
+  }[keyof Client],
+> = DeepPartial<
+  ReturnType<
+    Client[MethodName] extends F
+      ? Parameters<Client[MethodName]>[0]['toObject']
+      : never
+  >
+>;
+
 export function createInvoker<C>(
   client: C,
   initConfig?: Config,

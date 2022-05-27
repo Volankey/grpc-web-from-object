@@ -141,6 +141,17 @@ Promise.race([invokePromise, timeoutAbort])
   });
 ```
 
+### Get a method params type for typescript
+
+```ts
+import {
+  createInvoker,
+  GetInvokeMethodParams,
+} from '@volankey/grpc-web-invoker';
+
+type TEchoParams = GetInvokeMethodParams<EchoServiceClient, 'echo'>;
+```
+
 ## grpc-web-pb-transform
 
 transform the pb.js file which generate by protoc and grpc-web
@@ -210,7 +221,6 @@ exec(
   },
 );
 ```
-
 
 ## CONTRIBUTE
 

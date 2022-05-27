@@ -1,3 +1,3 @@
 import { CancelToken, Executor } from './CancelToken';
-import { createInvoker } from './createGrpcWebInvoker';
-export { createInvoker, CancelToken, Executor };
+import { createInvoker, GetInvokeMethodParams } from './createGrpcWebInvoker';
+export { createInvoker, CancelToken, Executor, GetInvokeMethodParams };

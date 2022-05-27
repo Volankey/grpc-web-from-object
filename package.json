@@ -1,7 +1,12 @@
 {
   "name": "grpc-web-protojs-transformer",
   "version": "1.0.0",
-  "description": "## Run Demo",
+  "description": "grpc-web invoker from object",
+  "keywords": [
+    "grpc",
+    "grpc-web",
+    "grpc from object"
+  ],
   "main": "index.js",
   "directories": {
     "example": "example"

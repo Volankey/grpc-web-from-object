@@ -1,7 +1,11 @@
 import { EchoServiceClient } from './proto/EchoServiceClientPb';
-import { createInvoker } from '@volankey/grpc-web-invoker';
+import {
+  createInvoker,
+  GetInvokeMethodParams,
+} from '@volankey/grpc-web-invoker';
 
 const client = new EchoServiceClient('http://localhost:8080', null);
+type TEchoParams = GetInvokeMethodParams<EchoServiceClient, 'echo'>;
 //@ts-ignore
 const enableDevTools = window.__GRPCWEB_DEVTOOLS__ || (() => {});
 enableDevTools([client]);
