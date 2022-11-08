@@ -11,7 +11,7 @@
 // @ts-nocheck
 
 
-import * as grpcWeb from 'grpc-web';
+import * as _grpcWeb from 'grpc-web';
 
 import * as echo_pb from './echo_pb';
 
@@ -210,3 +210,21 @@ export class EchoServiceClient {
 
 }
 
+
+  // fix getRequestMessageCtor is not expose grpc-web 1.4.x
+  // ref:https://github.com/grpc/grpc-web/releases/tag/1.4.0
+  var grpcWeb = Object.create(_grpcWeb);
+  const oldMethodDescriptor = grpcWeb.MethodDescriptor;
+  Object.defineProperty(grpcWeb, 'MethodDescriptor', {
+    value: function(...args){
+      this.reqMessageCtor = args[2]
+      this.__proto__.__proto__ = oldMethodDescriptor.prototype;
+      return oldMethodDescriptor.apply(this,args);
+    }
+  })
+  Object.defineProperty(grpcWeb.MethodDescriptor.prototype, 'getRequestMessageCtor', {
+    value: function() {
+      return this.reqMessageCtor;
+    }
+  })
+  

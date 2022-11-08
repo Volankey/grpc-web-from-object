@@ -56,7 +56,9 @@ function doEcho(mockDelay?: number) {
     {
       cancelToken: cancelToken.token,
     },
-  );
+  ).catch((e) => {
+    console.error('error', e);
+  });
 
   Promise.race([invokePromise, timeoutAbort])
     .then((t) => {
@@ -65,7 +67,7 @@ function doEcho(mockDelay?: number) {
       result.value = JSON.stringify(resp, null, ' ');
     })
     .catch((e) => {
-      console.error(e);
+      console.error('error', e);
     })
     .finally(() => {
       sending.value = false;
