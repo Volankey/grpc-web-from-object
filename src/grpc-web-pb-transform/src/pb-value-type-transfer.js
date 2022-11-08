@@ -10,7 +10,6 @@ function pbValueTypeTransfer(filePath) {
   const code = fs.readFileSync(filePath, 'utf-8');
   const AST = $(code);
   // 注意 setWrapperField,setRepeatedWrapperField,setOneofWrapperField 是嵌套的标志
-  // TODO: setOneofWrapperField
   const res = AST.find(
     `$_$1 = function(value) {
     return jspb.Message.setWrapperField(this, $_$2, value);

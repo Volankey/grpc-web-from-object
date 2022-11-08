@@ -4,33 +4,30 @@ var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
-var __markAsModule = (target) => __defProp(target, "__esModule", { value: true });
 var __esm = (fn, res) => function __init() {
   return fn && (res = (0, fn[__getOwnPropNames(fn)[0]])(fn = 0)), res;
 };
 var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
-var __reExport = (target, module, copyDefault, desc) => {
-  if (module && typeof module === "object" || typeof module === "function") {
-    for (let key of __getOwnPropNames(module))
-      if (!__hasOwnProp.call(target, key) && (copyDefault || key !== "default"))
-        __defProp(target, key, { get: () => module[key], enumerable: !(desc = __getOwnPropDesc(module, key)) || desc.enumerable });
+var __copyProps = (to, from, except, desc) => {
+  if (from && typeof from === "object" || typeof from === "function") {
+    for (let key of __getOwnPropNames(from))
+      if (!__hasOwnProp.call(to, key) && key !== except)
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
   }
-  return target;
+  return to;
 };
-var __toESM = (module, isNodeMode) => {
-  return __reExport(__markAsModule(__defProp(module != null ? __create(__getProtoOf(module)) : {}, "default", !isNodeMode && module && module.__esModule ? { get: () => module.default, enumerable: true } : { value: module, enumerable: true })), module);
-};
-var __toCommonJS = /* @__PURE__ */ ((cache) => {
-  return (module, temp) => {
-    return cache && cache.get(module) || (temp = __reExport(__markAsModule({}), module, 1), cache && cache.set(module, temp), temp);
-  };
-})(typeof WeakMap !== "undefined" ? /* @__PURE__ */ new WeakMap() : 0);
+var __reExport = (target, mod, secondTarget) => (__copyProps(target, mod, "default"), secondTarget && __copyProps(secondTarget, mod, "default"));
+var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+  mod
+));
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-// ../../node_modules/.pnpm/grpc-web@1.3.1/node_modules/grpc-web/index.js
+// ../../node_modules/.pnpm/grpc-web@1.4.2/node_modules/grpc-web/index.js
 var require_grpc_web = __commonJS({
-  "../../node_modules/.pnpm/grpc-web@1.3.1/node_modules/grpc-web/index.js"(exports, module) {
+  "../../node_modules/.pnpm/grpc-web@1.4.2/node_modules/grpc-web/index.js"(exports, module) {
     var n;
     function aa(a) {
       var b = 0;
@@ -38,11 +35,11 @@ var require_grpc_web = __commonJS({
         return b < a.length ? { done: false, value: a[b++] } : { done: true };
       };
     }
-    var ba = typeof Object.defineProperties == "function" ? Object.defineProperty : function(a, b, c) {
+    var ba = "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, b, c) {
       a != Array.prototype && a != Object.prototype && (a[b] = c.value);
     };
     function ca(a) {
-      a = [typeof window == "object" && window, typeof self == "object" && self, typeof global == "object" && global, a];
+      a = ["object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, a];
       for (var b = 0; b < a.length; ++b) {
         var c = a[b];
         if (c && c.Math == Math)
@@ -76,7 +73,7 @@ var require_grpc_web = __commonJS({
       t();
       var a = r.Symbol.iterator;
       a || (a = r.Symbol.iterator = r.Symbol("Symbol.iterator"));
-      typeof Array.prototype[a] != "function" && ba(Array.prototype, a, { configurable: true, writable: true, value: function() {
+      "function" != typeof Array.prototype[a] && ba(Array.prototype, a, { configurable: true, writable: true, value: function() {
         return fa(aa(this));
       } });
       u = function() {
@@ -91,17 +88,17 @@ var require_grpc_web = __commonJS({
       return a;
     }
     function ha(a) {
-      var b = typeof Symbol != "undefined" && Symbol.iterator && a[Symbol.iterator];
+      var b = "undefined" != typeof Symbol && Symbol.iterator && a[Symbol.iterator];
       return b ? b.call(a) : { next: aa(a) };
     }
-    var ia = typeof Object.create == "function" ? Object.create : function(a) {
+    var ia = "function" == typeof Object.create ? Object.create : function(a) {
       function b() {
       }
       b.prototype = a;
       return new b();
     };
     var ja;
-    if (typeof Object.setPrototypeOf == "function")
+    if ("function" == typeof Object.setPrototypeOf)
       ja = Object.setPrototypeOf;
     else {
       a: {
@@ -132,7 +129,7 @@ var require_grpc_web = __commonJS({
         na(a, b);
       else
         for (var c in b)
-          if (c != "prototype")
+          if ("prototype" != c)
             if (Object.defineProperties) {
               var d = Object.getOwnPropertyDescriptor(b, c);
               d && Object.defineProperty(a, c, d);
@@ -170,7 +167,7 @@ var require_grpc_web = __commonJS({
         a = a[a.length - 1];
         d = c[a];
         b = b(d);
-        b != d && b != null && ba(c, a, { configurable: true, writable: true, value: b });
+        b != d && null != b && ba(c, a, { configurable: true, writable: true, value: b });
       }
     }
     v("Array.prototype.keys", function(a) {
@@ -199,7 +196,7 @@ var require_grpc_web = __commonJS({
     });
     v("Object.is", function(a) {
       return a ? a : function(b, c) {
-        return b === c ? b !== 0 || 1 / b === 1 / c : b !== b && c !== c;
+        return b === c ? 0 !== b || 1 / b === 1 / c : b !== b && c !== c;
       };
     });
     v("Array.prototype.includes", function(a) {
@@ -239,7 +236,7 @@ var require_grpc_web = __commonJS({
       if (a)
         return a;
       c.prototype.b = function(e) {
-        if (this.a == null) {
+        if (null == this.a) {
           this.a = [];
           var h = this;
           this.c(function() {
@@ -291,7 +288,7 @@ var require_grpc_web = __commonJS({
           a:
             switch (typeof e) {
               case "object":
-                var h = e != null;
+                var h = null != e;
                 break a;
               case "function":
                 h = true;
@@ -310,7 +307,7 @@ var require_grpc_web = __commonJS({
           this.g(k);
           return;
         }
-        typeof h == "function" ? this.w(h, e) : this.h(e);
+        "function" == typeof h ? this.w(h, e) : this.h(e);
       };
       b.prototype.g = function(e) {
         this.i(2, e);
@@ -319,14 +316,14 @@ var require_grpc_web = __commonJS({
         this.i(1, e);
       };
       b.prototype.i = function(e, h) {
-        if (this.b != 0)
+        if (0 != this.b)
           throw Error("Cannot settle(" + e + ", " + h + "): Promise already settled in state" + this.b);
         this.b = e;
         this.c = h;
         this.l();
       };
       b.prototype.l = function() {
-        if (this.a != null) {
+        if (null != this.a) {
           for (var e = 0; e < this.a.length; ++e)
             g.b(this.a[e]);
           this.a = null;
@@ -346,18 +343,18 @@ var require_grpc_web = __commonJS({
         }
       };
       b.prototype.then = function(e, h) {
-        function k(q, x) {
-          return typeof q == "function" ? function(z) {
+        function k(q, w) {
+          return "function" == typeof q ? function(z) {
             try {
               l(q(z));
-            } catch (N) {
-              m(N);
+            } catch (M) {
+              m(M);
             }
-          } : x;
+          } : w;
         }
-        var l, m, p = new b(function(q, x) {
+        var l, m, p = new b(function(q, w) {
           l = q;
-          m = x;
+          m = w;
         });
         this.F(k(e, l), k(h, m));
         return p;
@@ -379,7 +376,7 @@ var require_grpc_web = __commonJS({
           }
         }
         var l = this;
-        this.a == null ? g.b(k) : this.a.push(k);
+        null == this.a ? g.b(k) : this.a.push(k);
       };
       b.resolve = d;
       b.reject = function(e) {
@@ -397,27 +394,27 @@ var require_grpc_web = __commonJS({
         var h = ha(e), k = h.next();
         return k.done ? d([]) : new b(function(l, m) {
           function p(z) {
-            return function(N) {
-              q[z] = N;
-              x--;
-              x == 0 && l(q);
+            return function(M) {
+              q[z] = M;
+              w--;
+              0 == w && l(q);
             };
           }
-          var q = [], x = 0;
+          var q = [], w = 0;
           do
-            q.push(void 0), x++, d(k.value).F(p(q.length - 1), m), k = h.next();
+            q.push(void 0), w++, d(k.value).F(p(q.length - 1), m), k = h.next();
           while (!k.done);
         });
       };
       return b;
     });
     var qa = qa || {};
-    var w = exports || self;
+    var x = exports || self;
     function y(a, b) {
       a = a.split(".");
-      b = b || w;
+      b = b || x;
       for (var c = 0; c < a.length; c++)
-        if (b = b[a[c]], b == null)
+        if (b = b[a[c]], null == b)
           return null;
       return b;
     }
@@ -425,7 +422,7 @@ var require_grpc_web = __commonJS({
     }
     function sa(a) {
       var b = typeof a;
-      return b == "object" && a != null || b == "function";
+      return "object" == b && null != a || "function" == b;
     }
     var ta = "closure_uid_" + (1e9 * Math.random() >>> 0);
     var ua = 0;
@@ -448,7 +445,7 @@ var require_grpc_web = __commonJS({
       };
     }
     function A(a, b, c) {
-      Function.prototype.bind && Function.prototype.bind.toString().indexOf("native code") != -1 ? A = va : A = wa;
+      Function.prototype.bind && -1 != Function.prototype.bind.toString().indexOf("native code") ? A = va : A = wa;
       return A.apply(null, arguments);
     }
     function B(a, b) {
@@ -487,11 +484,11 @@ var require_grpc_web = __commonJS({
       return this.a;
     };
     function D(a, b, c, d) {
-      c = c === void 0 ? {} : c;
+      c = void 0 === c ? {} : c;
       this.c = a;
       this.a = c;
       this.b = b;
-      this.f = d === void 0 ? null : d;
+      this.f = void 0 === d ? null : d;
     }
     D.prototype.getResponseMessage = function() {
       return this.c;
@@ -505,45 +502,21 @@ var require_grpc_web = __commonJS({
     D.prototype.getStatus = function() {
       return this.f;
     };
-    function E(a, b, c, d, f, g) {
+    function ya(a, b, c, d, f, g) {
       this.name = a;
-      this.a = b;
-      this.f = c;
-      this.b = d;
-      this.c = f;
-      this.g = g;
+      this.a = f;
+      this.b = g;
     }
-    function ya(a, b, c) {
-      c = c === void 0 ? {} : c;
-      var d = d === void 0 ? new xa() : d;
+    function za(a, b, c) {
+      c = void 0 === c ? {} : c;
+      var d = void 0 === d ? new xa() : d;
       return new C(b, a, c, d);
     }
-    n = E.prototype;
-    n.getName = function() {
+    ya.prototype.getName = function() {
       return this.name;
     };
-    n.getMethodType = function() {
-      return this.a;
-    };
-    n.getResponseMessageCtor = function() {
-      return this.b;
-    };
-    n.getRequestMessageCtor = function() {
-      return this.f;
-    };
-    n.getResponseDeserializeFn = function() {
-      return this.g;
-    };
-    n.getRequestSerializeFn = function() {
-      return this.c;
-    };
-    E.prototype.getRequestSerializeFn = E.prototype.getRequestSerializeFn;
-    E.prototype.getResponseDeserializeFn = E.prototype.getResponseDeserializeFn;
-    E.prototype.getRequestMessageCtor = E.prototype.getRequestMessageCtor;
-    E.prototype.getResponseMessageCtor = E.prototype.getResponseMessageCtor;
-    E.prototype.getMethodType = E.prototype.getMethodType;
-    E.prototype.getName = E.prototype.getName;
-    function za(a) {
+    ya.prototype.getName = ya.prototype.getName;
+    function Aa(a) {
       switch (a) {
         case 200:
           return 0;
@@ -575,29 +548,29 @@ var require_grpc_web = __commonJS({
           return 2;
       }
     }
-    function F(a, b, c) {
-      c = c === void 0 ? {} : c;
+    function E(a, b, c) {
+      c = void 0 === c ? {} : c;
       b = Error.call(this, b);
       this.message = b.message;
       "stack" in b && (this.stack = b.stack);
       this.code = a;
       this.metadata = c;
     }
-    oa(F, Error);
-    F.prototype.name = "RpcError";
-    function Aa(a) {
+    oa(E, Error);
+    E.prototype.name = "RpcError";
+    function Ba(a) {
       this.a = a;
     }
-    Aa.prototype.on = function(a, b) {
-      return a == "data" || a == "error" ? this : this.a.on(a, b);
+    Ba.prototype.on = function(a, b) {
+      return "data" == a || "error" == a ? this : this.a.on(a, b);
     };
-    Aa.prototype.removeListener = function(a, b) {
+    Ba.prototype.removeListener = function(a, b) {
       return this.a.removeListener(a, b);
     };
-    Aa.prototype.cancel = function() {
+    Ba.prototype.cancel = function() {
       this.a.cancel();
     };
-    function Ba(a) {
+    function Ca(a) {
       switch (a) {
         case 0:
           return "No Error";
@@ -623,48 +596,48 @@ var require_grpc_web = __commonJS({
           return "Unrecognized error code";
       }
     }
-    function G(a) {
+    function F(a) {
       if (Error.captureStackTrace)
-        Error.captureStackTrace(this, G);
+        Error.captureStackTrace(this, F);
       else {
         var b = Error().stack;
         b && (this.stack = b);
       }
       a && (this.message = String(a));
     }
-    B(G, Error);
-    G.prototype.name = "CustomError";
-    function Ca(a, b) {
+    B(F, Error);
+    F.prototype.name = "CustomError";
+    function Da(a, b) {
       a = a.split("%s");
       for (var c = "", d = a.length - 1, f = 0; f < d; f++)
         c += a[f] + (f < b.length ? b[f] : "%s");
-      G.call(this, c + a[d]);
+      F.call(this, c + a[d]);
     }
-    B(Ca, G);
-    Ca.prototype.name = "AssertionError";
-    function Da(a, b) {
-      throw new Ca("Failure" + (a ? ": " + a : ""), Array.prototype.slice.call(arguments, 1));
+    B(Da, F);
+    Da.prototype.name = "AssertionError";
+    function Ea(a, b) {
+      throw new Da("Failure" + (a ? ": " + a : ""), Array.prototype.slice.call(arguments, 1));
     }
-    function Ea() {
+    function Fa() {
       this.l = null;
       this.i = [];
       this.m = 0;
-      this.b = Fa;
+      this.b = Ga;
       this.f = this.a = this.h = 0;
       this.c = null;
       this.g = 0;
     }
-    function Ga(a, b) {
+    function Ha(a, b) {
       function c(l) {
-        l == Ha ? e.h = l : l == H ? e.h = l : Ia(e, h, k, "invalid frame byte");
-        e.b = Ja;
+        l == Ia ? e.h = l : l == G ? e.h = l : Ja(e, h, k, "invalid frame byte");
+        e.b = Ka;
         e.a = 0;
         e.f = 0;
       }
       function d(l) {
         e.f++;
         e.a = (e.a << 8) + l;
-        e.f == 4 && (e.b = Ka, e.g = 0, typeof Uint8Array !== "undefined" ? e.c = new Uint8Array(e.a) : e.c = Array(e.a), e.a == 0 && g());
+        4 == e.f && (e.b = La, e.g = 0, "undefined" !== typeof Uint8Array ? e.c = new Uint8Array(e.a) : e.c = Array(e.a), 0 == e.a && g());
       }
       function f(l) {
         e.c[e.g++] = l;
@@ -674,21 +647,21 @@ var require_grpc_web = __commonJS({
         var l = {};
         l[e.h] = e.c;
         e.i.push(l);
-        e.b = Fa;
+        e.b = Ga;
       }
       var e = a, h, k = 0;
       for (b instanceof Uint8Array || b instanceof Array ? h = b : h = new Uint8Array(b); k < h.length; ) {
         switch (e.b) {
-          case La:
-            Ia(e, h, k, "stream already broken");
+          case Ma:
+            Ja(e, h, k, "stream already broken");
             break;
-          case Fa:
+          case Ga:
             c(h[k]);
             break;
-          case Ja:
+          case Ka:
             d(h[k]);
             break;
-          case Ka:
+          case La:
             f(h[k]);
             break;
           default:
@@ -701,73 +674,73 @@ var require_grpc_web = __commonJS({
       e.i = [];
       return 0 < a.length ? a : null;
     }
-    var Fa = 0;
-    var Ja = 1;
-    var Ka = 2;
-    var La = 3;
-    var Ha = 0;
-    var H = 128;
-    function Ia(a, b, c, d) {
-      a.b = La;
+    var Ga = 0;
+    var Ka = 1;
+    var La = 2;
+    var Ma = 3;
+    var Ia = 0;
+    var G = 128;
+    function Ja(a, b, c, d) {
+      a.b = Ma;
       a.l = "The stream is broken @" + a.m + "/" + c + ". Error: " + d + ". With input:\n" + b;
       throw Error(a.l);
     }
-    var Ma = Array.prototype.indexOf ? function(a, b) {
+    var Na = Array.prototype.indexOf ? function(a, b) {
       return Array.prototype.indexOf.call(a, b, void 0);
     } : function(a, b) {
-      if (typeof a === "string")
-        return typeof b !== "string" || b.length != 1 ? -1 : a.indexOf(b, 0);
+      if ("string" === typeof a)
+        return "string" !== typeof b || 1 != b.length ? -1 : a.indexOf(b, 0);
       for (var c = 0; c < a.length; c++)
         if (c in a && a[c] === b)
           return c;
       return -1;
     };
-    var Na = String.prototype.trim ? function(a) {
+    var Oa = String.prototype.trim ? function(a) {
       return a.trim();
     } : function(a) {
       return /^[\s\xa0]*([\s\S]*?)[\s\xa0]*$/.exec(a)[1];
     };
-    function I(a, b) {
-      return a.indexOf(b) != -1;
+    function H(a, b) {
+      return -1 != a.indexOf(b);
     }
-    function Oa(a, b) {
+    function Pa(a, b) {
       return a < b ? -1 : a > b ? 1 : 0;
     }
-    var J;
+    var I;
     a: {
-      Pa = w.navigator;
-      if (Pa) {
-        Qa = Pa.userAgent;
-        if (Qa) {
-          J = Qa;
+      Qa = x.navigator;
+      if (Qa) {
+        Ra = Qa.userAgent;
+        if (Ra) {
+          I = Ra;
           break a;
         }
       }
-      J = "";
+      I = "";
     }
-    var Pa;
     var Qa;
-    function Ra(a, b) {
+    var Ra;
+    function Sa(a, b) {
       for (var c in a)
         b.call(void 0, a[c], c, a);
     }
-    function Sa(a, b) {
+    function Ta(a, b) {
       var c = {}, d;
       for (d in a)
         c[d] = b.call(void 0, a[d], d, a);
       return c;
     }
-    var Ta = "constructor hasOwnProperty isPrototypeOf propertyIsEnumerable toLocaleString toString valueOf".split(" ");
-    function Ua(a, b) {
+    var Ua = "constructor hasOwnProperty isPrototypeOf propertyIsEnumerable toLocaleString toString valueOf".split(" ");
+    function Va(a, b) {
       for (var c, d, f = 1; f < arguments.length; f++) {
         d = arguments[f];
         for (c in d)
           a[c] = d[c];
-        for (var g = 0; g < Ta.length; g++)
-          c = Ta[g], Object.prototype.hasOwnProperty.call(d, c) && (a[c] = d[c]);
+        for (var g = 0; g < Ua.length; g++)
+          c = Ua[g], Object.prototype.hasOwnProperty.call(d, c) && (a[c] = d[c]);
       }
     }
-    function Va(a) {
+    function Wa(a) {
       var b = 1;
       a = a.split(":");
       for (var c = []; 0 < b && a.length; )
@@ -775,99 +748,99 @@ var require_grpc_web = __commonJS({
       a.length && c.push(a.join(":"));
       return c;
     }
-    function Wa(a) {
-      Wa[" "](a);
+    function Xa(a) {
+      Xa[" "](a);
       return a;
     }
-    Wa[" "] = ra;
-    function Xa(a) {
-      var b = Ya;
+    Xa[" "] = ra;
+    function Ya(a) {
+      var b = Za;
       return Object.prototype.hasOwnProperty.call(b, 9) ? b[9] : b[9] = a(9);
     }
-    var Za = I(J, "Opera");
-    var $a = I(J, "Trident") || I(J, "MSIE");
-    var ab = I(J, "Edge");
-    var bb = I(J, "Gecko") && !(I(J.toLowerCase(), "webkit") && !I(J, "Edge")) && !(I(J, "Trident") || I(J, "MSIE")) && !I(J, "Edge");
-    var cb = I(J.toLowerCase(), "webkit") && !I(J, "Edge");
-    var db;
+    var $a = H(I, "Opera");
+    var ab = H(I, "Trident") || H(I, "MSIE");
+    var bb = H(I, "Edge");
+    var cb = H(I, "Gecko") && !(H(I.toLowerCase(), "webkit") && !H(I, "Edge")) && !(H(I, "Trident") || H(I, "MSIE")) && !H(I, "Edge");
+    var db = H(I.toLowerCase(), "webkit") && !H(I, "Edge");
+    var eb;
     a: {
-      eb = "", fb = function() {
-        var a = J;
-        if (bb)
-          return /rv:([^\);]+)(\)|;)/.exec(a);
-        if (ab)
-          return /Edge\/([\d\.]+)/.exec(a);
-        if ($a)
-          return /\b(?:MSIE|rv)[: ]([^\);]+)(\)|;)/.exec(a);
+      fb = "", gb = function() {
+        var a = I;
         if (cb)
+          return /rv:([^\);]+)(\)|;)/.exec(a);
+        if (bb)
+          return /Edge\/([\d\.]+)/.exec(a);
+        if (ab)
+          return /\b(?:MSIE|rv)[: ]([^\);]+)(\)|;)/.exec(a);
+        if (db)
           return /WebKit\/(\S+)/.exec(a);
-        if (Za)
+        if ($a)
           return /(?:Version)[ \/]?(\S+)/.exec(a);
       }();
-      fb && (eb = fb ? fb[1] : "");
-      if ($a) {
-        hb = w.document;
-        gb = hb ? hb.documentMode : void 0;
-        if (gb != null && gb > parseFloat(eb)) {
-          db = String(gb);
+      gb && (fb = gb ? gb[1] : "");
+      if (ab) {
+        ib = x.document;
+        hb = ib ? ib.documentMode : void 0;
+        if (null != hb && hb > parseFloat(fb)) {
+          eb = String(hb);
           break a;
         }
       }
-      db = eb;
+      eb = fb;
     }
-    var eb;
     var fb;
     var gb;
     var hb;
-    var Ya = {};
-    function ib() {
-      return Xa(function() {
-        for (var a = 0, b = Na(String(db)).split("."), c = Na("9").split("."), d = Math.max(b.length, c.length), f = 0; a == 0 && f < d; f++) {
+    var ib;
+    var Za = {};
+    function jb() {
+      return Ya(function() {
+        for (var a = 0, b = Oa(String(eb)).split("."), c = Oa("9").split("."), d = Math.max(b.length, c.length), f = 0; 0 == a && f < d; f++) {
           var g = b[f] || "", e = c[f] || "";
           do {
             g = /(\d*)(\D*)(.*)/.exec(g) || ["", "", "", ""];
             e = /(\d*)(\D*)(.*)/.exec(e) || ["", "", "", ""];
-            if (g[0].length == 0 && e[0].length == 0)
+            if (0 == g[0].length && 0 == e[0].length)
               break;
-            a = Oa(g[1].length == 0 ? 0 : parseInt(g[1], 10), e[1].length == 0 ? 0 : parseInt(e[1], 10)) || Oa(g[2].length == 0, e[2].length == 0) || Oa(g[2], e[2]);
+            a = Pa(0 == g[1].length ? 0 : parseInt(g[1], 10), 0 == e[1].length ? 0 : parseInt(e[1], 10)) || Pa(0 == g[2].length, 0 == e[2].length) || Pa(g[2], e[2]);
             g = g[3];
             e = e[3];
-          } while (a == 0);
+          } while (0 == a);
         }
         return 0 <= a;
       });
     }
-    function jb() {
-      kb != 0 && (Object.prototype.hasOwnProperty.call(this, ta) && this[ta] || (this[ta] = ++ua));
+    function kb() {
+      0 != lb && (Object.prototype.hasOwnProperty.call(this, ta) && this[ta] || (this[ta] = ++ua));
       this.K = this.K;
     }
-    var kb = 0;
-    jb.prototype.K = false;
-    var lb = Object.freeze || function(a) {
+    var lb = 0;
+    kb.prototype.K = false;
+    var mb = Object.freeze || function(a) {
       return a;
     };
-    function K(a, b) {
+    function J(a, b) {
       this.type = a;
       this.a = this.target = b;
       this.defaultPrevented = false;
     }
-    K.prototype.b = function() {
+    J.prototype.b = function() {
       this.defaultPrevented = true;
     };
-    var mb = function() {
-      if (!w.addEventListener || !Object.defineProperty)
+    var nb = function() {
+      if (!x.addEventListener || !Object.defineProperty)
         return false;
       var a = false, b = Object.defineProperty({}, "passive", { get: function() {
         a = true;
       } });
       try {
-        w.addEventListener("test", ra, b), w.removeEventListener("test", ra, b);
+        x.addEventListener("test", ra, b), x.removeEventListener("test", ra, b);
       } catch (c) {
       }
       return a;
     }();
-    function L(a, b) {
-      K.call(this, a ? a.type : "");
+    function K(a, b) {
+      J.call(this, a ? a.type : "");
       this.relatedTarget = this.a = this.target = null;
       this.button = this.screenY = this.screenX = this.clientY = this.clientX = 0;
       this.key = "";
@@ -880,10 +853,10 @@ var require_grpc_web = __commonJS({
         this.target = a.target || a.srcElement;
         this.a = b;
         if (b = a.relatedTarget) {
-          if (bb) {
+          if (cb) {
             a: {
               try {
-                Wa(b.nodeName);
+                Xa(b.nodeName);
                 var f = true;
                 break a;
               } catch (g) {
@@ -893,9 +866,9 @@ var require_grpc_web = __commonJS({
             f || (b = null);
           }
         } else
-          c == "mouseover" ? b = a.fromElement : c == "mouseout" && (b = a.toElement);
+          "mouseover" == c ? b = a.fromElement : "mouseout" == c && (b = a.toElement);
         this.relatedTarget = b;
-        d ? (this.clientX = d.clientX !== void 0 ? d.clientX : d.pageX, this.clientY = d.clientY !== void 0 ? d.clientY : d.pageY, this.screenX = d.screenX || 0, this.screenY = d.screenY || 0) : (this.clientX = a.clientX !== void 0 ? a.clientX : a.pageX, this.clientY = a.clientY !== void 0 ? a.clientY : a.pageY, this.screenX = a.screenX || 0, this.screenY = a.screenY || 0);
+        d ? (this.clientX = void 0 !== d.clientX ? d.clientX : d.pageX, this.clientY = void 0 !== d.clientY ? d.clientY : d.pageY, this.screenX = d.screenX || 0, this.screenY = d.screenY || 0) : (this.clientX = void 0 !== a.clientX ? a.clientX : a.pageX, this.clientY = void 0 !== a.clientY ? a.clientY : a.pageY, this.screenX = a.screenX || 0, this.screenY = a.screenY || 0);
         this.button = a.button;
         this.key = a.key || "";
         this.ctrlKey = a.ctrlKey;
@@ -903,19 +876,19 @@ var require_grpc_web = __commonJS({
         this.shiftKey = a.shiftKey;
         this.metaKey = a.metaKey;
         this.pointerId = a.pointerId || 0;
-        this.pointerType = typeof a.pointerType === "string" ? a.pointerType : nb[a.pointerType] || "";
+        this.pointerType = "string" === typeof a.pointerType ? a.pointerType : ob[a.pointerType] || "";
         this.c = a;
-        a.defaultPrevented && L.O.b.call(this);
+        a.defaultPrevented && K.O.b.call(this);
       }
     }
-    B(L, K);
-    var nb = lb({ 2: "touch", 3: "pen", 4: "mouse" });
-    L.prototype.b = function() {
-      L.O.b.call(this);
+    B(K, J);
+    var ob = mb({ 2: "touch", 3: "pen", 4: "mouse" });
+    K.prototype.b = function() {
+      K.O.b.call(this);
       var a = this.c;
       a.preventDefault ? a.preventDefault() : a.returnValue = false;
     };
-    var ob = "closure_listenable_" + (1e6 * Math.random() | 0);
+    var L = "closure_listenable_" + (1e6 * Math.random() | 0);
     var pb = 0;
     function qb(a, b, c, d, f) {
       this.listener = a;
@@ -953,14 +926,14 @@ var require_grpc_web = __commonJS({
         return false;
       var f = this.a[a];
       b = tb(f, b, c, d);
-      return -1 < b ? (rb(f[b]), Array.prototype.splice.call(f, b, 1), f.length == 0 && (delete this.a[a], this.b--), true) : false;
+      return -1 < b ? (rb(f[b]), Array.prototype.splice.call(f, b, 1), 0 == f.length && (delete this.a[a], this.b--), true) : false;
     };
     function ub(a, b) {
       var c = b.type;
       if (c in a.a) {
-        var d = a.a[c], f = Ma(d, b), g;
+        var d = a.a[c], f = Na(d, b), g;
         (g = 0 <= f) && Array.prototype.splice.call(d, f, 1);
-        g && (rb(b), a.a[c].length == 0 && (delete a.a[c], a.b--));
+        g && (rb(b), 0 == a.a[c].length && (delete a.a[c], a.b--));
       }
     }
     function tb(a, b, c, d) {
@@ -981,7 +954,7 @@ var require_grpc_web = __commonJS({
         for (var g = 0; g < b.length; g++)
           yb(a, b[g], c, d, f);
       else
-        c = Ab(c), a && a[ob] ? a.f.add(String(b), c, false, sa(d) ? !!d.capture : !!d, f) : Bb(a, b, c, false, d, f);
+        c = Ab(c), a && a[L] ? a.f.add(String(b), c, false, sa(d) ? !!d.capture : !!d, f) : Bb(a, b, c, false, d, f);
     }
     function Bb(a, b, c, d, f, g) {
       if (!b)
@@ -995,7 +968,7 @@ var require_grpc_web = __commonJS({
         d.src = a;
         d.listener = c;
         if (a.addEventListener)
-          mb || (f = e), f === void 0 && (f = false), a.addEventListener(b.toString(), d, f);
+          nb || (f = e), void 0 === f && (f = false), a.addEventListener(b.toString(), d, f);
         else if (a.attachEvent)
           a.attachEvent(Eb(b.toString()), d);
         else if (a.addListener && a.removeListener)
@@ -1017,25 +990,25 @@ var require_grpc_web = __commonJS({
         for (var g = 0; g < b.length; g++)
           zb(a, b[g], c, d, f);
       else
-        c = Ab(c), a && a[ob] ? a.f.add(String(b), c, true, sa(d) ? !!d.capture : !!d, f) : Bb(a, b, c, true, d, f);
+        c = Ab(c), a && a[L] ? a.f.add(String(b), c, true, sa(d) ? !!d.capture : !!d, f) : Bb(a, b, c, true, d, f);
     }
     function Gb(a, b, c, d, f) {
       if (Array.isArray(b))
         for (var g = 0; g < b.length; g++)
           Gb(a, b[g], c, d, f);
       else
-        (d = sa(d) ? !!d.capture : !!d, c = Ab(c), a && a[ob]) ? a.f.remove(String(b), c, d, f) : a && (a = Cb(a)) && (b = a.a[b.toString()], a = -1, b && (a = tb(b, c, d, f)), (c = -1 < a ? b[a] : null) && Hb(c));
+        (d = sa(d) ? !!d.capture : !!d, c = Ab(c), a && a[L]) ? a.f.remove(String(b), c, d, f) : a && (a = Cb(a)) && (b = a.a[b.toString()], a = -1, b && (a = tb(b, c, d, f)), (c = -1 < a ? b[a] : null) && Hb(c));
     }
     function Hb(a) {
-      if (typeof a !== "number" && a && !a.A) {
+      if ("number" !== typeof a && a && !a.A) {
         var b = a.src;
-        if (b && b[ob])
+        if (b && b[L])
           ub(b.f, a);
         else {
           var c = a.type, d = a.proxy;
           b.removeEventListener ? b.removeEventListener(c, d, a.capture) : b.detachEvent ? b.detachEvent(Eb(c), d) : b.addListener && b.removeListener && b.removeListener(d);
           xb--;
-          (c = Cb(b)) ? (ub(c, a), c.b == 0 && (c.src = null, b[vb] = null)) : rb(a);
+          (c = Cb(b)) ? (ub(c, a), 0 == c.b && (c.src = null, b[vb] = null)) : rb(a);
         }
       }
     }
@@ -1046,7 +1019,7 @@ var require_grpc_web = __commonJS({
       if (a.A)
         a = true;
       else {
-        b = new L(b, this);
+        b = new K(b, this);
         var c = a.listener, d = a.H || a.src;
         a.D && Hb(a);
         a = c.call(d, b);
@@ -1059,37 +1032,37 @@ var require_grpc_web = __commonJS({
     }
     var Ib = "__closure_events_fn_" + (1e9 * Math.random() >>> 0);
     function Ab(a) {
-      if (typeof a === "function")
+      if ("function" === typeof a)
         return a;
       a[Ib] || (a[Ib] = function(b) {
         return a.handleEvent(b);
       });
       return a[Ib];
     }
-    function M() {
-      jb.call(this);
+    function N() {
+      kb.call(this);
       this.f = new sb(this);
       this.U = this;
     }
-    B(M, jb);
-    M.prototype[ob] = true;
-    M.prototype.addEventListener = function(a, b, c, d) {
+    B(N, kb);
+    N.prototype[L] = true;
+    N.prototype.addEventListener = function(a, b, c, d) {
       yb(this, a, b, c, d);
     };
-    M.prototype.removeEventListener = function(a, b, c, d) {
+    N.prototype.removeEventListener = function(a, b, c, d) {
       Gb(this, a, b, c, d);
     };
     function O(a, b) {
       a = a.U;
       var c = b.type || b;
-      if (typeof b === "string")
-        b = new K(b, a);
-      else if (b instanceof K)
+      if ("string" === typeof b)
+        b = new J(b, a);
+      else if (b instanceof J)
         b.target = b.target || a;
       else {
         var d = b;
-        b = new K(c, a);
-        Ua(b, d);
+        b = new J(c, a);
+        Va(b, d);
       }
       a = b.a = a;
       Jb(a, c, true, b);
@@ -1103,16 +1076,16 @@ var require_grpc_web = __commonJS({
           if (e && !e.A && e.capture == c) {
             var h = e.listener, k = e.H || e.src;
             e.D && ub(a.f, e);
-            f = h.call(k, d) !== false && f;
+            f = false !== h.call(k, d) && f;
           }
         }
       }
     }
-    var Kb = w;
+    var Kb = x;
     function Lb(a, b, c) {
-      if (typeof a === "function")
+      if ("function" === typeof a)
         c && (a = A(a, c));
-      else if (a && typeof a.handleEvent == "function")
+      else if (a && "function" == typeof a.handleEvent)
         a = A(a.handleEvent, a);
       else
         throw Error("Invalid listener argument");
@@ -1143,7 +1116,7 @@ var require_grpc_web = __commonJS({
     function Vb(a, b) {
       this.a = null;
       this.f = [];
-      this.b = (b === void 0 ? null : b) || null;
+      this.b = (void 0 === b ? null : b) || null;
       this.c = [];
       this.g = { getName: function() {
         return a;
@@ -1154,7 +1127,7 @@ var require_grpc_web = __commonJS({
         return a.a;
       if (a.b)
         return Wb(a.b);
-      Da("Root logger has no level set.");
+      Ea("Root logger has no level set.");
       return Nb;
     }
     function Xb(a, b) {
@@ -1173,12 +1146,12 @@ var require_grpc_web = __commonJS({
     function $b(a, b, c) {
       var d = a.entries[b];
       if (d)
-        return c !== void 0 && (d.a = c), d;
+        return void 0 !== c && (d.a = c), d;
       d = $b(a, b.substr(0, b.lastIndexOf(".")));
       var f = new Vb(b, d);
       a.entries[b] = f;
       d.c.push(f);
-      c !== void 0 && (f.a = c);
+      void 0 !== c && (f.a = c);
       return f;
     }
     function ac() {
@@ -1194,7 +1167,7 @@ var require_grpc_web = __commonJS({
           d = d >= f.value;
         }
       }
-      d && (b = b || Nb, d = $b(ac(), a.getName()), typeof c === "function" && (c = c()), Sb || (Sb = new Rb()), a = a.getName(), a = new Ub(b, c, a), Xb(d, a));
+      d && (b = b || Nb, d = $b(ac(), a.getName()), "function" === typeof c && (c = c()), Sb || (Sb = new Rb()), a = a.getName(), a = new Ub(b, c, a), Xb(d, a));
     }
     function P(a, b) {
       a && bc(a, Qb, b);
@@ -1215,7 +1188,7 @@ var require_grpc_web = __commonJS({
       return (a = ec(a)) ? new ActiveXObject(a) : new XMLHttpRequest();
     }
     function ec(a) {
-      if (!a.b && typeof XMLHttpRequest == "undefined" && typeof ActiveXObject != "undefined") {
+      if (!a.b && "undefined" == typeof XMLHttpRequest && "undefined" != typeof ActiveXObject) {
         for (var b = ["MSXML2.XMLHTTP.6.0", "MSXML2.XMLHTTP.3.0", "MSXML2.XMLHTTP", "Microsoft.XMLHTTP"], c = 0; c < b.length; c++) {
           var d = b[c];
           try {
@@ -1231,7 +1204,7 @@ var require_grpc_web = __commonJS({
     t();
     u();
     function ic(a, b) {
-      this.b = a[w.Symbol.iterator]();
+      this.b = a[x.Symbol.iterator]();
       this.c = b;
       this.f = 0;
     }
@@ -1249,7 +1222,7 @@ var require_grpc_web = __commonJS({
     u();
     t();
     u();
-    var kc = "StopIteration" in w ? w.StopIteration : { message: "StopIteration", stack: "" };
+    var kc = "StopIteration" in x ? x.StopIteration : { message: "StopIteration", stack: "" };
     function Q() {
     }
     Q.prototype.next = function() {
@@ -1264,17 +1237,17 @@ var require_grpc_web = __commonJS({
     function lc(a) {
       if (a instanceof R || a instanceof S || a instanceof T)
         return a;
-      if (typeof a.next == "function")
+      if ("function" == typeof a.next)
         return new R(function() {
           return mc(a);
         });
       t();
       u();
-      if (typeof a[Symbol.iterator] == "function")
+      if ("function" == typeof a[Symbol.iterator])
         return t(), u(), new R(function() {
           return a[Symbol.iterator]();
         });
-      if (typeof a.u == "function")
+      if ("function" == typeof a.u)
         return new R(function() {
           return mc(a.u());
         });
@@ -1444,7 +1417,7 @@ var require_grpc_web = __commonJS({
     }
     var pc = /^(?:([^:/?#.]+):)?(?:\/\/(?:([^\\/?#]*)@)?([^\\/?#]*?)(?::([0-9]+))?(?=[\\/?#]|$))?([^?#]+)?(?:\?([^#]*))?(?:#([\s\S]*))?$/;
     function qc(a) {
-      M.call(this);
+      N.call(this);
       this.headers = new nc();
       this.C = a || null;
       this.c = false;
@@ -1458,7 +1431,7 @@ var require_grpc_web = __commonJS({
       this.m = rc;
       this.I = this.M = false;
     }
-    B(qc, M);
+    B(qc, N);
     var rc = "";
     qc.prototype.b = $b(ac(), "goog.net.XhrIo", void 0).g;
     var sc = /^https?$/i;
@@ -1485,9 +1458,9 @@ var require_grpc_web = __commonJS({
       b = c || "";
       c = a.headers.clone();
       var d = c.G().find(function(g) {
-        return g.toLowerCase() == "content-type";
-      }), f = w.FormData && b instanceof w.FormData;
-      !(0 <= Ma(tc, "POST")) || d || f || c.set("Content-Type", "application/x-www-form-urlencoded;charset=utf-8");
+        return "content-type" == g.toLowerCase();
+      }), f = x.FormData && b instanceof x.FormData;
+      !(0 <= Na(tc, "POST")) || d || f || c.set("Content-Type", "application/x-www-form-urlencoded;charset=utf-8");
       c.forEach(function(g, e) {
         this.a.setRequestHeader(e, g);
       }, a);
@@ -1496,15 +1469,18 @@ var require_grpc_web = __commonJS({
       try {
         wc(a), 0 < a.h && (a.I = xc(a.a), P(a.b, V(a, "Will abort after " + a.h + "ms if incomplete, xhr2 " + a.I)), a.I ? (a.a.timeout = a.h, a.a.ontimeout = A(a.T, a)) : a.w = Lb(a.T, a.h, a)), P(a.b, V(a, "Sending request")), a.s = true, a.a.send(b), a.s = false;
       } catch (g) {
-        P(a.b, V(a, "Send error: " + g.message)), vc(a, g);
+        P(
+          a.b,
+          V(a, "Send error: " + g.message)
+        ), vc(a, g);
       }
     }
     function xc(a) {
-      return $a && ib() && typeof a.timeout === "number" && a.ontimeout !== void 0;
+      return ab && jb() && "number" === typeof a.timeout && void 0 !== a.ontimeout;
     }
     n = qc.prototype;
     n.T = function() {
-      typeof qa != "undefined" && this.a && (this.l = "Timed out after " + this.h + "ms, aborting", this.g = 8, P(this.b, V(this, this.l)), O(this, "timeout"), this.abort(8));
+      "undefined" != typeof qa && this.a && (this.l = "Timed out after " + this.h + "ms, aborting", this.g = 8, P(this.b, V(this, this.l)), O(this, "timeout"), this.abort(8));
     };
     function vc(a, b) {
       a.c = false;
@@ -1527,12 +1503,12 @@ var require_grpc_web = __commonJS({
       Ac(this);
     };
     function Ac(a) {
-      if (a.c && typeof qa != "undefined") {
-        if (a.J[1] && W(a) == 4 && a.getStatus() == 2)
+      if (a.c && "undefined" != typeof qa) {
+        if (a.J[1] && 4 == W(a) && 2 == a.getStatus())
           P(a.b, V(a, "Local request error detected and ignored"));
-        else if (a.s && W(a) == 4)
+        else if (a.s && 4 == W(a))
           Lb(a.R, 0, a);
-        else if (O(a, "readystatechange"), W(a) == 4) {
+        else if (O(a, "readystatechange"), 4 == W(a)) {
           P(a.b, V(a, "Request complete"));
           a.c = false;
           try {
@@ -1554,10 +1530,10 @@ var require_grpc_web = __commonJS({
             var d;
             if (!(d = c)) {
               var f;
-              if (f = b === 0) {
+              if (f = 0 === b) {
                 var g = String(a.v).match(pc)[1] || null;
-                if (!g && w.self && w.self.location) {
-                  var e = w.self.location.protocol;
+                if (!g && x.self && x.self.location) {
+                  var e = x.self.location.protocol;
                   g = e.substr(0, e.length - 1);
                 }
                 f = !sc.test(g ? g.toLowerCase() : "");
@@ -1632,24 +1608,24 @@ var require_grpc_web = __commonJS({
       }
     }
     function Cc(a, b) {
-      if (a.a && W(a) == 4)
-        return a = a.a.getResponseHeader(b), a === null ? void 0 : a;
+      if (a.a && 4 == W(a))
+        return a = a.a.getResponseHeader(b), null === a ? void 0 : a;
     }
     function Dc(a) {
       var b = {};
-      a = (a.a && W(a) == 4 ? a.a.getAllResponseHeaders() || "" : "").split("\r\n");
+      a = (a.a && 4 == W(a) ? a.a.getAllResponseHeaders() || "" : "").split("\r\n");
       for (var c = 0; c < a.length; c++)
         if (!/^[\s\xa0]*$/.test(a[c])) {
-          var d = Va(a[c]), f = d[0];
+          var d = Wa(a[c]), f = d[0];
           d = d[1];
-          if (typeof d === "string") {
+          if ("string" === typeof d) {
             d = d.trim();
             var g = b[f] || [];
             b[f] = g;
             g.push(d);
           }
         }
-      return Sa(b, function(e) {
+      return Ta(b, function(e) {
         return e.join(", ");
       });
     }
@@ -1660,7 +1636,7 @@ var require_grpc_web = __commonJS({
     var Fc = null;
     function Gc(a) {
       var b = a.length, c = 3 * b / 4;
-      c % 3 ? c = Math.floor(c) : I("=.", a[b - 1]) && (c = I("=.", a[b - 2]) ? c - 2 : c - 1);
+      c % 3 ? c = Math.floor(c) : H("=.", a[b - 1]) && (c = H("=.", a[b - 2]) ? c - 2 : c - 1);
       var d = new Uint8Array(c), f = 0;
       Hc(a, function(g) {
         d[f++] = g;
@@ -1671,7 +1647,7 @@ var require_grpc_web = __commonJS({
       function c(k) {
         for (; d < a.length; ) {
           var l = a.charAt(d++), m = Fc[l];
-          if (m != null)
+          if (null != m)
             return m;
           if (!/^[\s\xa0]*$/.test(l))
             throw Error("Unknown base64 encoding at char: " + l);
@@ -1681,10 +1657,10 @@ var require_grpc_web = __commonJS({
       Ic();
       for (var d = 0; ; ) {
         var f = c(-1), g = c(0), e = c(64), h = c(64);
-        if (h === 64 && f === -1)
+        if (64 === h && -1 === f)
           break;
         b(f << 2 | g >> 4);
-        e != 64 && (b(g << 4 & 240 | e >> 2), h != 64 && b(e << 6 & 192 | h));
+        64 != e && (b(g << 4 & 240 | e >> 2), 64 != h && b(e << 6 & 192 | h));
       }
     }
     function Ic() {
@@ -1695,7 +1671,7 @@ var require_grpc_web = __commonJS({
           Ec[c] = d;
           for (var f = 0; f < d.length; f++) {
             var g = d[f];
-            Fc[g] === void 0 && (Fc[g] = f);
+            void 0 === Fc[g] && (Fc[g] = f);
           }
         }
       }
@@ -1711,13 +1687,13 @@ var require_grpc_web = __commonJS({
       this.c = [];
       this.l = false;
       this.i = 0;
-      this.s = new Ea();
+      this.s = new Fa();
       var b = this;
       yb(this.a, "readystatechange", function() {
         var c = b.a;
         if (c = c.a ? c.a.getResponseHeader("Content-Type") : null) {
           c = c.toLowerCase();
-          if (c.lastIndexOf("application/grpc-web-text", 0) == 0) {
+          if (0 == c.lastIndexOf("application/grpc-web-text", 0)) {
             c = b.a;
             try {
               var d = c.a ? c.a.responseText : "";
@@ -1727,44 +1703,42 @@ var require_grpc_web = __commonJS({
             c = d || "";
             d = c.length - c.length % 4;
             c = c.substr(b.i, d - b.i);
-            if (c.length == 0)
+            if (0 == c.length)
               return;
             b.i = d;
             c = Gc(c);
-          } else if (c.lastIndexOf("application/grpc", 0) == 0)
+          } else if (0 == c.lastIndexOf("application/grpc", 0))
             c = new Uint8Array(Bc(b.a));
           else {
-            Y(b, new F(2, "Unknown Content-type received."));
+            Y(b, new E(2, "Unknown Content-type received."));
             return;
           }
           d = null;
           try {
-            d = Ga(b.s, c);
+            d = Ha(b.s, c);
           } catch (k) {
-            Y(b, new F(2, "Error in parsing response body"));
+            Y(b, new E(2, "Error in parsing response body"));
           }
           if (d)
             for (c = 0; c < d.length; c++) {
-              if (Ha in d[c]) {
-                var f = d[c][Ha];
+              if (Ia in d[c]) {
+                var f = d[c][Ia];
                 if (f) {
-                  var g = void 0;
+                  var g = false, e = void 0;
                   try {
-                    g = b.m(f);
+                    e = b.m(f), g = true;
                   } catch (k) {
-                    Y(b, new F(13, "Error when deserializing response data; error: " + k + (", response: " + g)));
+                    Y(b, new E(13, "Error when deserializing response data; error: " + k + (", response: " + e)));
                   }
-                  if (g) {
-                    f = b;
-                    for (var e = 0; e < f.b.length; e++)
-                      f.b[e](g);
-                  }
+                  if (g)
+                    for (f = e, g = 0; g < b.b.length; g++)
+                      b.b[g](f);
                 }
               }
-              if (H in d[c] && 0 < d[c][H].length) {
+              if (G in d[c] && 0 < d[c][G].length) {
                 f = "";
-                for (g = 0; g < d[c][H].length; g++)
-                  f += String.fromCharCode(d[c][H][g]);
+                for (g = 0; g < d[c][G].length; g++)
+                  f += String.fromCharCode(d[c][G][g]);
                 f = f.trim().split("\r\n");
                 g = {};
                 for (e = 0; e < f.length; e++) {
@@ -1776,18 +1750,19 @@ var require_grpc_web = __commonJS({
                 e = "";
                 "grpc-status" in f && (g = Number(f["grpc-status"]), delete f["grpc-status"]);
                 "grpc-message" in f && (e = f["grpc-message"], delete f["grpc-message"]);
-                Y(b, new F(g, e, f));
+                Y(b, new E(g, e, f));
               }
             }
         }
       });
       yb(this.a, "complete", function() {
         var c = b.a.g, d = 2, f = "", g = {}, e = Dc(b.a);
-        Object.keys(e).forEach(function(h) {
-          Jc.includes(h) || (g[h] = e[h]);
+        Object.keys(e).forEach(function(k) {
+          Jc.includes(k) || (g[k] = e[k]);
         });
         Kc(b, g);
-        if (c != 0) {
+        var h = -1;
+        if (0 != c) {
           switch (c) {
             case 7:
               d = 10;
@@ -1796,18 +1771,19 @@ var require_grpc_web = __commonJS({
               d = 4;
               break;
             case 6:
-              d = za(b.a.getStatus());
+              h = b.a.getStatus();
+              d = Aa(h);
               break;
             default:
               d = 14;
           }
-          d == 10 && b.l || Y(b, new F(d, Ba(c)));
+          10 == d && b.l || (f = Ca(c), -1 != h && (f += ", http status code: " + h), Y(b, new E(d, f)));
         } else
-          c = false, "grpc-status" in e && (d = Number(Cc(b.a, "grpc-status")), "grpc-message" in e && (f = Cc(b.a, "grpc-message")), d != 0 && (Y(b, new F(d, f || "", e)), c = true)), c || Lc(b);
+          h = false, "grpc-status" in e && (d = Number(Cc(b.a, "grpc-status")), "grpc-message" in e && (f = Cc(b.a, "grpc-message")), 0 != d && (Y(b, new E(d, f || "", e)), h = true)), h || Lc(b);
       });
     }
     X.prototype.on = function(a, b) {
-      a == "data" ? this.b.push(b) : a == "status" ? this.h.push(b) : a == "metadata" ? this.g.push(b) : a == "end" ? this.c.push(b) : a == "error" && this.f.push(b);
+      "data" == a ? this.b.push(b) : "status" == a ? this.h.push(b) : "metadata" == a ? this.g.push(b) : "end" == a ? this.c.push(b) : "error" == a && this.f.push(b);
       return this;
     };
     function Mc(a, b) {
@@ -1815,7 +1791,7 @@ var require_grpc_web = __commonJS({
       -1 < b && a.splice(b, 1);
     }
     X.prototype.removeListener = function(a, b) {
-      a == "data" ? Mc(this.b, b) : a == "status" ? Mc(this.h, b) : a == "metadata" ? Mc(this.g, b) : a == "end" ? Mc(this.c, b) : a == "error" && Mc(this.f, b);
+      "data" == a ? Mc(this.b, b) : "status" == a ? Mc(this.h, b) : "metadata" == a ? Mc(this.g, b) : "end" == a ? Mc(this.c, b) : "error" == a && Mc(this.f, b);
       return this;
     };
     X.prototype.cancel = function() {
@@ -1823,8 +1799,8 @@ var require_grpc_web = __commonJS({
       this.a.abort();
     };
     function Y(a, b) {
-      if (b.code != 0)
-        for (var c = new F(b.code, decodeURIComponent(b.message || ""), b.metadata), d = 0; d < a.f.length; d++)
+      if (0 != b.code)
+        for (var c = new E(b.code, decodeURIComponent(b.message || ""), b.metadata), d = 0; d < a.f.length; d++)
           a.f[d](c);
       b = { code: b.code, details: decodeURIComponent(b.message || ""), metadata: b.metadata };
       for (c = 0; c < a.h.length; c++)
@@ -1843,7 +1819,7 @@ var require_grpc_web = __commonJS({
     X.prototype.on = X.prototype.on;
     function Nc(a) {
       var b = "";
-      Ra(a, function(c, d) {
+      Sa(a, function(c, d) {
         b += d;
         b += ":";
         b += c;
@@ -1852,7 +1828,7 @@ var require_grpc_web = __commonJS({
       return b;
     }
     function Z(a, b) {
-      a = a === void 0 ? {} : a;
+      a = void 0 === a ? {} : a;
       this.a = a.format || y("format", a) || "text";
       this.g = a.aa || y("suppressCorsPreflight", a) || false;
       this.f = a.withCredentials || y("withCredentials", a) || false;
@@ -1864,20 +1840,20 @@ var require_grpc_web = __commonJS({
       var g = this, e = a.substr(0, a.length - d.name.length);
       a = Oc(function(h) {
         return Pc(g, h, e);
-      }, this.b).call(this, ya(d, b, c));
+      }, this.b).call(this, za(d, b, c));
       Qc(a, f, false);
-      return new Aa(a);
+      return new Ba(a);
     };
     Z.prototype.S = function(a, b, c, d) {
       var f = this, g = a.substr(0, a.length - d.name.length);
       return Oc(function(e) {
         return new Promise(function(h, k) {
           var l = Pc(f, e, g), m, p, q;
-          Qc(l, function(x, z, N, Tb) {
-            x ? k(x) : z ? q = z : N ? p = N : Tb ? m = Tb : (x = e.getMethodDescriptor(), z = m, z = z === void 0 ? {} : z, h(new D(q, x, z, p === void 0 ? null : p)));
+          Qc(l, function(w, z, M, Tb, Rc) {
+            w ? k(w) : Rc ? q = z : M ? p = M : Tb ? m = Tb : (w = e.getMethodDescriptor(), z = m, z = void 0 === z ? {} : z, h(new D(q, w, z, void 0 === p ? null : p)));
           }, true);
         });
-      }, this.h).call(this, ya(d, b, c)).then(function(e) {
+      }, this.h).call(this, za(d, b, c)).then(function(e) {
         return e.getResponseMessage();
       });
     };
@@ -1888,21 +1864,27 @@ var require_grpc_web = __commonJS({
       var f = this, g = a.substr(0, a.length - d.name.length);
       return Oc(function(e) {
         return Pc(f, e, g);
-      }, this.b).call(this, ya(d, b, c));
+      }, this.b).call(this, za(d, b, c));
     };
     function Pc(a, b, c) {
       var d = b.getMethodDescriptor(), f = c + d.getName();
       c = a.c ? a.c : new qc();
       c.M = a.f;
-      var g = new X({ Z: c }), e = d.getResponseDeserializeFn();
-      g.m = e;
-      e = b.getMetadata();
-      for (var h in e)
+      var g = new X({ Z: c });
+      g.m = d.b;
+      var e = b.getMetadata();
+      for (h in e)
         c.headers.set(h, e[h]);
-      a.a == "text" ? (c.headers.set("Content-Type", "application/grpc-web-text"), c.headers.set("Accept", "application/grpc-web-text")) : c.headers.set("Content-Type", "application/grpc-web+proto");
+      "text" == a.a ? (c.headers.set("Content-Type", "application/grpc-web-text"), c.headers.set("Accept", "application/grpc-web-text")) : c.headers.set("Content-Type", "application/grpc-web+proto");
       c.headers.set("X-User-Agent", "grpc-web-javascript/0.1");
       c.headers.set("X-Grpc-Web", "1");
-      c.headers.has("deadline") && (h = Number(c.headers.get("deadline")), h = Math.ceil(h - new Date().getTime()), c.headers.delete("deadline"), h === Infinity && (h = 0), 0 < h && (c.headers.set("grpc-timeout", h + "m"), c.h = Math.max(0, Math.max(1e3, Math.ceil(1.1 * h)))));
+      if (c.headers.has("deadline")) {
+        var h = Number(c.headers.get("deadline"));
+        h = Math.ceil(h - new Date().getTime());
+        c.headers.delete("deadline");
+        Infinity === h && (h = 0);
+        0 < h && (c.headers.set("grpc-timeout", h + "m"), c.h = Math.max(0, Math.max(1e3, Math.ceil(1.1 * h))));
+      }
       if (a.g) {
         e = c.headers;
         h = {};
@@ -1917,13 +1899,13 @@ var require_grpc_web = __commonJS({
           m = true;
         }
         if (!m)
-          if (h = Nc(h), typeof f === "string") {
-            if (m = encodeURIComponent("$httpHeaders"), h = h != null ? "=" + encodeURIComponent(String(h)) : "", m += h)
+          if (h = Nc(h), "string" === typeof f) {
+            if (m = encodeURIComponent("$httpHeaders"), h = null != h ? "=" + encodeURIComponent(String(h)) : "", m += h)
               h = f.indexOf("#"), 0 > h && (h = f.length), e = f.indexOf("?"), 0 > e || e > h ? (e = h, k = "") : k = f.substring(e + 1, h), f = [f.substr(0, e), k, f.substr(h)], h = f[1], f[1] = m ? h ? h + "&" + m : m : h, f = f[0] + (f[1] ? "?" + f[1] : "") + f[2];
           } else
             f.a("$httpHeaders", h);
       }
-      b = d.getRequestSerializeFn()(b.getRequestMessage());
+      b = (0, d.a)(b.getRequestMessage());
       d = b.length;
       m = [0, 0, 0, 0];
       h = new Uint8Array(5 + d);
@@ -1932,10 +1914,10 @@ var require_grpc_web = __commonJS({
       h.set(new Uint8Array(m), 1);
       h.set(b, 5);
       b = h;
-      if (a.a == "text") {
+      if ("text" == a.a) {
         a = b;
         var p;
-        p === void 0 && (p = 0);
+        void 0 === p && (p = 0);
         Ic();
         p = Ec[p];
         b = Array(Math.floor(a.length / 3));
@@ -1960,7 +1942,7 @@ var require_grpc_web = __commonJS({
         }
         b = b.join("");
       } else
-        a.a == "binary" && (c.m = "arraybuffer");
+        "binary" == a.a && (c.m = "arraybuffer");
       uc(c, f, b);
       return g;
     }
@@ -1971,17 +1953,17 @@ var require_grpc_web = __commonJS({
         f = e;
       });
       a.on("error", function(e) {
-        e.code == 0 || g || (g = true, b(e, null));
+        0 == e.code || g || (g = true, b(e, null));
       });
       a.on("status", function(e) {
-        e.code == 0 || g ? c && b(null, null, e) : (g = true, b({ code: e.code, message: e.details, metadata: e.metadata }, null));
+        0 == e.code || g ? c && b(null, null, e) : (g = true, b({ code: e.code, message: e.details, metadata: e.metadata }, null));
       });
       if (c)
         a.on("metadata", function(e) {
           b(null, null, null, e);
         });
       a.on("end", function() {
-        g || (d ? b(null, f) : b({ code: 2, message: "Incomplete response" }));
+        g || (d ? c ? b(null, f, null, null, true) : b(null, f) : b({ code: 2, message: "Incomplete response" }));
         c && b(null, null);
       });
     }
@@ -2000,12 +1982,12 @@ var require_grpc_web = __commonJS({
     Z.prototype.thenableCall = Z.prototype.S;
     Z.prototype.rpcCall = Z.prototype.X;
     module.exports.CallOptions = xa;
-    module.exports.MethodDescriptor = E;
+    module.exports.MethodDescriptor = ya;
     module.exports.GrpcWebClientBase = Z;
-    module.exports.RpcError = F;
+    module.exports.RpcError = E;
     module.exports.StatusCode = { OK: 0, CANCELLED: 1, UNKNOWN: 2, INVALID_ARGUMENT: 3, DEADLINE_EXCEEDED: 4, NOT_FOUND: 5, ALREADY_EXISTS: 6, PERMISSION_DENIED: 7, UNAUTHENTICATED: 16, RESOURCE_EXHAUSTED: 8, FAILED_PRECONDITION: 9, ABORTED: 10, OUT_OF_RANGE: 11, UNIMPLEMENTED: 12, INTERNAL: 13, UNAVAILABLE: 14, DATA_LOSS: 15 };
     module.exports.MethodType = { UNARY: "unary", SERVER_STREAMING: "server_streaming", BIDI_STREAMING: "bidi_streaming" };
-    Kb = typeof globalThis !== "undefined" && globalThis || self;
+    Kb = "undefined" !== typeof globalThis && globalThis || self;
   }
 });
 
@@ -2021,6 +2003,7 @@ var init_google_protobuf = __esm({
 // src/proto/echo_pb.js
 var require_echo_pb = __commonJS({
   "src/proto/echo_pb.js"(exports) {
+    "use strict";
     var jspb = (init_google_protobuf(), __toCommonJS(google_protobuf_exports));
     var goog = jspb;
     var global2 = function() {
@@ -2223,15 +2206,24 @@ var require_echo_pb = __commonJS({
       var f = void 0;
       f = message.getName();
       if (f.length > 0) {
-        writer.writeString(1, f);
+        writer.writeString(
+          1,
+          f
+        );
       }
       f = message.getSex();
       if (f.length > 0) {
-        writer.writeString(2, f);
+        writer.writeString(
+          2,
+          f
+        );
       }
       f = message.getFavoratesList();
       if (f.length > 0) {
-        writer.writeRepeatedString(3, f);
+        writer.writeRepeatedString(
+          3,
+          f
+        );
       }
     };
     proto.grpc.gateway.testing.Student.prototype.getName = function() {
@@ -2265,8 +2257,16 @@ var require_echo_pb = __commonJS({
       };
       proto.grpc.gateway.testing.Suject.toObject = function(includeInstance, msg) {
         var f, obj = {
-          liberalArtsList: jspb.Message.toObjectList(msg.getLiberalArtsList(), proto.grpc.gateway.testing.Score.toObject, includeInstance),
-          scienceList: jspb.Message.toObjectList(msg.getScienceList(), proto.grpc.gateway.testing.Score.toObject, includeInstance)
+          liberalArtsList: jspb.Message.toObjectList(
+            msg.getLiberalArtsList(),
+            proto.grpc.gateway.testing.Score.toObject,
+            includeInstance
+          ),
+          scienceList: jspb.Message.toObjectList(
+            msg.getScienceList(),
+            proto.grpc.gateway.testing.Score.toObject,
+            includeInstance
+          )
         };
         if (includeInstance) {
           obj.$jspbMessageInstance = msg;
@@ -2312,11 +2312,19 @@ var require_echo_pb = __commonJS({
       var f = void 0;
       f = message.getLiberalArtsList();
       if (f.length > 0) {
-        writer.writeRepeatedMessage(1, f, proto.grpc.gateway.testing.Score.serializeBinaryToWriter);
+        writer.writeRepeatedMessage(
+          1,
+          f,
+          proto.grpc.gateway.testing.Score.serializeBinaryToWriter
+        );
       }
       f = message.getScienceList();
       if (f.length > 0) {
-        writer.writeRepeatedMessage(2, f, proto.grpc.gateway.testing.Score.serializeBinaryToWriter);
+        writer.writeRepeatedMessage(
+          2,
+          f,
+          proto.grpc.gateway.testing.Score.serializeBinaryToWriter
+        );
       }
     };
     proto.grpc.gateway.testing.Suject.prototype.getLiberalArtsList = function() {
@@ -2402,11 +2410,17 @@ var require_echo_pb = __commonJS({
       var f = void 0;
       f = message.getName();
       if (f.length > 0) {
-        writer.writeString(1, f);
+        writer.writeString(
+          1,
+          f
+        );
       }
       f = message.getScore();
       if (f.length > 0) {
-        writer.writeString(2, f);
+        writer.writeString(
+          2,
+          f
+        );
       }
     };
     proto.grpc.gateway.testing.Score.prototype.getName = function() {
@@ -2482,11 +2496,18 @@ var require_echo_pb = __commonJS({
       var f = void 0;
       f = jspb.Message.getField(message, 4);
       if (f != null) {
-        writer.writeString(4, f);
+        writer.writeString(
+          4,
+          f
+        );
       }
       f = message.getSubMessage();
       if (f != null) {
-        writer.writeMessage(9, f, proto.grpc.gateway.testing.Score.serializeBinaryToWriter);
+        writer.writeMessage(
+          9,
+          f,
+          proto.grpc.gateway.testing.Score.serializeBinaryToWriter
+        );
       }
     };
     proto.grpc.gateway.testing.OneOfSample.prototype.getName = function() {
@@ -2595,15 +2616,26 @@ var require_echo_pb = __commonJS({
       var f = void 0;
       f = message.getMessage();
       if (f.length > 0) {
-        writer.writeString(1, f);
+        writer.writeString(
+          1,
+          f
+        );
       }
       f = message.getStudent();
       if (f != null) {
-        writer.writeMessage(2, f, proto.grpc.gateway.testing.Student.serializeBinaryToWriter);
+        writer.writeMessage(
+          2,
+          f,
+          proto.grpc.gateway.testing.Student.serializeBinaryToWriter
+        );
       }
       f = message.getSuject();
       if (f != null) {
-        writer.writeMessage(3, f, proto.grpc.gateway.testing.Suject.serializeBinaryToWriter);
+        writer.writeMessage(
+          3,
+          f,
+          proto.grpc.gateway.testing.Suject.serializeBinaryToWriter
+        );
       }
       f = message.getKeyvalueMap(true);
       if (f && f.getLength() > 0) {
@@ -2615,7 +2647,11 @@ var require_echo_pb = __commonJS({
       }
       f = message.getOneOfSample();
       if (f != null) {
-        writer.writeMessage(6, f, proto.grpc.gateway.testing.OneOfSample.serializeBinaryToWriter);
+        writer.writeMessage(
+          6,
+          f,
+          proto.grpc.gateway.testing.OneOfSample.serializeBinaryToWriter
+        );
       }
     };
     proto.grpc.gateway.testing.EchoRequest.prototype.getMessage = function() {
@@ -2657,7 +2693,12 @@ var require_echo_pb = __commonJS({
       return jspb.Message.getField(this, 3) != null;
     };
     proto.grpc.gateway.testing.EchoRequest.prototype.getKeyvalueMap = function(opt_noLazyCreate) {
-      return jspb.Message.getMapField(this, 4, opt_noLazyCreate, null);
+      return jspb.Message.getMapField(
+        this,
+        4,
+        opt_noLazyCreate,
+        null
+      );
     };
     proto.grpc.gateway.testing.EchoRequest.prototype.setKeyvalueMap = function(k, v) {
       this.getKeyvalueMap().set(k, v);
@@ -2670,7 +2711,12 @@ var require_echo_pb = __commonJS({
       return this;
     };
     proto.grpc.gateway.testing.EchoRequest.prototype.getKeyScroeMap = function(opt_noLazyCreate) {
-      return jspb.Message.getMapField(this, 5, opt_noLazyCreate, proto.grpc.gateway.testing.Score);
+      return jspb.Message.getMapField(
+        this,
+        5,
+        opt_noLazyCreate,
+        proto.grpc.gateway.testing.Score
+      );
     };
     proto.grpc.gateway.testing.EchoRequest.prototype.setKeyScroeMap = function(k, v) {
       this.getKeyScroeMap().set(k, v);
@@ -2755,15 +2801,25 @@ var require_echo_pb = __commonJS({
       var f = void 0;
       f = message.getMessage();
       if (f.length > 0) {
-        writer.writeString(1, f);
+        writer.writeString(
+          1,
+          f
+        );
       }
       f = message.getMessageCount();
       if (f !== 0) {
-        writer.writeInt32(2, f);
+        writer.writeInt32(
+          2,
+          f
+        );
       }
       f = message.getResp();
       if (f != null) {
-        writer.writeMessage(3, f, proto.grpc.gateway.testing.EchoRequest.serializeBinaryToWriter);
+        writer.writeMessage(
+          3,
+          f,
+          proto.grpc.gateway.testing.EchoRequest.serializeBinaryToWriter
+        );
       }
     };
     proto.grpc.gateway.testing.EchoResponse.prototype.getMessage = function() {
@@ -2850,15 +2906,24 @@ var require_echo_pb = __commonJS({
       var f = void 0;
       f = message.getMessage();
       if (f.length > 0) {
-        writer.writeString(1, f);
+        writer.writeString(
+          1,
+          f
+        );
       }
       f = message.getMessageCount();
       if (f !== 0) {
-        writer.writeInt32(2, f);
+        writer.writeInt32(
+          2,
+          f
+        );
       }
       f = message.getMessageInterval();
       if (f !== 0) {
-        writer.writeInt32(3, f);
+        writer.writeInt32(
+          3,
+          f
+        );
       }
     };
     proto.grpc.gateway.testing.ServerStreamingEchoRequest.prototype.getMessage = function() {
@@ -2925,7 +2990,10 @@ var require_echo_pb = __commonJS({
       var f = void 0;
       f = message.getMessage();
       if (f.length > 0) {
-        writer.writeString(1, f);
+        writer.writeString(
+          1,
+          f
+        );
       }
     };
     proto.grpc.gateway.testing.ServerStreamingEchoResponse.prototype.getMessage = function() {
@@ -2980,7 +3048,10 @@ var require_echo_pb = __commonJS({
       var f = void 0;
       f = message.getMessage();
       if (f.length > 0) {
-        writer.writeString(1, f);
+        writer.writeString(
+          1,
+          f
+        );
       }
     };
     proto.grpc.gateway.testing.ClientStreamingEchoRequest.prototype.getMessage = function() {
@@ -3035,7 +3106,10 @@ var require_echo_pb = __commonJS({
       var f = void 0;
       f = message.getMessageCount();
       if (f !== 0) {
-        writer.writeInt32(1, f);
+        writer.writeInt32(
+          1,
+          f
+        );
       }
     };
     proto.grpc.gateway.testing.ClientStreamingEchoResponse.prototype.getMessageCount = function() {
@@ -3049,7 +3123,7 @@ var require_echo_pb = __commonJS({
 });
 
 // src/proto/EchoServiceClientPb.ts
-var grpcWeb = __toESM(require_grpc_web());
+var _grpcWeb = __toESM(require_grpc_web());
 var echo_pb = __toESM(require_echo_pb());
 var EchoServiceClient = class {
   client_;
@@ -3067,46 +3141,138 @@ var EchoServiceClient = class {
     this.credentials_ = credentials;
     this.options_ = options;
   }
-  methodInfoEcho = new grpcWeb.MethodDescriptor("/grpc.gateway.testing.EchoService/Echo", grpcWeb.MethodType.UNARY, echo_pb.EchoRequest, echo_pb.EchoResponse, (request) => {
-    return request.serializeBinary();
-  }, echo_pb.EchoResponse.deserializeBinary);
+  methodInfoEcho = new grpcWeb.MethodDescriptor(
+    "/grpc.gateway.testing.EchoService/Echo",
+    grpcWeb.MethodType.UNARY,
+    echo_pb.EchoRequest,
+    echo_pb.EchoResponse,
+    (request) => {
+      return request.serializeBinary();
+    },
+    echo_pb.EchoResponse.deserializeBinary
+  );
   echo(request, metadata, callback) {
     if (callback !== void 0) {
-      return this.client_.rpcCall(this.hostname_ + "/grpc.gateway.testing.EchoService/Echo", request, metadata || {}, this.methodInfoEcho, callback);
+      return this.client_.rpcCall(
+        this.hostname_ + "/grpc.gateway.testing.EchoService/Echo",
+        request,
+        metadata || {},
+        this.methodInfoEcho,
+        callback
+      );
     }
-    return this.client_.unaryCall(this.hostname_ + "/grpc.gateway.testing.EchoService/Echo", request, metadata || {}, this.methodInfoEcho);
+    return this.client_.unaryCall(
+      this.hostname_ + "/grpc.gateway.testing.EchoService/Echo",
+      request,
+      metadata || {},
+      this.methodInfoEcho
+    );
   }
-  methodInfoEchoAbort = new grpcWeb.MethodDescriptor("/grpc.gateway.testing.EchoService/EchoAbort", grpcWeb.MethodType.UNARY, echo_pb.EchoRequest, echo_pb.EchoResponse, (request) => {
-    return request.serializeBinary();
-  }, echo_pb.EchoResponse.deserializeBinary);
+  methodInfoEchoAbort = new grpcWeb.MethodDescriptor(
+    "/grpc.gateway.testing.EchoService/EchoAbort",
+    grpcWeb.MethodType.UNARY,
+    echo_pb.EchoRequest,
+    echo_pb.EchoResponse,
+    (request) => {
+      return request.serializeBinary();
+    },
+    echo_pb.EchoResponse.deserializeBinary
+  );
   echoAbort(request, metadata, callback) {
     if (callback !== void 0) {
-      return this.client_.rpcCall(this.hostname_ + "/grpc.gateway.testing.EchoService/EchoAbort", request, metadata || {}, this.methodInfoEchoAbort, callback);
+      return this.client_.rpcCall(
+        this.hostname_ + "/grpc.gateway.testing.EchoService/EchoAbort",
+        request,
+        metadata || {},
+        this.methodInfoEchoAbort,
+        callback
+      );
     }
-    return this.client_.unaryCall(this.hostname_ + "/grpc.gateway.testing.EchoService/EchoAbort", request, metadata || {}, this.methodInfoEchoAbort);
+    return this.client_.unaryCall(
+      this.hostname_ + "/grpc.gateway.testing.EchoService/EchoAbort",
+      request,
+      metadata || {},
+      this.methodInfoEchoAbort
+    );
   }
-  methodInfoNoOp = new grpcWeb.MethodDescriptor("/grpc.gateway.testing.EchoService/NoOp", grpcWeb.MethodType.UNARY, echo_pb.Empty, echo_pb.Empty, (request) => {
-    return request.serializeBinary();
-  }, echo_pb.Empty.deserializeBinary);
+  methodInfoNoOp = new grpcWeb.MethodDescriptor(
+    "/grpc.gateway.testing.EchoService/NoOp",
+    grpcWeb.MethodType.UNARY,
+    echo_pb.Empty,
+    echo_pb.Empty,
+    (request) => {
+      return request.serializeBinary();
+    },
+    echo_pb.Empty.deserializeBinary
+  );
   noOp(request, metadata, callback) {
     if (callback !== void 0) {
-      return this.client_.rpcCall(this.hostname_ + "/grpc.gateway.testing.EchoService/NoOp", request, metadata || {}, this.methodInfoNoOp, callback);
+      return this.client_.rpcCall(
+        this.hostname_ + "/grpc.gateway.testing.EchoService/NoOp",
+        request,
+        metadata || {},
+        this.methodInfoNoOp,
+        callback
+      );
     }
-    return this.client_.unaryCall(this.hostname_ + "/grpc.gateway.testing.EchoService/NoOp", request, metadata || {}, this.methodInfoNoOp);
+    return this.client_.unaryCall(
+      this.hostname_ + "/grpc.gateway.testing.EchoService/NoOp",
+      request,
+      metadata || {},
+      this.methodInfoNoOp
+    );
   }
-  methodInfoServerStreamingEcho = new grpcWeb.MethodDescriptor("/grpc.gateway.testing.EchoService/ServerStreamingEcho", grpcWeb.MethodType.SERVER_STREAMING, echo_pb.ServerStreamingEchoRequest, echo_pb.ServerStreamingEchoResponse, (request) => {
-    return request.serializeBinary();
-  }, echo_pb.ServerStreamingEchoResponse.deserializeBinary);
+  methodInfoServerStreamingEcho = new grpcWeb.MethodDescriptor(
+    "/grpc.gateway.testing.EchoService/ServerStreamingEcho",
+    grpcWeb.MethodType.SERVER_STREAMING,
+    echo_pb.ServerStreamingEchoRequest,
+    echo_pb.ServerStreamingEchoResponse,
+    (request) => {
+      return request.serializeBinary();
+    },
+    echo_pb.ServerStreamingEchoResponse.deserializeBinary
+  );
   serverStreamingEcho(request, metadata) {
-    return this.client_.serverStreaming(this.hostname_ + "/grpc.gateway.testing.EchoService/ServerStreamingEcho", request, metadata || {}, this.methodInfoServerStreamingEcho);
+    return this.client_.serverStreaming(
+      this.hostname_ + "/grpc.gateway.testing.EchoService/ServerStreamingEcho",
+      request,
+      metadata || {},
+      this.methodInfoServerStreamingEcho
+    );
   }
-  methodInfoServerStreamingEchoAbort = new grpcWeb.MethodDescriptor("/grpc.gateway.testing.EchoService/ServerStreamingEchoAbort", grpcWeb.MethodType.SERVER_STREAMING, echo_pb.ServerStreamingEchoRequest, echo_pb.ServerStreamingEchoResponse, (request) => {
-    return request.serializeBinary();
-  }, echo_pb.ServerStreamingEchoResponse.deserializeBinary);
+  methodInfoServerStreamingEchoAbort = new grpcWeb.MethodDescriptor(
+    "/grpc.gateway.testing.EchoService/ServerStreamingEchoAbort",
+    grpcWeb.MethodType.SERVER_STREAMING,
+    echo_pb.ServerStreamingEchoRequest,
+    echo_pb.ServerStreamingEchoResponse,
+    (request) => {
+      return request.serializeBinary();
+    },
+    echo_pb.ServerStreamingEchoResponse.deserializeBinary
+  );
   serverStreamingEchoAbort(request, metadata) {
-    return this.client_.serverStreaming(this.hostname_ + "/grpc.gateway.testing.EchoService/ServerStreamingEchoAbort", request, metadata || {}, this.methodInfoServerStreamingEchoAbort);
+    return this.client_.serverStreaming(
+      this.hostname_ + "/grpc.gateway.testing.EchoService/ServerStreamingEchoAbort",
+      request,
+      metadata || {},
+      this.methodInfoServerStreamingEchoAbort
+    );
   }
 };
+var grpcWeb = Object.create(_grpcWeb);
+var oldMethodDescriptor = grpcWeb.MethodDescriptor;
+Object.defineProperty(grpcWeb, "MethodDescriptor", {
+  value: function(...args) {
+    this.reqMessageCtor = args[2];
+    this.__proto__.__proto__ = oldMethodDescriptor.prototype;
+    return oldMethodDescriptor.apply(this, args);
+  }
+});
+Object.defineProperty(grpcWeb.MethodDescriptor.prototype, "getRequestMessageCtor", {
+  value: function() {
+    return this.reqMessageCtor;
+  }
+});
 export {
   EchoServiceClient
 };

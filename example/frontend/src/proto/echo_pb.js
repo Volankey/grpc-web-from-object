@@ -2,26 +2,22 @@ var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
-var __markAsModule = (target) => __defProp(target, "__esModule", { value: true });
 var __esm = (fn, res) => function __init() {
   return fn && (res = (0, fn[__getOwnPropNames(fn)[0]])(fn = 0)), res;
 };
 var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
-var __reExport = (target, module, copyDefault, desc) => {
-  if (module && typeof module === "object" || typeof module === "function") {
-    for (let key of __getOwnPropNames(module))
-      if (!__hasOwnProp.call(target, key) && (copyDefault || key !== "default"))
-        __defProp(target, key, { get: () => module[key], enumerable: !(desc = __getOwnPropDesc(module, key)) || desc.enumerable });
+var __copyProps = (to, from, except, desc) => {
+  if (from && typeof from === "object" || typeof from === "function") {
+    for (let key of __getOwnPropNames(from))
+      if (!__hasOwnProp.call(to, key) && key !== except)
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
   }
-  return target;
+  return to;
 };
-var __toCommonJS = /* @__PURE__ */ ((cache) => {
-  return (module, temp) => {
-    return cache && cache.get(module) || (temp = __reExport(__markAsModule({}), module, 1), cache && cache.set(module, temp), temp);
-  };
-})(typeof WeakMap !== "undefined" ? /* @__PURE__ */ new WeakMap() : 0);
+var __reExport = (target, mod, secondTarget) => (__copyProps(target, mod, "default"), secondTarget && __copyProps(secondTarget, mod, "default"));
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
 // external:google-protobuf
 var google_protobuf_exports = {};
@@ -237,15 +233,24 @@ var require_echo_pb = __commonJS({
       var f = void 0;
       f = message.getName();
       if (f.length > 0) {
-        writer.writeString(1, f);
+        writer.writeString(
+          1,
+          f
+        );
       }
       f = message.getSex();
       if (f.length > 0) {
-        writer.writeString(2, f);
+        writer.writeString(
+          2,
+          f
+        );
       }
       f = message.getFavoratesList();
       if (f.length > 0) {
-        writer.writeRepeatedString(3, f);
+        writer.writeRepeatedString(
+          3,
+          f
+        );
       }
     };
     proto.grpc.gateway.testing.Student.prototype.getName = function() {
@@ -279,8 +284,16 @@ var require_echo_pb = __commonJS({
       };
       proto.grpc.gateway.testing.Suject.toObject = function(includeInstance, msg) {
         var f, obj = {
-          liberalArtsList: jspb.Message.toObjectList(msg.getLiberalArtsList(), proto.grpc.gateway.testing.Score.toObject, includeInstance),
-          scienceList: jspb.Message.toObjectList(msg.getScienceList(), proto.grpc.gateway.testing.Score.toObject, includeInstance)
+          liberalArtsList: jspb.Message.toObjectList(
+            msg.getLiberalArtsList(),
+            proto.grpc.gateway.testing.Score.toObject,
+            includeInstance
+          ),
+          scienceList: jspb.Message.toObjectList(
+            msg.getScienceList(),
+            proto.grpc.gateway.testing.Score.toObject,
+            includeInstance
+          )
         };
         if (includeInstance) {
           obj.$jspbMessageInstance = msg;
@@ -326,11 +339,19 @@ var require_echo_pb = __commonJS({
       var f = void 0;
       f = message.getLiberalArtsList();
       if (f.length > 0) {
-        writer.writeRepeatedMessage(1, f, proto.grpc.gateway.testing.Score.serializeBinaryToWriter);
+        writer.writeRepeatedMessage(
+          1,
+          f,
+          proto.grpc.gateway.testing.Score.serializeBinaryToWriter
+        );
       }
       f = message.getScienceList();
       if (f.length > 0) {
-        writer.writeRepeatedMessage(2, f, proto.grpc.gateway.testing.Score.serializeBinaryToWriter);
+        writer.writeRepeatedMessage(
+          2,
+          f,
+          proto.grpc.gateway.testing.Score.serializeBinaryToWriter
+        );
       }
     };
     proto.grpc.gateway.testing.Suject.prototype.getLiberalArtsList = function() {
@@ -416,11 +437,17 @@ var require_echo_pb = __commonJS({
       var f = void 0;
       f = message.getName();
       if (f.length > 0) {
-        writer.writeString(1, f);
+        writer.writeString(
+          1,
+          f
+        );
       }
       f = message.getScore();
       if (f.length > 0) {
-        writer.writeString(2, f);
+        writer.writeString(
+          2,
+          f
+        );
       }
     };
     proto.grpc.gateway.testing.Score.prototype.getName = function() {
@@ -496,11 +523,18 @@ var require_echo_pb = __commonJS({
       var f = void 0;
       f = jspb.Message.getField(message, 4);
       if (f != null) {
-        writer.writeString(4, f);
+        writer.writeString(
+          4,
+          f
+        );
       }
       f = message.getSubMessage();
       if (f != null) {
-        writer.writeMessage(9, f, proto.grpc.gateway.testing.Score.serializeBinaryToWriter);
+        writer.writeMessage(
+          9,
+          f,
+          proto.grpc.gateway.testing.Score.serializeBinaryToWriter
+        );
       }
     };
     proto.grpc.gateway.testing.OneOfSample.prototype.getName = function() {
@@ -609,15 +643,26 @@ var require_echo_pb = __commonJS({
       var f = void 0;
       f = message.getMessage();
       if (f.length > 0) {
-        writer.writeString(1, f);
+        writer.writeString(
+          1,
+          f
+        );
       }
       f = message.getStudent();
       if (f != null) {
-        writer.writeMessage(2, f, proto.grpc.gateway.testing.Student.serializeBinaryToWriter);
+        writer.writeMessage(
+          2,
+          f,
+          proto.grpc.gateway.testing.Student.serializeBinaryToWriter
+        );
       }
       f = message.getSuject();
       if (f != null) {
-        writer.writeMessage(3, f, proto.grpc.gateway.testing.Suject.serializeBinaryToWriter);
+        writer.writeMessage(
+          3,
+          f,
+          proto.grpc.gateway.testing.Suject.serializeBinaryToWriter
+        );
       }
       f = message.getKeyvalueMap(true);
       if (f && f.getLength() > 0) {
@@ -629,7 +674,11 @@ var require_echo_pb = __commonJS({
       }
       f = message.getOneOfSample();
       if (f != null) {
-        writer.writeMessage(6, f, proto.grpc.gateway.testing.OneOfSample.serializeBinaryToWriter);
+        writer.writeMessage(
+          6,
+          f,
+          proto.grpc.gateway.testing.OneOfSample.serializeBinaryToWriter
+        );
       }
     };
     proto.grpc.gateway.testing.EchoRequest.prototype.getMessage = function() {
@@ -671,7 +720,12 @@ var require_echo_pb = __commonJS({
       return jspb.Message.getField(this, 3) != null;
     };
     proto.grpc.gateway.testing.EchoRequest.prototype.getKeyvalueMap = function(opt_noLazyCreate) {
-      return jspb.Message.getMapField(this, 4, opt_noLazyCreate, null);
+      return jspb.Message.getMapField(
+        this,
+        4,
+        opt_noLazyCreate,
+        null
+      );
     };
     proto.grpc.gateway.testing.EchoRequest.prototype.setKeyvalueMap = function(k, v) {
       this.getKeyvalueMap().set(k, v);
@@ -684,7 +738,12 @@ var require_echo_pb = __commonJS({
       return this;
     };
     proto.grpc.gateway.testing.EchoRequest.prototype.getKeyScroeMap = function(opt_noLazyCreate) {
-      return jspb.Message.getMapField(this, 5, opt_noLazyCreate, proto.grpc.gateway.testing.Score);
+      return jspb.Message.getMapField(
+        this,
+        5,
+        opt_noLazyCreate,
+        proto.grpc.gateway.testing.Score
+      );
     };
     proto.grpc.gateway.testing.EchoRequest.prototype.setKeyScroeMap = function(k, v) {
       this.getKeyScroeMap().set(k, v);
@@ -769,15 +828,25 @@ var require_echo_pb = __commonJS({
       var f = void 0;
       f = message.getMessage();
       if (f.length > 0) {
-        writer.writeString(1, f);
+        writer.writeString(
+          1,
+          f
+        );
       }
       f = message.getMessageCount();
       if (f !== 0) {
-        writer.writeInt32(2, f);
+        writer.writeInt32(
+          2,
+          f
+        );
       }
       f = message.getResp();
       if (f != null) {
-        writer.writeMessage(3, f, proto.grpc.gateway.testing.EchoRequest.serializeBinaryToWriter);
+        writer.writeMessage(
+          3,
+          f,
+          proto.grpc.gateway.testing.EchoRequest.serializeBinaryToWriter
+        );
       }
     };
     proto.grpc.gateway.testing.EchoResponse.prototype.getMessage = function() {
@@ -864,15 +933,24 @@ var require_echo_pb = __commonJS({
       var f = void 0;
       f = message.getMessage();
       if (f.length > 0) {
-        writer.writeString(1, f);
+        writer.writeString(
+          1,
+          f
+        );
       }
       f = message.getMessageCount();
       if (f !== 0) {
-        writer.writeInt32(2, f);
+        writer.writeInt32(
+          2,
+          f
+        );
       }
       f = message.getMessageInterval();
       if (f !== 0) {
-        writer.writeInt32(3, f);
+        writer.writeInt32(
+          3,
+          f
+        );
       }
     };
     proto.grpc.gateway.testing.ServerStreamingEchoRequest.prototype.getMessage = function() {
@@ -939,7 +1017,10 @@ var require_echo_pb = __commonJS({
       var f = void 0;
       f = message.getMessage();
       if (f.length > 0) {
-        writer.writeString(1, f);
+        writer.writeString(
+          1,
+          f
+        );
       }
     };
     proto.grpc.gateway.testing.ServerStreamingEchoResponse.prototype.getMessage = function() {
@@ -994,7 +1075,10 @@ var require_echo_pb = __commonJS({
       var f = void 0;
       f = message.getMessage();
       if (f.length > 0) {
-        writer.writeString(1, f);
+        writer.writeString(
+          1,
+          f
+        );
       }
     };
     proto.grpc.gateway.testing.ClientStreamingEchoRequest.prototype.getMessage = function() {
@@ -1049,7 +1133,10 @@ var require_echo_pb = __commonJS({
       var f = void 0;
       f = message.getMessageCount();
       if (f !== 0) {
-        writer.writeInt32(1, f);
+        writer.writeInt32(
+          1,
+          f
+        );
       }
     };
     proto.grpc.gateway.testing.ClientStreamingEchoResponse.prototype.getMessageCount = function() {
